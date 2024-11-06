@@ -269,7 +269,7 @@ VALUES
 """.lstrip()
 
 def main():
-    with open("random.sql", "w") as file:
+    with open("gen_random.sql", "w") as file:
         random.seed(time.time())
 
         for i in range(0,random.randint(3,10)):

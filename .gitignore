@@ -1,1 +1,4 @@
-random.sql
+gen_*
+.vscode/*
+*.exe
+I_love_go
