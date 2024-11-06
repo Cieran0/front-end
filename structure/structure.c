@@ -4,6 +4,7 @@
 #define FOREIGN_KEY(key, table)
 #define TABLE struct
 #define date int
+#define timestamp int
 #define decimal float
 
 TABLE {
@@ -15,7 +16,11 @@ TABLE {
 
 TABLE {
     int EmployeeID NOT_NULL;
-    char Name[255] DEFAULT_NULL;
+    char Role[255] DEFAULT_NULL;
+    char Email[255] DEFAULT_NULL;
+    char Password[255] DEFAULT_NULL;
+    char FirstName[255] DEFAULT_NULL;
+    char LastName[255] DEFAULT_NULL;
     decimal Salary DEFAULT_NULL;
     int BranchID DEFAULT_NULL;
     PRIMARY_KEY ('EmployeeID')
@@ -24,11 +29,15 @@ TABLE {
 
 TABLE {
     int CustomerID NOT_NULL;
-    char Name[255] DEFAULT_NULL;
+    char Email[255] DEFAULT_NULL;
+    char Password[255] DEFAULT_NULL;
+    char FirstName[255] DEFAULT_NULL;
+    char LastName[255] DEFAULT_NULL;
     int BranchID DEFAULT_NULL;
     PRIMARY_KEY ('CustomerID')
     FOREIGN_KEY ('BranchID', 'BRANCH')
 } typedef CUSTOMER;
+
 
 TABLE {
     int SupplierID NOT_NULL;
@@ -41,6 +50,7 @@ TABLE {
 TABLE {
     int ProductID NOT_NULL;
     char Name[255] DEFAULT_NULL;
+    char Category[255] NOT_NULL;
     char Description[255] DEFAULT_NULL;
     decimal Price DEFAULT_NULL;
     int Stock DEFAULT_NULL;
@@ -61,3 +71,15 @@ TABLE {
     FOREIGN_KEY ('ProductID', 'PRODUCT')
     FOREIGN_KEY ('CustomerID', 'CUSTOMER')
 } typedef ORDER;
+
+
+TABLE {
+    int BookmarkID NOT_NULL;
+    int ProductId DEFAULT_NULL;
+    int CustomerId DEFAULT_NULL;
+    timestamp TimeSaved DEFAULT_NULL;
+    PRIMARY_KEY ('BookmarkID')
+    FOREIGN_KEY ('ProductId', 'PRODUCT')
+    FOREIGN_KEY ('CustomerID', 'CUSTOMER')
+} typedef BOOKMARK;
+

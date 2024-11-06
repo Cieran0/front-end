@@ -272,9 +272,7 @@ func main() {
 
 	builder.WriteString("SET FOREIGN_KEY_CHECKS = 0;\n\n")
 	
-	for _, t := range tables {
-		builder.WriteString(fmt.Sprintf("DROP TABLE IF EXISTS `%s`;\n",t.name))
-	}
+	builder.WriteString("DROP DATABASE `database`;\nCREATE DATABASE `database`;\nUSE `database`;\n")
 
 	builder.WriteString("\nSET FOREIGN_KEY_CHECKS = 1;\n\n")
 
