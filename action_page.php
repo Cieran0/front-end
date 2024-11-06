@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>Connection Test</title>
@@ -8,6 +8,7 @@
 <body>
 <?php
 
+	session_start();
     $email = $_POST['email'];
     $password = $_POST['password'];
 
@@ -27,22 +28,16 @@
     
 	if ($row = mysqli_fetch_array($sqlSelect))
 	{
-        echo "<table border='1'>
-        <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>ID</th>
-        <th>BranchID</th>
-        </tr>";
-		echo "<tr>";
-		echo "<td>" . $row['FirstName'] . "</td>";
-		echo "<td>" . $row['LastName'] . "</td>";
-		echo "<td>" . $row['CustomerID'] . "</td>";
-		echo "<td>" . $row['BranchID'] . "</td>";
-		echo "</tr>";		
-        echo "</table>";
+		$_SESSION['loggedin'] = true;
+		$_SESSION['email'] = $email;
+		$_SESSION['password'] = $password;
+		header("Location: customer_dashboard.php");
 	} else {
-        echo "<br>RAHHHHHHHHHHHH<br>";
+		$_SESSION['loggedin'] = false;
+		$_SESSION['email'] = "";
+		$_SESSION['password'] = "";
+        header("Location: login_failed.html");
+        exit();
     }
 	
 	
