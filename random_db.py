@@ -299,8 +299,12 @@ def main():
             file.write(gen_branch(len(branch_ids), random.choice(locations), gen_phone_no()))
 
         for i in range(0,random.randint(3,10)):
-            file.write(gen_customer(len(customer_ids), "email@email.com", "password123", random.choice(first_names), random.choice(last_names), random.randint(0,len(branch_ids) - 1)))
-            file.write(gen_employee(len(employee_ids), "Employee", "email@email.com", "password123", random.choice(first_names), random.choice(last_names), gen_salary(), random.randint(0,len(branch_ids) - 1)))
+            fname = random.choice(first_names)
+            lname = random.choice(last_names)
+            file.write(gen_customer(len(customer_ids), f"{fname[0]}{lname}@email.com", "password123", fname, lname, random.randint(0,len(branch_ids) - 1)))
+            fname = random.choice(first_names)
+            lname = random.choice(last_names)
+            file.write(gen_employee(len(employee_ids), "Employee", f"{fname[0]}{lname}@email.com", "password123", fname, lname, gen_salary(), random.randint(0,len(branch_ids) - 1)))
 
         for i in range(0,random.randint(3,10)):
             file.write(gen_supplier(len(supplier_ids), random.choice(supplier_names), gen_phone_no(), gen_address()))
