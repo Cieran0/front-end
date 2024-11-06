@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -30,6 +34,8 @@ else
 {
 	echo "ERROR SELECTING DB: " . mysqli_error($dbc);
 }
+
+echo "Favorite color is " . $_SESSION["favcolor"] . ".<br>";
 
 $sqlSelect = mysqli_query($dbc, "SELECT * FROM EMPLOYEE");
 	

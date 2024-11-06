@@ -1,4 +1,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<?php
+// Start the session
+session_start();
+?>
 <html>
 <head>
 <title>Connection Test</title>
@@ -8,6 +12,8 @@
 <body>
 <?php
 $id = "0";
+
+$_SESSION["favcolor"] = "red";
 
 $dbc = mysqli_connect("assignment-2-database.cc4fgdywaapg.us-east-1.rds.amazonaws.com","admin","assignment-2");
 	

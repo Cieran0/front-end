@@ -6,8 +6,11 @@ else
     EXECUTABLE=$(BINARY_NAME)
 endif
 
+run:
+	php -S 127.0.0.1:8080
+
 go:
 	go build -o $(EXECUTABLE)
 
-run: go
+gen_reset: go
 	./$(EXECUTABLE)
