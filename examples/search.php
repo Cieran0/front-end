@@ -43,7 +43,7 @@ $sqlSelect = mysqli_query($dbc, "SELECT * FROM EMPLOYEE WHERE EmployeeID = '$id'
 	while ($row = mysqli_fetch_array($sqlSelect))
 	{
 		echo "<tr>";
-		echo "<td>" . $row['EmployeeName'] . "</td>";
+		echo "<td>" . $row['Name'] . "</td>";
 		echo "<td>" . $row['Salary'] . "</td>";
 		echo "<td>" . $row['EmployeeID'] . "</td>";
 		echo "</tr>";		
