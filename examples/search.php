@@ -13,8 +13,6 @@ session_start();
 <?php
 $id = "0";
 
-$_SESSION["favcolor"] = "red";
-
 $dbc = mysqli_connect("assignment-2-database.cc4fgdywaapg.us-east-1.rds.amazonaws.com","admin","assignment-2");
 	
 if (!$dbc)
