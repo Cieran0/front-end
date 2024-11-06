@@ -13,7 +13,7 @@ session_start();
 <?php
 $id = "0";
 
-$dbc = mysqli_connect("assignment-2-database.cc4fgdywaapg.us-east-1.rds.amazonaws.com","admin","assignment-2");
+$dbc = mysqli_connect("127.0.0.1","root","root");
 	
 if (!$dbc)
 {
@@ -41,7 +41,8 @@ $sqlSelect = mysqli_query($dbc, "SELECT * FROM EMPLOYEE");
 	
 	echo "<table border='1'>
 			<tr>
-			<th>Name</th>
+			<th>FirstName</th>
+			<th>LastName</th>
 			<th>Salary</th>
 			<th>ID</th>
 			</tr>";
@@ -49,7 +50,8 @@ $sqlSelect = mysqli_query($dbc, "SELECT * FROM EMPLOYEE");
 	while ($row = mysqli_fetch_array($sqlSelect))
 	{
 		echo "<tr>";
-		echo "<td>" . $row['Name'] . "</td>";
+		echo "<td>" . $row['FirstName'] . "</td>";
+		echo "<td>" . $row['LastName'] . "</td>";
 		echo "<td>" . $row['Salary'] . "</td>";
 		echo "<td>" . $row['EmployeeID'] . "</td>";
 		echo "</tr>";		

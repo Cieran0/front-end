@@ -13,7 +13,7 @@ session_start();
 <?php
 $id = "0";
 
-$dbc = mysqli_connect("assignment-2-database.cc4fgdywaapg.us-east-1.rds.amazonaws.com","admin","assignment-2");
+$dbc = mysqli_connect("127.0.0.1","root","root");
 	
 if (!$dbc)
 {
