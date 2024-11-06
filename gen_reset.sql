@@ -1,6 +1,6 @@
 SET FOREIGN_KEY_CHECKS = 0;
 
-DROP DATABASE `database`;
+DROP DATABASE if exists `database`;
 CREATE DATABASE `database`;
 USE `database`;
 

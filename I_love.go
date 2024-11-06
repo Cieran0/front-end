@@ -272,7 +272,7 @@ func main() {
 
 	builder.WriteString("SET FOREIGN_KEY_CHECKS = 0;\n\n")
 	
-	builder.WriteString("DROP DATABASE `database`;\nCREATE DATABASE `database`;\nUSE `database`;\n")
+	builder.WriteString("DROP DATABASE if exists `database`;\nCREATE DATABASE `database`;\nUSE `database`;\n")
 
 	builder.WriteString("\nSET FOREIGN_KEY_CHECKS = 1;\n\n")
 
