@@ -159,7 +159,7 @@ VALUES
 """.lstrip()
 
 
-def gen_customer(CustomerID, Name, BranchID):
+def gen_customer(CustomerID, Email, Password, FirstName, LastName, BranchID):
     if CustomerID in customer_ids:
         return ""
 
@@ -172,15 +172,21 @@ def gen_customer(CustomerID, Name, BranchID):
     return f"""
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
-`Name`,
+`Email`,
+`Password`,
+`FirstName`,
+`LastName`,
 `BranchID`)
 VALUES
 ({CustomerID},
-"{Name}",
+"{Email}",
+"{Password}",
+"{FirstName}",
+"{LastName}",
 {BranchID});
 """.lstrip()
 
-def gen_employee(EmployeeID, EmployeeName, Salary, BranchID):
+def gen_employee(EmployeeID, Role, Email, Password, FirstName, LastName, Salary, BranchID):
     if EmployeeID in employee_ids:
         return ""
     
@@ -192,12 +198,20 @@ def gen_employee(EmployeeID, EmployeeName, Salary, BranchID):
     return f"""
 INSERT INTO `database`.`EMPLOYEE`
 (`EmployeeID`,
-`Name`,
+`Role`,
+`Email`,
+`Password`,
+`FirstName`,
+`LastName`,
 `Salary`,
 `BranchID`)
 VALUES
 ({EmployeeID},
-"{EmployeeName}",
+"{Role}",
+"{Email}",
+"{Password}",
+"{FirstName}",
+"{LastName}",
 {Salary},
 {BranchID});
 """.lstrip()
@@ -248,7 +262,7 @@ VALUES
 "{Address}");
 """.lstrip()
 
-def gen_product(ProductID, Name, Description, Price, Stock, BranchID, SupplierID):
+def gen_product(ProductID, Name, Category, Description, Price, Stock, BranchID, SupplierID):
     if ProductID in product_ids:
         return ""
 
@@ -260,6 +274,7 @@ def gen_product(ProductID, Name, Description, Price, Stock, BranchID, SupplierID
     return f"""INSERT INTO `database`.`PRODUCT`
 (`ProductID`,
 `Name`,
+`Category`,
 `Description`,
 `Price`,
 `Stock`,
@@ -268,6 +283,7 @@ def gen_product(ProductID, Name, Description, Price, Stock, BranchID, SupplierID
 VALUES
 ({ProductID},
 "{Name}",
+"{Category}",
 "{Description}",
 {Price},
 {Stock},
@@ -283,14 +299,14 @@ def main():
             file.write(gen_branch(len(branch_ids), random.choice(locations), gen_phone_no()))
 
         for i in range(0,random.randint(3,10)):
-            file.write(gen_customer(len(customer_ids), gen_name(), random.randint(0,len(branch_ids) - 1)))
-            file.write(gen_employee(len(employee_ids), gen_name(), gen_salary(), random.randint(0,len(branch_ids) - 1)))
+            file.write(gen_customer(len(customer_ids), "email@email.com", "password123", random.choice(first_names), random.choice(last_names), random.randint(0,len(branch_ids) - 1)))
+            file.write(gen_employee(len(employee_ids), "Employee", "email@email.com", "password123", random.choice(first_names), random.choice(last_names), gen_salary(), random.randint(0,len(branch_ids) - 1)))
 
         for i in range(0,random.randint(3,10)):
             file.write(gen_supplier(len(supplier_ids), random.choice(supplier_names), gen_phone_no(), gen_address()))
 
         for i in range(0,random.randint(3,10)):
-            file.write(gen_product(len(product_ids), random.choice(products), random.choice(products), gen_cost(), random.randint(0, 1000), random.randint(0,len(branch_ids) - 1), random.randint(0,len(supplier_ids) - 1)))
+            file.write(gen_product(len(product_ids), random.choice(products), "All", "Descriptopn", gen_cost(), random.randint(0, 1000), random.randint(0,len(branch_ids) - 1), random.randint(0,len(supplier_ids) - 1)))
 
         for i in range(0,25):
             file.write(gen_order(len(order_ids), gen_date(), gen_cost(), random.randint(0,len(product_ids) - 1), random.randint(0,len(customer_ids) - 1)))
