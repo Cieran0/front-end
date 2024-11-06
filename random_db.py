@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 ############## RANDOM STUFF ########################
 import random
 import time
@@ -190,7 +192,7 @@ def gen_employee(EmployeeID, EmployeeName, Salary, BranchID):
     return f"""
 INSERT INTO `database`.`EMPLOYEE`
 (`EmployeeID`,
-`EmployeeName`,
+`Name`,
 `Salary`,
 `BranchID`)
 VALUES
@@ -200,11 +202,14 @@ VALUES
 {BranchID});
 """.lstrip()
 
-def gen_order(OrderID, OrderDate, Cost, BranchID):
+def gen_order(OrderID, Date, Cost, CustomerID, ProductID):
     if OrderID in order_ids:
         return ""
     
-    if not BranchID in branch_ids:
+    if not CustomerID in customer_ids:
+        return ""
+
+    if not ProductID in product_ids:
         return ""
 
     order_ids.add(OrderID)
@@ -212,14 +217,16 @@ def gen_order(OrderID, OrderDate, Cost, BranchID):
     return f"""
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
-`OrderDate`,
+`Date`,
 `Cost`,
-`BranchID`)
+`ProductID`,
+`CustomerID`)
 VALUES
 ({OrderID},
-"{OrderDate}",
+"{Date}",
 {Cost},
-{BranchID});
+{ProductID},
+{CustomerID});
 """.lstrip()
 
 def gen_supplier(SupplierID, Name, ContactNo, Address):
@@ -241,7 +248,7 @@ VALUES
 "{Address}");
 """.lstrip()
 
-def gen_product(ProductID, Description, Price, Stock, Supplier, BranchID, SupplierID):
+def gen_product(ProductID, Name, Description, Price, Stock, BranchID, SupplierID):
     if ProductID in product_ids:
         return ""
 
@@ -252,18 +259,18 @@ def gen_product(ProductID, Description, Price, Stock, Supplier, BranchID, Suppli
 
     return f"""INSERT INTO `database`.`PRODUCT`
 (`ProductID`,
+`Name`,
 `Description`,
 `Price`,
 `Stock`,
-`Supplier`,
 `BranchID`,
 `SupplierID`)
 VALUES
 ({ProductID},
+"{Name}",
 "{Description}",
 {Price},
 {Stock},
-"{Supplier}",
 {BranchID},
 {SupplierID});
 """.lstrip()
@@ -278,13 +285,15 @@ def main():
         for i in range(0,random.randint(3,10)):
             file.write(gen_customer(len(customer_ids), gen_name(), random.randint(0,len(branch_ids) - 1)))
             file.write(gen_employee(len(employee_ids), gen_name(), gen_salary(), random.randint(0,len(branch_ids) - 1)))
-            file.write(gen_order(len(order_ids), gen_date(), gen_cost(), random.randint(0,len(branch_ids) - 1)))
 
         for i in range(0,random.randint(3,10)):
             file.write(gen_supplier(len(supplier_ids), random.choice(supplier_names), gen_phone_no(), gen_address()))
 
         for i in range(0,random.randint(3,10)):
-            file.write(gen_product(len(product_ids), random.choice(products), gen_cost(), random.randint(0, 1000), "???", random.randint(0,len(branch_ids) - 1), random.randint(0,len(supplier_ids) - 1)))
+            file.write(gen_product(len(product_ids), random.choice(products), random.choice(products), gen_cost(), random.randint(0, 1000), random.randint(0,len(branch_ids) - 1), random.randint(0,len(supplier_ids) - 1)))
+
+        for i in range(0,25):
+            file.write(gen_order(len(order_ids), gen_date(), gen_cost(), random.randint(0,len(product_ids) - 1), random.randint(0,len(customer_ids) - 1)))
 
 
 if __name__ == "__main__":
