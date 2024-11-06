@@ -1,2 +1,41 @@
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+#support {
+    margin-left: 40%;
+}
+
+#info {
+    margin-left: 2%;
+}
+
 .logo {
+    margin-left: 2%;
+}
+
+#login {
+    margin-right: 2%;
+}
+
+.searchBar {
+    margin: auto;
+}
+
+#searchBar {
+    width: 50rem;
+    height: 2rem;
+}
+
+#searchButton {
+    background-color: grey;
 }
