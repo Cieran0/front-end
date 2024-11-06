@@ -1,4 +1,4 @@
-gen_*
+gen_random*
 .vscode/*
 *.exe
 I_love_go
