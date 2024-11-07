@@ -15,11 +15,11 @@ CREATE TABLE `BRANCH` (
 
 CREATE TABLE `EMPLOYEE` (
 	EmployeeID int NOT NULL,
-	Role varchar(255) DEFAULT NULL,
-	Email varchar(255) DEFAULT NULL,
-	Password varchar(255) DEFAULT NULL,
 	FirstName varchar(255) DEFAULT NULL,
 	LastName varchar(255) DEFAULT NULL,
+	Role varchar(255) DEFAULT NULL,
+	Password varchar(255) DEFAULT NULL,
+	Email varchar(255) DEFAULT NULL,
 	Salary decimal(10, 2) DEFAULT NULL,
 	BranchID int DEFAULT NULL,
 	PRIMARY KEY(`EmployeeID`),
@@ -28,10 +28,10 @@ CREATE TABLE `EMPLOYEE` (
 
 CREATE TABLE `CUSTOMER` (
 	CustomerID int NOT NULL,
-	Email varchar(255) DEFAULT NULL,
-	Password varchar(255) DEFAULT NULL,
 	FirstName varchar(255) DEFAULT NULL,
 	LastName varchar(255) DEFAULT NULL,
+	Password varchar(255) DEFAULT NULL,
+	Email varchar(255) DEFAULT NULL,
 	BranchID int DEFAULT NULL,
 	PRIMARY KEY(`CustomerID`),
 	CONSTRAINT `fk_CUSTOMER_BRANCH1` FOREIGN KEY (`BranchID`) REFERENCES `BRANCH` (`BranchID`) ON DELETE SET NULL ON UPDATE CASCADE
@@ -72,11 +72,60 @@ CREATE TABLE `ORDER` (
 
 CREATE TABLE `BOOKMARK` (
 	BookmarkID int NOT NULL,
-	ProductId int DEFAULT NULL,
-	CustomerId int DEFAULT NULL,
+	ProductID int DEFAULT NULL,
+	CustomerID int DEFAULT NULL,
 	TimeSaved timestamp DEFAULT NULL,
 	PRIMARY KEY(`BookmarkID`),
-	CONSTRAINT `fk_BOOKMARK_PRODUCT1` FOREIGN KEY (`ProductId`) REFERENCES `PRODUCT` (`ProductId`) ON DELETE SET NULL ON UPDATE CASCADE,
+	CONSTRAINT `fk_BOOKMARK_PRODUCT1` FOREIGN KEY (`ProductID`) REFERENCES `PRODUCT` (`ProductID`) ON DELETE SET NULL ON UPDATE CASCADE,
 	CONSTRAINT `fk_BOOKMARK_CUSTOMER1` FOREIGN KEY (`CustomerID`) REFERENCES `CUSTOMER` (`CustomerID`) ON DELETE SET NULL ON UPDATE CASCADE
 );
+
+CREATE VIEW CEOView 
+AS SELECT
+	EmployeeID,
+	Email,
+	FirstName,
+	LastName,
+	Salary,
+	BranchID
+FROM
+	EMPLOYEE;
+
+CREATE VIEW ManagerView 
+AS SELECT
+	EmployeeID,
+	Email,
+	FirstName,
+	LastName,
+	BranchID
+FROM
+	EMPLOYEE;
+
+CREATE VIEW CustomerProductView 
+AS SELECT
+	ProductID,
+	Name,
+	Description,
+	Price,
+	Stock,
+	BranchID
+FROM
+	PRODUCT;
+
+CREATE VIEW CustomerSupplierView 
+AS SELECT
+	Name,
+	ContactNo
+FROM
+	SUPPLIER;
+
+CREATE VIEW EmployeeView 
+AS SELECT
+	CustomerID,
+	Email,
+	FirstName,
+	LastName,
+	BranchID
+FROM
+	CUSTOMER;
 

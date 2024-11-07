@@ -3,9 +3,12 @@
 #define PRIMARY_KEY(key)
 #define FOREIGN_KEY(key, table)
 #define TABLE struct
+#define VIEW
 #define date int
 #define timestamp int
 #define decimal float
+#define INCLUDED = 0,
+#define EXCLUDED = 1,
 
 TABLE {
     int BranchID NOT_NULL;
@@ -16,11 +19,11 @@ TABLE {
 
 TABLE {
     int EmployeeID NOT_NULL;
-    char Role[255] DEFAULT_NULL;
-    char Email[255] DEFAULT_NULL;
-    char Password[255] DEFAULT_NULL;
     char FirstName[255] DEFAULT_NULL;
     char LastName[255] DEFAULT_NULL;
+    char Role[255] DEFAULT_NULL;
+    char Password[255] DEFAULT_NULL;
+    char Email[255] DEFAULT_NULL;
     decimal Salary DEFAULT_NULL;
     int BranchID DEFAULT_NULL;
     PRIMARY_KEY ('EmployeeID')
@@ -29,10 +32,10 @@ TABLE {
 
 TABLE {
     int CustomerID NOT_NULL;
-    char Email[255] DEFAULT_NULL;
-    char Password[255] DEFAULT_NULL;
     char FirstName[255] DEFAULT_NULL;
     char LastName[255] DEFAULT_NULL;
+    char Password[255] DEFAULT_NULL;
+    char Email[255] DEFAULT_NULL;
     int BranchID DEFAULT_NULL;
     PRIMARY_KEY ('CustomerID')
     FOREIGN_KEY ('BranchID', 'BRANCH')
@@ -75,11 +78,49 @@ TABLE {
 
 TABLE {
     int BookmarkID NOT_NULL;
-    int ProductId DEFAULT_NULL;
-    int CustomerId DEFAULT_NULL;
+    int ProductID DEFAULT_NULL;
+    int CustomerID DEFAULT_NULL;
     timestamp TimeSaved DEFAULT_NULL;
     PRIMARY_KEY ('BookmarkID')
-    FOREIGN_KEY ('ProductId', 'PRODUCT')
+    FOREIGN_KEY ('ProductID', 'PRODUCT')
     FOREIGN_KEY ('CustomerID', 'CUSTOMER')
 } typedef BOOKMARK;
 
+VIEW EMPLOYEE CEOView = {
+    .EmployeeID INCLUDED
+    .Email INCLUDED
+    .FirstName INCLUDED
+    .LastName INCLUDED
+    .Salary INCLUDED
+    .BranchID INCLUDED
+};
+
+VIEW EMPLOYEE ManagerView = {
+    .EmployeeID INCLUDED
+    .Email INCLUDED
+    .FirstName INCLUDED
+    .LastName INCLUDED
+    .BranchID INCLUDED
+};
+
+VIEW PRODUCT CustomerProductView = {
+    .ProductID INCLUDED
+    .Name INCLUDED
+    .Description INCLUDED
+    .Price INCLUDED
+    .Stock INCLUDED
+    .BranchID INCLUDED
+};
+
+VIEW SUPPLIER CustomerSupplierView = {
+    .Name INCLUDED
+    .ContactNo INCLUDED
+};
+
+VIEW CUSTOMER EmployeeView = {
+    .CustomerID INCLUDED
+    .Email INCLUDED
+    .FirstName INCLUDED
+    .LastName INCLUDED
+    .BranchID INCLUDED
+};

@@ -19,9 +19,9 @@ if(!$_SESSION['loggedin']) {
 
 <div class="topnav">
   <div class="search-container">
-    <form action="">
-      <input type="text" placeholder="Search.." name="search">
-      <button type="submit">Submit</button>
+    <form action="results.php" method="GET">
+    <input type="text" name="search" placeholder="Search for products...">
+      <button type="submit">Search</button>
     </form>
   </div>
   

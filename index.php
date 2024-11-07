@@ -10,10 +10,10 @@
     <body>
         <div class="header container">
             <img class="logo" src="logo.png">
-            <div class="searchBar">
-                <input id="searchBar" type="text">
-                <button id="searchButton">Search</button>
-            </div>
+            <form class="searchBar" action="results.php" method="GET">
+                <input id="searchBar" type="text" name="search" placeholder="Search for products...">
+                <button type="submit" id="searchButton">Search</button>
+            </form>
 
             <button id="login" onclick="document.location.href = 'login.php'">Login</button>
         </div>
