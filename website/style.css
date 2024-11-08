@@ -1,6 +1,16 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 .header {
     display: flex;
-    flex-direction: row;
+    top: 0px;
+    width: 100%;
+    right: 0%;
+    height: 3rem;
+    margin: 0%;
 }
 
 .footer {
@@ -29,6 +39,12 @@
 
 .searchBar {
     margin: auto;
+    display: flex; /* Ensures items inside are aligned flexibly */
+    align-items: center;
+}
+
+#searchButton {
+    height: 2rem;
 }
 
 #searchBar {
@@ -36,6 +52,59 @@
     height: 2rem;
 }
 
-#searchButton {
-    background-color: grey;
+
+.dropdown {
+    margin-right: 2%;
+    height: 2rem;
+    display: flex; /* Ensures dropbtn inherits height from dropdown */
+    align-items: center;
+}
+
+.dropbtn {
+    background-color: #dedede;
+    color: #CA7D02;
+    border-color: #CA7D02;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    /* Remove height from here to let it match the container's height */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 2rem;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #CA7D02;
+    color: #dedede;
+    border-color: #dedede;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #CA7D02;
+    color: #dedede;
+    border-color: #dedede;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Center-aligns elements like search bar and dropdown */
 }

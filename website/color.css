@@ -9,12 +9,13 @@ form {
 
 input[type=text], input[type=password] {
     background-color: #dedede;
-    border: 1px solid #CA7D02;
+    border: 1px solid #000000;
 }
 
 button {
-    background-color: #CA7D02;
-    color: #ffffff;
+    background-color: #dedede;
+    color: #CA7D02;
+    border: 2px, #CA7D02;
     cursor: pointer;
 }
 

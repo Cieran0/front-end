@@ -13,16 +13,18 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
   }
 
-button {
-  padding: 2% 2%;
-  margin: 1% 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
+.container {
+   padding: 16px;
 }
 
-.container {
-    padding: 16px;
+button {
+  cursor: pointer;
+  padding: 1% 2%;
+  margin: 1% 0;
+  width: 100%;
+  color: #CA7D02;
+  background-color: #dedede;
+  border: 2px solid #CA7D02;
 }
 
 span.psw {
