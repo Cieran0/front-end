@@ -14,3 +14,6 @@ go:
 
 gen_reset: go
 	./$(EXECUTABLE)
+
+prototype:
+	$(MAKE) -C raylib_prototype all
