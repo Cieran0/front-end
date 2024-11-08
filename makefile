@@ -7,10 +7,10 @@ else
 endif
 
 run:
-	php -S 127.0.0.1:8080
+	cd website && php -S 127.0.0.1:8080
 
 go:
-	go build -o $(EXECUTABLE)
+	cd go_sql_gen/ && go build -o ../$(EXECUTABLE)
 
 gen_reset: go
 	./$(EXECUTABLE)

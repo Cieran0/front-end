@@ -52,13 +52,17 @@ func get_tables_and_views(path string) ([]table, []view) {
 	var current_start_view int = -1
 
 	for index, line := range lines {
-		if strings.Contains(line, "TABLE {") {
+		if strings.Contains(line, "#define") {
+			continue
+		}
+
+		if len(line) > 5 && line[:5] == "TABLE" {
 			if current_start_table != -1 {
 				panic(fmt.Sprintf("%s:%d Table inside table?", path, index))
 			}
 
 			current_start_table = index
-		} else if strings.Contains(line, "VIEW") {
+		} else if len(line) > 4 && line[:4] == "VIEW" {
 			current_start_view = index
 		} else if strings.Contains(line, "}") {
 			if current_start_table == -1 && current_start_view == -1 {

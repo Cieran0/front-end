@@ -39,6 +39,7 @@ func main() {
 	input_path := "structure/structure.c"
 	output_path := "gen_reset.sql"
 	random_output_path := "gen_random_go.sql"
+	generated_output_path := "gen_go.sql"
 
 	get_tables_and_views(input_path)
 
@@ -51,5 +52,7 @@ func main() {
 	die_on_error(write_to_file(random_output_path, random_output))
 
 	fmt.Print(output)
+
+	die_on_error(write_to_file(generated_output_path, data_to_sql("structure/data.cpp")))
 
 }

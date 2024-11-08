@@ -4,8 +4,8 @@
 #define FOREIGN_KEY(key, table)
 #define TABLE struct
 #define VIEW
-#define date int
-#define timestamp int
+#define date const char*
+#define timestamp const char*
 #define decimal float
 #define INCLUDED = 0,
 #define EXCLUDED = 1,
