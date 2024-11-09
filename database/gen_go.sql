@@ -102,3 +102,31 @@ VALUES
 "JaneD@TechSupply.co.uk",
 35241.73,
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
+INSERT INTO `database`.`SUPPLIER`
+(`SupplierID`,
+`Name`,
+`Address`,
+`ContactNo`)
+VALUES
+(0,
+"Samsung",
+"Samsung House, 1000 Hillswood Drive, Chertsey, Surrey",
+"01932455287");
+INSERT INTO `database`.`PRODUCT`
+(`ProductID`,
+`Name`,
+`Description`,
+`Category`,
+`Price`,
+`Stock`,
+`BranchID`,
+`SupplierID`)
+VALUES
+(0,
+"SAMSUNG S90D 65 inch OLED 4K HDR Smart TV (2024) - QE65S90D",
+"Samsung S90D TV brings a bit of cinema magic to your living room. The TV can accurately control the shadows and highlights. Everything looks much more real with deep blacks and billions of colours that burst from the screen.",
+"TVs",
+1599.99,
+10,
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+(SELECT SupplierID FROM SUPPLIER WHERE SUPPLIER.Name = "Samsung" LIMIT 1));

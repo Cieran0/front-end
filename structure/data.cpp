@@ -68,3 +68,25 @@ RECORDS EMPLOYEE employee[] = {
     .BranchID = ID_OF ( branch->Location == "Dundee" ),
 },
 };
+
+RECORDS SUPPLIER supplier[] = {
+{
+    .SupplierID = INDEX,
+    .Name = "Samsung",
+    .ContactNo = "01932455287",
+    .Address = "Samsung House, 1000 Hillswood Drive, Chertsey, Surrey",
+},
+};
+
+RECORDS PRODUCT product[] = {
+{
+    .ProductID = INDEX,
+    .Name = "SAMSUNG S90D 65 inch OLED 4K HDR Smart TV (2024) - QE65S90D",
+    .Category = "TVs",
+    .Description = "Samsung S90D TV brings a bit of cinema magic to your living room.the TV can accurately control the shadows and highlights. Everything looks much more real with deep blacks and billions of colours that burst from the screen.",
+    .Price = 1599.99,
+    .Stock = 10,
+    .BranchID = ID_OF ( branch->Location == "Dundee" ),
+    .SupplierID = ID_OF ( supplier->Name == "Samsung" ),
+},
+};

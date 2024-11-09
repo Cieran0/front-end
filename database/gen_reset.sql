@@ -83,9 +83,9 @@ CREATE TABLE `BOOKMARK` (
 CREATE VIEW CEOView 
 AS SELECT
 	EmployeeID,
-	Email,
 	FirstName,
 	LastName,
+	Email,
 	Salary,
 	BranchID
 FROM
@@ -94,9 +94,9 @@ FROM
 CREATE VIEW ManagerView 
 AS SELECT
 	EmployeeID,
-	Email,
 	FirstName,
 	LastName,
+	Email,
 	BranchID
 FROM
 	EMPLOYEE;
@@ -122,9 +122,9 @@ FROM
 CREATE VIEW EmployeeView 
 AS SELECT
 	CustomerID,
-	Email,
 	FirstName,
 	LastName,
+	Email,
 	BranchID
 FROM
 	CUSTOMER;

@@ -88,18 +88,18 @@ TABLE {
 
 VIEW EMPLOYEE CEOView = {
     .EmployeeID INCLUDED
-    .Email INCLUDED
     .FirstName INCLUDED
     .LastName INCLUDED
+    .Email INCLUDED
     .Salary INCLUDED
     .BranchID INCLUDED
 };
 
 VIEW EMPLOYEE ManagerView = {
     .EmployeeID INCLUDED
-    .Email INCLUDED
     .FirstName INCLUDED
     .LastName INCLUDED
+    .Email INCLUDED
     .BranchID INCLUDED
 };
 
@@ -119,8 +119,8 @@ VIEW SUPPLIER CustomerSupplierView = {
 
 VIEW CUSTOMER EmployeeView = {
     .CustomerID INCLUDED
-    .Email INCLUDED
     .FirstName INCLUDED
     .LastName INCLUDED
+    .Email INCLUDED
     .BranchID INCLUDED
 };
