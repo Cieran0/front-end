@@ -18,19 +18,7 @@
     $name = $_GET['search'];
     $category = $_GET['category'];
 
-    $dbc = mysqli_connect("127.0.0.1","root","root");
-    
-    if (!$dbc)
-    {
-    	die("Could not connect");
-    }
-
-    //SELECT DATABASE
-    $q = mysqli_select_db($dbc, "database");
-    if (!$q)
-    {
-    	die( "ERROR SELECTING DB: " . mysqli_error($dbc) );
-    }
+    @include_once ("query.php");
 
     $query = "SELECT * FROM PRODUCT WHERE Name LIKE '%$name%'";
 
@@ -40,7 +28,7 @@
 
     $query .= ";";
 
-    $sqlSelect = mysqli_query($dbc, $query);
+    $sqlSelect = query($query);
     
     if (mysqli_num_rows($sqlSelect) > 0) {
     	echo "<table border='1'>

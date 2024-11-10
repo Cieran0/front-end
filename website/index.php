@@ -14,21 +14,10 @@
             <h1>Categories:</h1>
 
             <?php 
-            $dbc = mysqli_connect("127.0.0.1","root","root");
 
-            if (!$dbc)
-            {
-                die("Could not connect");
-            }
+            @include_once("query.php");
         
-            //SELECT DATABASE
-            $q = mysqli_select_db($dbc, "database");
-            if (!$q)
-            {
-                die( "ERROR SELECTING DB: " . mysqli_error($dbc) );
-            }
-        
-            $sqlSelect = mysqli_query($dbc, "SELECT DISTINCT Category FROM PRODUCT;");
+            $sqlSelect = query("SELECT DISTINCT Category FROM PRODUCT;");
 
             if (mysqli_num_rows($sqlSelect) > 0) {
                 while ($row = mysqli_fetch_array($sqlSelect)) {
@@ -43,7 +32,7 @@
                 echo "<h1>No categories????</h1>";
             }
 
-            $sqlSelect = mysqli_query($dbc, "SELECT * FROM PRODUCT;");
+            $sqlSelect = query("SELECT * FROM PRODUCT;");
 
             echo "<br><h1>All Products:</h1>";
 

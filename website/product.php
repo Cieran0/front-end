@@ -19,19 +19,9 @@
         exit();
     }
 
-    $dbc = mysqli_connect("127.0.0.1", "root", "root");
+    @include_once("query.php");
 
-    if (!$dbc) {
-        die("Could not connect");
-    }
-
-    //SELECT DATABASE
-    $q = mysqli_select_db($dbc, "database");
-    if (!$q) {
-        die("ERROR SELECTING DB: " . mysqli_error($dbc));
-    }
-
-    $sqlSelect = mysqli_query($dbc, "SELECT * FROM PRODUCT WHERE ProductID = $pid;");
+    $sqlSelect = query("SELECT * FROM PRODUCT WHERE ProductID = $pid;");
 
     if (mysqli_num_rows($sqlSelect) > 0) {
         while ($row = mysqli_fetch_array($sqlSelect)) {
