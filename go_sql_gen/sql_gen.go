@@ -38,7 +38,7 @@ func main() {
 
 	input_path := "structure/structure.c"
 	output_path := "database/gen_reset.sql"
-	random_output_path := "database/gen_random_go.sql"
+	//random_output_path := "database/gen_random_go.sql"
 	generated_output_path := "database/gen_go.sql"
 
 	get_tables_and_views(input_path)
@@ -47,9 +47,9 @@ func main() {
 	
 	die_on_error(write_to_file(output_path, output))
 
-	random_output := fill_tables_randomly()
+	//random_output := fill_tables_randomly()
 
-	die_on_error(write_to_file(random_output_path, random_output))
+	//die_on_error(write_to_file(random_output_path, random_output))
 
 	fmt.Print(output)
 

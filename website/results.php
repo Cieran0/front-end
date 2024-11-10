@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="customer_dashboard.css">    
+<link rel="stylesheet" href="colours.css">
+<link rel="stylesheet" href="style.css">   
 <title>Page Title</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,27 +10,13 @@
 
 <body>
 
-<div class="topnav">
-  <div class="search-container">
-    <form action="results.php" method="GET">
-    <input type="text" name="search" placeholder="Search for products...">
-      <button type="submit">Search</button>
-    </form>
-  </div>
-  
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown</button>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div>
-</div>
+<?php include 'header.php'; ?>
+
 
 <div class="content">
     <?php
     $name = $_GET['search'];
+    $category = $_GET['category'];
 
     $dbc = mysqli_connect("127.0.0.1","root","root");
     
@@ -45,22 +32,30 @@
     	die( "ERROR SELECTING DB: " . mysqli_error($dbc) );
     }
 
-    $sqlSelect = mysqli_query($dbc, "SELECT * FROM PRODUCT WHERE Name LIKE '%$name%';");
+    $query = "SELECT * FROM PRODUCT WHERE Name LIKE '%$name%'";
+
+    if ($category != ""){
+        $query .= "AND Category = '$category'";
+    }
+
+    $query .= ";";
+
+    $sqlSelect = mysqli_query($dbc, $query);
     
     if (mysqli_num_rows($sqlSelect) > 0) {
     	echo "<table border='1'>
     			<tr>
     			<th>Name</th>
-    			<th>Price</th>
-    			<th>Stock</th>
+    			<th>BasePrice</th>
+    			<th>Discount</th>
     			</tr>";
     
     	while ($row = mysqli_fetch_array($sqlSelect))
     	{
     		echo "<tr>";
     		echo "<td>" . $row['Name'] . "</td>";
-    		echo "<td>" . $row['Price'] . "</td>";
-    		echo "<td>" . $row['Stock'] . "</td>";
+    		echo "<td>" . $row['BasePrice'] . "</td>";
+    		echo "<td>" . $row['Discount'] . "</td>";
     		echo "</tr>";		
     	}
     	echo "</table>";
@@ -71,6 +66,9 @@
 
     ?>
 </div>
+
+<?php include 'footer.php'; ?>
+
 
 </body>
 </html>

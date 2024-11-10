@@ -1,3 +1,5 @@
+@import './colours.css';
+
 html, body {
     margin: 0;
     padding: 0;
@@ -14,11 +16,13 @@ html, body {
 }
 
 .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
+    box-sizing: border-box;
+    height: 4rem;
 }
 
 #support {
@@ -30,7 +34,7 @@ html, body {
 }
 
 .logo {
-    margin-left: 2%;
+    height: 100%;
 }
 
 #login {
@@ -61,9 +65,9 @@ html, body {
 }
 
 .dropbtn {
-    background-color: #dedede;
-    color: #CA7D02;
-    border-color: #CA7D02;
+    background-color: BOX;
+    color: var(--BUTTON_COLOUR);
+    border-color: var(--BORDER_COLOUR);
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -73,7 +77,7 @@ html, body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: var(--BODY_BACKGROUND);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -81,16 +85,16 @@ html, body {
 }
 
 .dropdown-content a {
-    color: black;
+    color: var(--TEXT_COLOUR);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown-content a:hover {
-    background-color: #CA7D02;
-    color: #dedede;
-    border-color: #dedede;
+    background-color: var(--BUTTON_COLOUR);
+    color: var(--BOX_BACKGROUND);
+    border-color: var(--BOX_BACKGROUND);;
 }
 
 .dropdown:hover .dropdown-content {
@@ -98,9 +102,9 @@ html, body {
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #CA7D02;
-    color: #dedede;
-    border-color: #dedede;
+    background-color: var(--BUTTON_COLOUR);
+    color: var(--BOX_BACKGROUND);;
+    border-color: var(--BOX_BACKGROUND);;
 }
 
 .header {
@@ -108,3 +112,70 @@ html, body {
     flex-direction: row;
     align-items: center; /* Center-aligns elements like search bar and dropdown */
 }
+
+
+.content {
+    margin-left: 1%;
+    padding-bottom: 4rem;
+}
+
+.category {
+    color: #806bfa;
+    text-align: center;
+    margin: 0;
+    padding: 1%;
+    display: inline-block; /* Keeps each category item as a block */
+    width: 10%; /* Set a fixed width for the container */
+}
+
+.category .category-img {
+    width: 100%; /* Scale the image to the full width of the container */
+    height: auto; /* Automatically adjust height to maintain aspect ratio */
+    border: 5px solid var(--BORDER_COLOUR);
+    box-sizing: border-box; /* Ensures the border doesn’t affect the image width */
+    background-color: var(--BOX_BACKGROUND);
+}
+
+.category a {
+    color: var(--TEXT_COLOUR);
+    text-decoration: none;
+}
+
+.category h3 {
+    margin: 0;
+    font-size: clamp(10px, 2vw, 100px); /* Adjust values as needed */
+    text-align: center;
+    white-space: nowrap;
+}
+
+.product {
+    color: #806bfa;
+    text-align: center;
+    margin: 0;
+    padding: 1%;
+    display: inline-block; /* Keeps each product item as a block */
+    width: 10%; /* Set a fixed width for the container */
+}
+
+.product .product-img {
+    width: 100%; /* Scale the image to the full width of the container */
+    height: auto; /* Automatically adjust height to maintain aspect ratio */
+    border: 5px solid var(--BORDER_COLOUR);
+    box-sizing: border-box; /* Ensures the border doesn’t affect the image width */
+    background-color: var(--BOX_BACKGROUND);
+}
+
+.product a {
+    color: var(--TEXT_COLOUR);
+    text-decoration: none;
+}
+
+.product h3 {
+    margin: 1%;
+    padding: 1%;
+    font-size: clamp(10px, 0.5vw, 100px);
+    overflow: hidden;
+    word-wrap: break-word;
+    height: 2%;
+}
+

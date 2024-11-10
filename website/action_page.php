@@ -30,7 +30,7 @@
 	
 	$q = mysqli_select_db($dbc, "database");
 	
-    $sqlSelect = mysqli_query($dbc, "SELECT * FROM EMPLOYEE WHERE Email = '$email' AND Password = '$password'");
+    $sqlSelect = mysqli_query($dbc, "SELECT * FROM CUSTOMER WHERE Email = '$email' AND Password = '$password'");
 	
     
 	if ($row = mysqli_fetch_array($sqlSelect))

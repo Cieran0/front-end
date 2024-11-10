@@ -36,11 +36,8 @@ TABLE {
     char LastName[255] DEFAULT_NULL;
     char Password[255] DEFAULT_NULL;
     char Email[255] DEFAULT_NULL;
-    int BranchID DEFAULT_NULL;
     PRIMARY_KEY ('CustomerID')
-    FOREIGN_KEY ('BranchID', 'BRANCH')
 } typedef CUSTOMER;
-
 
 TABLE {
     int SupplierID NOT_NULL;
@@ -55,24 +52,34 @@ TABLE {
     char Name[255] DEFAULT_NULL;
     char Category[255] NOT_NULL;
     char Description[255] DEFAULT_NULL;
-    decimal Price DEFAULT_NULL;
-    int Stock DEFAULT_NULL;
-    int BranchID DEFAULT_NULL;
+    decimal BasePrice DEFAULT_NULL;
+    decimal Discount DEFAULT_NULL;
     int SupplierID DEFAULT_NULL;
     PRIMARY_KEY ('ProductID')
-    FOREIGN_KEY('BranchID', 'BRANCH')
     FOREIGN_KEY('SupplierID', 'SUPPLIER')
 } typedef PRODUCT;
 
 TABLE {
+    int StockID NOT_NULL;
+    int Stock DEFAULT_NULL;
+    int ProductID DEFAULT_NULL;
+    int BranchID DEFAULT_NULL;
+    PRIMARY_KEY ('StockID')
+    FOREIGN_KEY('ProductID', 'PRODUCT')
+    FOREIGN_KEY('BranchID', 'BRANCH')
+} typedef STOCK;
+
+TABLE {
     int OrderID NOT_NULL;
     date Date DEFAULT_NULL;
-    decimal Cost DEFAULT_NULL;
+    decimal Price DEFAULT_NULL;
     int ProductID DEFAULT_NULL;
     int CustomerID DEFAULT_NULL;
+    int BranchID DEFAULT_NULL;
     PRIMARY_KEY ('OrderID')
     FOREIGN_KEY ('ProductID', 'PRODUCT')
     FOREIGN_KEY ('CustomerID', 'CUSTOMER')
+    FOREIGN_KEY ('BranchID', 'BRANCH')
 } typedef ORDER;
 
 
@@ -107,9 +114,8 @@ VIEW PRODUCT CustomerProductView = {
     .ProductID INCLUDED
     .Name INCLUDED
     .Description INCLUDED
-    .Price INCLUDED
-    .Stock INCLUDED
-    .BranchID INCLUDED
+    .BasePrice INCLUDED
+    .Discount INCLUDED
 };
 
 VIEW SUPPLIER CustomerSupplierView = {
@@ -122,5 +128,4 @@ VIEW CUSTOMER EmployeeView = {
     .FirstName INCLUDED
     .LastName INCLUDED
     .Email INCLUDED
-    .BranchID INCLUDED
 };
