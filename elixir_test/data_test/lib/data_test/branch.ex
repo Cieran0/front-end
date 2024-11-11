@@ -6,5 +6,8 @@ defmodule DataTest.Branch do
   schema "BRANCH" do
     field :Location, :string
     field :ContactNo, :string
+    has_many :employee, DataTest.Employee, foreign_key: :BranchID
+    has_many :order, DataTest.Order, foreign_key: :BranchID
+    has_many :stock, DataTest.Stock, foreign_key: :BranchID
   end
 end

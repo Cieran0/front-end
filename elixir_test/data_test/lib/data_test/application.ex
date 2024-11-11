@@ -6,7 +6,12 @@ defmodule DataTest.Application do
     children = [
       DataTest.Repo,
     ]
-    opts = [strategy: :one_for_one, name: DataTest.Supervisor]
-    Supervisor.start_link(children, opts)
+    opts = [strategy: :one_for_one, name: DataTest.Supervisor] 
+    {:ok, pid} = Supervisor.start_link(children, opts)
+
+    employees = DataTest.Query.list_records(DataTest.Employee, [:branch])
+    IO.inspect(employees)
+
+    {:ok, pid}
   end
 end
