@@ -1,4 +1,4 @@
-defmodule DataTest.Employee do
+defmodule DataTest.Schemas.Employee do
   use Ecto.Schema
 
   @primary_key {:EmployeeID, :integer, autogenerate: false}
@@ -10,6 +10,6 @@ defmodule DataTest.Employee do
     field :Password, :string
     field :Email, :string
     field :Salary, :decimal
-    belongs_to :branch, DataTest.Branch, references: :BranchID, foreign_key: :BranchID 
+    belongs_to :branch, DataTest.Schemas.Branch, references: :BranchID, foreign_key: :BranchID 
   end
 end
