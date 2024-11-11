@@ -2,7 +2,7 @@ import Config
 
 config :data_test, DataTest.Repo,
   database: "database",
-  username: "dbennh",
+  username: "root",
   password: "houghton",
   hostname: "localhost",
   port: 3306 
