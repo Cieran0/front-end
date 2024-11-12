@@ -203,9 +203,16 @@ RECORDS STOCK stock[] = {
 RECORDS CUSTOMER customer[] = {
 {
     .CustomerID = INDEX,
-    .FirstName = "Test",
-    .LastName = "User",
-    .Email = "TU@email.com",
+    .FirstName = "Dill",
+    .LastName = "Doe",
     .Password = "password123",
+    .Email = "TU@email.com",
+},
+{
+    .CustomerID = INDEX,
+    .FirstName = "Test",
+    .LastName = "Tickles",
+    .Password = "1Love",
+    .Email = "TestTickles@coxmail.com",
 },
 };
