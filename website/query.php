@@ -5,12 +5,9 @@ $dbc = null;
 function connect_db() {
     global $dbc;
 
-    $server = "assignment-2-database.cc4fgdywaapg.us-east-1.rds.amazonaws.com";
 	$server = "127.0.0.1";
-	
 	$server_username = "root";
-
-	$server_password = "houghton";
+	$server_password = "root";
 
     if ($dbc === null) {
         $dbc = mysqli_connect($server, $server_username, $server_password);
