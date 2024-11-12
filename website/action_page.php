@@ -28,7 +28,7 @@
 		exit();
 	} 
 
-	$sqlEmployee = query("SELECT * FROM Employee WHERE Email = '$email' and Password = '$password'");
+	$sqlEmployee = query("SELECT * FROM EMPLOYEE WHERE Email = '$email' and Password = '$password'");
 	
 	if ($row = mysqli_fetch_array($sqlEmployee))
 	{
