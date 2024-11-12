@@ -5,11 +5,8 @@ $dbc = null;
 function connect_db() {
     global $dbc;
 
-    $server = "assignment-2-database.cc4fgdywaapg.us-east-1.rds.amazonaws.com";
 	$server = "127.0.0.1";
-	$server_username = "admin";
 	$server_username = "root";
-	$server_password = "assignment-2";
 	$server_password = "root";
 
     if ($dbc === null) {
