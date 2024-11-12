@@ -76,7 +76,7 @@
                     <button class="product-button" type="submit">Bookmark</button>
                     </form>
                 <?php 
-                    $action = "buy.php";
+                    $action = "confirmOrder.php";
                     if(!$_SESSION['loggedin']) {
                         $action = "login.php";
                     }
