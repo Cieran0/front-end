@@ -101,7 +101,7 @@ RECORDS PRODUCT product[] = {
 },
 {
     .ProductID = INDEX,
-    .Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA ",
+    .Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA",
     .Category = "TVs",
     .Description = "When was the last time your TV made you go 'wow'? This LG C4 OLED TV uses self-lit pixels for perfect blacks and brilliant highlights, it's pretty magical. You'll be able to pick out every star in a night sky.",
     .BasePrice = 1699.99,
