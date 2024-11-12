@@ -24,6 +24,7 @@
 		$_SESSION['loggedin'] = true;
 		$_SESSION['email'] = $email;
 		$_SESSION['password'] = $password;
+		$_SESSION['CustomerID'] = $row['CustomerID'];
 		header("Location: customer_dashboard.php");
 	} else {
 		$_SESSION['loggedin'] = false;
@@ -33,9 +34,7 @@
         exit();
     }
 	
-	
-	//CLOSE CONNECTION
-	mysqli_close($dbc);
+
 	
 ?>
 </body>
