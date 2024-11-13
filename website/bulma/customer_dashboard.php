@@ -19,22 +19,28 @@
             @include_once("query.php");
         
             $selectCategoryQuery = query("SELECT DISTINCT Category FROM PRODUCT");
-            $selectRecentOrder = query("SELECT p.Category 
-                            FROM `ORDER` o 
-                            JOIN PRODUCT p ON o.ProductID = p.ProductID 
-                            WHERE o.CustomerID = '" . $_SESSION['CustomerID'] . "' 
-                            ORDER BY o.Date DESC 
-                            LIMIT 1");
+            $selectRecentOrder = query("SELECT DISTINCT * 
+                                        FROM PRODUCT p1
+                                        JOIN `ORDER` o1 ON o1.ProductID = p1.ProductID
+                                        WHERE o1.CustomerID IN (
+                                        SELECT o2.CustomerID 
+                                        FROM `ORDER` o2 
+                                        JOIN PRODUCT p2 ON o2.ProductID = p2.ProductID 
+                                        WHERE p2.ProductID = (
+                                        SELECT p3.ProductID 
+                                        FROM `ORDER` o3 
+                                        JOIN PRODUCT p3 ON o3.ProductID = p3.ProductID
+                                        WHERE o3.CustomerID = '".$_SESSION['CustomerID']."' AND p3.ProductID != p1.ProductID
+                                        )
+                                    );");
 
             if(mysqli_num_rows($selectRecentOrder)> 0) {
               echo "    <section class=\"section\">
       <p class=\"title\">Your Recommended:</p>
       <div class=\"container\">
       <div class=\"columns is-multiline\">";
-              $recentOrder = mysqli_fetch_array($selectRecentOrder);
-              $category = $recentOrder['Category'];
-              $recommendedResults = query("SELECT * FROM PRODUCT WHERE Category = '$category'");
-              while ($row = mysqli_fetch_array($recommendedResults)) {
+
+              while ($row =mysqli_fetch_array($selectRecentOrder)) {
                 $pid = $row["ProductID"];
                 $name = $row["Name"];
                 $price = $row["BasePrice"];

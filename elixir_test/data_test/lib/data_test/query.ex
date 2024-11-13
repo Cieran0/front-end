@@ -7,4 +7,8 @@ defmodule DataTest.Query do
     |> Repo.all()
     |> Repo.preload(preload)
   end
+
+  def insert(table) do
+    
+  end
 end
