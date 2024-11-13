@@ -49,5 +49,3 @@
 	// mysqli_close($dbc);
 	
 ?>
-</body>
-</html>

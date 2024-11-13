@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <?php 
     include 'query.php';
-    $dbc = connect_db();
 ?>
 <html>
 <head>
