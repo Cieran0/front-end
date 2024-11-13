@@ -19,6 +19,8 @@
             @include_once("query.php");
         
             $selectCategoryQuery = query("SELECT DISTINCT Category FROM PRODUCT");
+
+            //DONT TOUCH THIS PLEASE - ITS MAGIC
             $selectRecentOrder = query("SELECT DISTINCT * 
                                         FROM PRODUCT p1
                                         JOIN `ORDER` o1 ON o1.ProductID = p1.ProductID
