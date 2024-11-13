@@ -1,181 +1,28 @@
-@import './colours.css';
 
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
+html, body { height: 100vh; margin: 0;   display: flex;
+  flex-direction: column;}
+/* Carousel container */
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem; /* space between items */
+  padding: 1rem;
 }
-
-.header {
-    display: flex;
-    top: 0px;
-    width: 100%;
-    right: 0%;
-    height: 3rem;
-    margin: 0%;
+.carousel-container::-webkit-scrollbar {
+  display: none; /* hides scrollbar for WebKit browsers */
+}
+.carousel-item {
+  height: 20%;
+  width: 20%;
+  flex: 0 0 auto; /* Prevent items from shrinking */
 }
 
 .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-    height: 4rem;
+  margin-top: auto;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  bottom: 0;
 }
-
-#support {
-    margin-left: 40%;
-}
-
-#info {
-    margin-left: 2%;
-}
-
-.logo {
-    height: 100%;
-}
-
-#login {
-    margin-right: 2%;
-}
-
-.searchBar {
-    margin: auto;
-    display: flex; /* Ensures items inside are aligned flexibly */
-    align-items: center;
-}
-
-#searchButton {
-    height: 2rem;
-}
-
-#searchBar {
-    width: 50rem;
-    height: 2rem;
-}
-
-
-.dropdown {
-    margin-right: 2%;
-    height: 2rem;
-    display: flex; /* Ensures dropbtn inherits height from dropdown */
-    align-items: center;
-}
-
-.dropbtn {
-    background-color: BOX;
-    color: var(--BUTTON_COLOUR);
-    border-color: var(--BORDER_COLOUR);
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    /* Remove height from here to let it match the container's height */
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--BODY_BACKGROUND);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    top: 2rem;
-}
-
-.dropdown-content a {
-    color: var(--TEXT_COLOUR);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: var(--BUTTON_COLOUR);
-    color: var(--BOX_BACKGROUND);
-    border-color: var(--BOX_BACKGROUND);;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: var(--BUTTON_COLOUR);
-    color: var(--BOX_BACKGROUND);;
-    border-color: var(--BOX_BACKGROUND);;
-}
-
-.header {
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* Center-aligns elements like search bar and dropdown */
-}
-
-
-.content {
-    margin-left: 1%;
-    padding-bottom: 4rem;
-}
-
-.category {
-    color: #806bfa;
-    text-align: center;
-    margin: 0;
-    padding: 1%;
-    display: inline-block; /* Keeps each category item as a block */
-    width: 10%; /* Set a fixed width for the container */
-}
-
-.category .category-img {
-    width: 100%; /* Scale the image to the full width of the container */
-    height: auto; /* Automatically adjust height to maintain aspect ratio */
-    border: 5px solid var(--BORDER_COLOUR);
-    box-sizing: border-box; /* Ensures the border doesn’t affect the image width */
-    background-color: var(--BOX_BACKGROUND);
-}
-
-.category a {
-    color: var(--TEXT_COLOUR);
-    text-decoration: none;
-}
-
-.category h3 {
-    margin: 0;
-    font-size: clamp(10px, 2vw, 100px); /* Adjust values as needed */
-    text-align: center;
-    white-space: nowrap;
-}
-
-.product {
-    color: #806bfa;
-    text-align: center;
-    margin: 0;
-    padding: 1%;
-    display: inline-block; /* Keeps each product item as a block */
-    width: 10%; /* Set a fixed width for the container */
-}
-
-.product .product-img {
-    width: 100%; /* Scale the image to the full width of the container */
-    height: auto; /* Automatically adjust height to maintain aspect ratio */
-    border: 5px solid var(--BORDER_COLOUR);
-    box-sizing: border-box; /* Ensures the border doesn’t affect the image width */
-    background-color: var(--BOX_BACKGROUND);
-}
-
-.product a {
-    color: var(--TEXT_COLOUR);
-    text-decoration: none;
-}
-
-.product h3 {
-    margin: 1%;
-    padding: 1%;
-    font-size: clamp(10px, 0.5vw, 100px);
-    overflow: hidden;
-    word-wrap: break-word;
-    height: 2%;
-}
-

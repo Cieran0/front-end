@@ -1,25 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tech Supply</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
 
-<head>
-    <?php
+        .product-img {
+            max-width: 30vw;
+        }
 
-    session_start();
+        .bottom-col {
+            margin-top: 40%;
+        }
 
+        .split-col .button {
+            width: 100%;
+        }
 
-    if (!isset($_GET["ProductID"])) {
-        header("Location: index.php");
-        exit();
+    </style>
+  </head>
+<body>
+
+  <?php @include_once 'header.php' ?>
+
+  <?php
+    $pid = $_GET['ProductID'];
+
+    if(!isset($_GET['ProductID']) || $pid == "") {
+      header("Location: index.php");
+      exit();
     }
+    $logged_in = $_SESSION['loggedin'];
+    $none = "";
+    $title = "";
 
-    $pid = $_GET["ProductID"];
 
-    if ($pid == "") {
-        header("Location: index.php");
-        exit();
-    }
-
-    @include_once("query.php");
+    @include_once ("query.php");
 
     $sqlSelect = query("SELECT * FROM PRODUCT WHERE ProductID = $pid;");
 
@@ -35,65 +55,99 @@
         exit();
     }
 
-    echo "<title>Tech Supply: " . $name . "</title>";
-
     ?>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="colours.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="product.css">
-</head>
 
-<body>
-
-    <?php include 'header.php'; ?>
-
-    <div class="content">
-    <div class="content-split content-left">
-
-        <img src="product.png" class="product-main-view">
-    </div>
-    <div class="content-split content-right">
-        <div class="vertical vertical-split">
-            <div class="top">
-                <?php 
-                echo "<h1 class=\"product-title\">$name</h1>";
-                echo "<h2 class=\"product-price\">£$price</h2>";
-                echo "<h3 class=\"product-price\">Catergory: $category</h3>";
-                echo "<h4 class=\"product-price\">$desc</h4>";
-                ?>
-            </div>
-            <div class="bottom vertical-split">
-                <?php
-                    $action = "bookmark.php";
-                    if(!$_SESSION['loggedin']) {
-                        $action = "login.php";
-                    }
-                    echo "<form action=\"$action\" method=\"post\">";
-                    echo "<input type=\"text\" name=\"ProductID\" value=\"$pid\" style=\"display: none;\">";
-                    ?>
-                    <button class="product-button" type="submit">Bookmark</button>
-                    </form>
-                <?php 
-
-                    $action = "confirmOrder.php";
-                    
-                   if(!$_SESSION['loggedin']) {
-                        $action = "login.php";
-                    }
-                    echo "<form action=\"$action\" method=\"post\">";
-                    echo "<input type=\"text\" name=\"ProductID\" value=\"$pid\" style=\"display: none;\">";
-                    ?>
-                    <button class="product-button" type="submit">Buy</button>
-                    </form>
-            </div>
+    <section class="section">
+        <div class="has-text-centered">
+        <?php echo "<p class=\"title\">$title</p>";?>
         </div>
+    </section>
+
+    <section class="section">
+    <div class="columns is-multiline">
+        <div class="column is-one-quarter is-one-quarter-mobile is-one-quarter-tablet is-one-quarter-desktop">
+        </div>
+        
+        <div class="column is-half is-one-mobile is-half-tablet is-half-desktop">
+            <?php
+                    
+                    echo "<div class=\"box\">
+                    <article class=\"media\">
+                        <div class=\"media-left\">
+                            <figure class=\"image\">
+                                <img src=\"product.png\" class=\"product-img\" alt=\"Image\" />
+                            </figure>
+                        </div>
+                        <div class=\"media-content\">
+                            <div class=\"content\">
+                                <p>
+                                    <h1>$name</h1> 
+                                    <h3>£$price</h3>
+                                    <strong>Category: $category</strong>
+                                    <br>
+                                    $desc
+                                </p>
+                            </div>
+
+                            <div class=\"content\">";
+                            
+                            ?>
+                                <div class="columns bottom-col">
+                                <div class="column split-col">
+                            <?php
+                                $action = "bookmark.php";
+                                if(!$_SESSION['loggedin']) {
+                                    $action = "login.php";
+                                }
+                                echo "<form action=\"$action\" method=\"post\">";
+                                echo "<input type=\"text\" name=\"ProductID\" value=\"$pid\" style=\"display: none;\">";
+                                ?>
+                                <button class="button" type="submit">Bookmark</button>
+                                </form>
+                                </div>
+                                <div class="column split-col">
+                            <?php     
+                                $action = "confirm_order.php";
+                                
+                                if(!$_SESSION['loggedin']) {
+                                     $action = "login.php";
+                                }
+                                echo "<form action=\"$action\" method=\"post\">";
+                                echo "<input type=\"text\" name=\"ProductID\" value=\"$pid\" style=\"display: none;\">";
+                                ?>
+                                <button class="button" type="submit">Buy</button>
+                                </form>
+                                </div>
+                                </div>
+                            <?php
+                            echo "</div>
+                        </div>
+                    </article>
+                </div>
+            <br>";
+
+            
+            ?>
+        </div>
+        
+        <div class="column is-one-quarter is-one-quarter-mobile is-one-quarter-tablet is-one-quarter-desktop">
+        </div> <!-- Close this column div here -->
     </div>
-</div>
+</section>
 
-    <?php include 'footer.php'; ?>
 
-</body>
+    
+    <footer class="footer">
+    <div class="content has-text-centered">
+    <p id="support">
+        Customer Support:
+    </p>
+    <p id="info">
+        email: email@email.com<br> 
+        telephone: 4749479474
+    </p>
+    </div>
+    </footer>
 
+  </body>
 </html>

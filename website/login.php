@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="colours.css">
-  <link rel="stylesheet" href="login.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in page</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    
-    
-<form action="/action_page.php" method="post">
 
-  <div class="container">
-    <label for="uname"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+<section class="section">
+<div class="box">
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
-        
-    <button type="submit">Login</button>
-    <div class="signup-text">
-    <a href="signup.php">No account? Sign Up</a>
-    </div>
+<form action="login_action.php" method="post">
+
+<div class="field">
+  <label class="label">Email</label>
+  <div class="control">
+    <input class="input" name="email" type="email" placeholder="Email..." value="" required>
   </div>
+</div>
 
+<div class="field">
+  <label class="label">Password</label>
+  <div class="control">
+    <input class="input" name="password" type="password" placeholder="Password..." value="" required>
+  </div>
+</div>
 
+<div class="field is-grouped">
+  <div class="control">
+    <button class="button is-link" type="submit">Login</button>
+  </div>
+</div>
 </form>
-
+</div>
+</section>
 </body>
 </html>

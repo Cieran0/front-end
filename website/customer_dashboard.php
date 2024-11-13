@@ -1,73 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Dashboard</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="colours.css">
-<link rel="stylesheet" href="style.css">
-</head>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tech Supply</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 
-<?php
-session_start();
-if(!$_SESSION['loggedin']) {
-    header("Location: login.php");
-    exit();
-}
-?>
-
+  </head>
 <body>
 
-<?php include 'header.php'; ?>
-
-<div class="content" style="display:flex;flex-direction: column;">
-    <h1>Customer Dashboard</h1>
-        <?php
+  <?php @include_once 'header.php' ?>
+        <?php 
             @include_once("query.php");
 
+            if (isset($_SESSION['EmployeeID'])) {
+              header('Location: employee_view.php');
+              exit();
+            }
+        
             $selectCategoryQuery = query("SELECT DISTINCT Category FROM PRODUCT");
-            $selectRecentOrder = query("SELECT p.Category 
-                            FROM `ORDER` o 
-                            JOIN PRODUCT p ON o.ProductID = p.ProductID 
-                            WHERE o.CustomerID = '" . $_SESSION['CustomerID'] . "' 
-                            ORDER BY o.Date DESC 
-                            LIMIT 1");
-            if(mysqli_num_rows($selectRecentOrder)==0){
-                echo "<h1>No Orders Placed</h1>";
-            }else{
-                $recentOrder = mysqli_fetch_array($selectRecentOrder);
-                $category = $recentOrder['Category'];
-                $recommendedResults = query("SELECT * FROM PRODUCT WHERE Category = '$category'");
-                echo "<h1>Your Recommended</h1>";
-                echo "<div style=\"display:flex;flex-direction:row;\">"; 
-                while($row = mysqli_fetch_array($recommendedResults)){
-                        echo "<div class=\"category\">";
-                        echo "<img class=\"category-img\" src=\"product.png\"><br>";
-                        echo "<h6>" . $row['Name'] . "</h6>";
-                        echo "</div>";
-                }
-                 echo "</div>";
-                }
 
-            if(mysqli_num_rows($selectCategoryQuery)>0){
-            echo "<h1>Categories</h1>";
-            echo "<div style=\"display:flex;flex-direction:row;\">"; 
-                while($row = mysqli_fetch_array($selectCategoryQuery)){
-                    echo "<div class=\"category\">";
-                    echo "<a href=\"results.php?category=". $row['Category']."\">";
-                    echo "<img class=\"category-img\" src=\"product.png\"><br>";
-                    echo "<h3>" . $row['Category'] . "</h3>";
-                    echo "</a>";
-                    echo "</div>";
+            //DONT TOUCH THIS PLEASE - ITS MAGIC
+            $selectRecentOrder = query("SELECT DISTINCT * 
+                                        FROM PRODUCT p1
+                                        JOIN `ORDER` o1 ON o1.ProductID = p1.ProductID
+                                        WHERE o1.CustomerID IN (
+                                        SELECT o2.CustomerID 
+                                        FROM `ORDER` o2 
+                                        JOIN PRODUCT p2 ON o2.ProductID = p2.ProductID 
+                                        WHERE p2.ProductID = (
+                                        SELECT p3.ProductID 
+                                        FROM `ORDER` o3 
+                                        JOIN PRODUCT p3 ON o3.ProductID = p3.ProductID
+                                        WHERE o3.CustomerID = '".$_SESSION['CustomerID']."' AND p3.ProductID != p1.ProductID
+                                        )
+                                    );");
+
+            if(mysqli_num_rows($selectRecentOrder)> 0) {
+              echo "    <section class=\"section\">
+      <p class=\"title\">Your Recommended:</p>
+      <div class=\"container\">
+      <div class=\"columns is-multiline\">";
+
+              while ($row =mysqli_fetch_array($selectRecentOrder)) {
+                $pid = $row["ProductID"];
+                $name = $row["Name"];
+                $price = $row["BasePrice"];
+                $img = "product.png";
+
+                echo"<div class=\"column is-one-fifth is-third-mobile is-one-third-tablet is-one-fifth-desktop\">
+        <div class=\"card\">
+          <div class=\"card-image\">
+            <figure class=\"image is-1by1\">
+              <a href=\"product.php?ProductID=". $pid ."\">
+              <img src=\"$img\" alt=\"Placeholder image\">
+              </a>
+            </figure>
+          </div>
+          <div class=\"card-content\">
+            <div class=\"content\">
+              <p><strong>$name</strong></p>
+              <p>$price</p>
+            </div>
+          </div>
+        </div>
+      </div>";
             }
-           echo "</div>";  
-            }else{
-                echo "<h1>No Categories????????</h1>";
+
+            echo "        </div>
+        </div>
+    </section>";
             }
-        ?> 
-</div>
 
-<?php include 'footer.php'; ?>
 
-</body>
+        ?>
+        <!-- Add more carousel items here -->
+
+
+    <section class="section">
+      <p class="title">Categories:</p>
+      <div class="container">
+        <div class="columns is-multiline">
+          <!-- Repeat for more cards -->
+          <?php
+
+            if (mysqli_num_rows($selectCategoryQuery) > 0) {
+              while ($row = mysqli_fetch_array($selectCategoryQuery)) {
+              
+                  $category = $row['Category'];
+                  $img = "product.png";
+              
+                  echo"<div class=\"column is-one-fifth is-third-mobile is-one-third-tablet is-one-fifth-desktop\">
+        <div class=\"card\">
+          <div class=\"card-image\">
+            <figure class=\"image is-1by1\">
+              <a href=\"results.php?category=". $category ."\">
+              <img src=\"$img\" alt=\"Placeholder image\">
+              </a>
+            </figure>
+          </div>
+          <div class=\"card-content\">
+            <div class=\"content\">
+              <p><strong>$category</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>";
+              }
+            } else {
+              echo "<h1>No categories????</h1>";
+            }
+
+          
+          ?>
+          <!-- Repeat for more cards -->
+        </div>
+      </div>
+    </section>
+
+    
+    <footer class="footer">
+    <div class="content has-text-centered">
+    <p id="support">
+        Customer Support:
+    </p>
+    <p id="info">
+        email: email@email.com<br> 
+        telephone: 4749479474
+    </p>
+    </div>
+    </footer>
+
+  </body>
 </html>
