@@ -21,9 +21,8 @@ connect_db();
 
 $sql = query("UPDATE `ORDER` SET `Status` = 'Fulfilled' WHERE `OrderID` = $orderID;");
 
-if(true) {
+if($sql) {
     echo json_encode(['success' => true]);
-
 } else {
     echo json_encode(['success' => false, 'error' => mysqli_error($dbc)]);
 }
