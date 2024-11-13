@@ -23,20 +23,26 @@
             $selectCategoryQuery = query("SELECT DISTINCT Category FROM PRODUCT");
 
             //DONT TOUCH THIS PLEASE - ITS MAGIC
-            $selectRecentOrder = query("SELECT DISTINCT * 
-                                        FROM PRODUCT p1
-                                        JOIN `ORDER` o1 ON o1.ProductID = p1.ProductID
-                                        WHERE o1.CustomerID IN (
-                                        SELECT o2.CustomerID 
-                                        FROM `ORDER` o2 
-                                        JOIN PRODUCT p2 ON o2.ProductID = p2.ProductID 
-                                        WHERE p2.ProductID = (
-                                        SELECT p3.ProductID 
-                                        FROM `ORDER` o3 
-                                        JOIN PRODUCT p3 ON o3.ProductID = p3.ProductID
-                                        WHERE o3.CustomerID = '".$_SESSION['CustomerID']."' AND p3.ProductID != p1.ProductID
-                                        )
-                                    );");
+        $selectRecentOrder = query("
+SELECT DISTINCT p1.* 
+FROM PRODUCT p1
+JOIN `ORDER` o1 ON o1.ProductID = p1.ProductID
+WHERE o1.CustomerID IN (
+    SELECT o2.CustomerID
+    FROM `ORDER` o2
+    WHERE o2.ProductID IN (
+        SELECT ProductID 
+        FROM `ORDER`
+        WHERE CustomerID = '".$_SESSION['CustomerID']."'
+    )
+)
+AND p1.ProductID NOT IN (
+    SELECT ProductID 
+    FROM `ORDER`
+    WHERE CustomerID = '".$_SESSION['CustomerID']."'
+);"
+        
+        );
 
             if(mysqli_num_rows($selectRecentOrder)> 0) {
               echo "    <section class=\"section\">
