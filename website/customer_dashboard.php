@@ -78,7 +78,11 @@ AND p1.ProductID NOT IN (
             echo "        </div>
         </div>
     </section>";
-            }
+        }else{
+            echo "<section class=\"section\"><h1 class=\"title\">
+                        No Recommendations.
+                </h1></section>";
+        }
 
 
         ?>
