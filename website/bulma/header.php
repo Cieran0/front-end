@@ -52,8 +52,8 @@
                         <a class=\"navbar-item\" href=\"customer_dashboard.php\">
                             Dashboard
                         </a>
-                        <a class=\"navbar-item\">
-                            IDK
+                        <a class=\"navbar-item\" href=\"view_bookmarks.php\">
+                            View Bookmarked
                         </a>
                         <hr class=\"navbar-divider\">
                         <a class=\"navbar-item\" href=\"logout.php\">
