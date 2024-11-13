@@ -22,7 +22,7 @@
         header("Location: order_failed.php");
         exit();
 	} else {
-        $sqlSelect = query("INSERT INTO `ORDER` (OrderID, Date, Price, ProductID, CustomerID, BranchID, Status) SELECT COUNT(*), NOW(), (SELECT BasePrice FROM `PRODUCT` WHERE ProductID = $product), $product, $customer , 0, 'Unfufilled' FROM `ORDER`; ");
+        $sqlSelect = query("INSERT INTO `ORDER` (OrderID, Date, Price, ProductID, CustomerID, BranchID, `Status`) SELECT COUNT(*), NOW(), (SELECT BasePrice FROM `PRODUCT` WHERE ProductID = $product), $product, $customer , 0, 'Unfufilled' FROM `ORDER`; ");
         header("Location: customer_dashboard.php");
         exit();
     }
