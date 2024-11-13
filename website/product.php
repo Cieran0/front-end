@@ -96,13 +96,33 @@
                                 <div class="column split-col">
                             <?php
                                 $action = "bookmark.php";
+                                $bmarkVal = query("SELECT * FROM Bookmarks WHERE CustomerID = ".$_SESSION['CustomerID'].";");
+
+                                if(mysqli_num_rows($bmarkVal) > 0) {
+                                    $action = "un_bookmark.php";    
+                                }
+
                                 if(!$_SESSION['loggedin']) {
                                     $action = "login.php";
                                 }
                                 echo "<form action=\"$action\" method=\"post\">";
                                 echo "<input type=\"text\" name=\"ProductID\" value=\"$pid\" style=\"display: none;\">";
+
+
+
                                 ?>
-                                <button class="button" type="submit">Bookmark</button>
+                                
+                                <button class="button" type="submit">
+                                    <?php
+                                    if($action == "un_bookmark.php"){
+                                        echo "Remove bookmark";
+                                    }
+                                    else{
+                                        echo "Bookmark";
+                                    }
+                                     
+                                    ?>
+                                </button>
                                 </form>
                                 </div>
                                 <div class="column split-col">

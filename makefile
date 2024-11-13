@@ -14,7 +14,7 @@ go:
 
 gen_reset: go
 	./$(EXECUTABLE)
-	cat database/bookmarks_view.sql >> gen_reset.sql
+	cat database/bookmarks_view.sql >> database/gen_reset.sql
 
 prototype:
 	$(MAKE) -C raylib_prototype all
