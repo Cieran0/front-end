@@ -2,6 +2,7 @@
 #define NOT_NULL
 #define PRIMARY_KEY(key)
 #define FOREIGN_KEY(key, table)
+#define ENUM(...) const char*
 #define TABLE struct
 #define VIEW
 #define date const char*
@@ -76,6 +77,7 @@ TABLE {
     int ProductID DEFAULT_NULL;
     int CustomerID DEFAULT_NULL;
     int BranchID DEFAULT_NULL;
+    ENUM('Unfufilled','Fulfilled') Status DEFAULT_NULL;
     PRIMARY_KEY ('OrderID')
     FOREIGN_KEY ('ProductID', 'PRODUCT')
     FOREIGN_KEY ('CustomerID', 'CUSTOMER')

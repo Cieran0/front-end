@@ -5,8 +5,10 @@
 ?>
 <html>
 <head>
-    <link rel="stylesheet" href="./main.css">
     <title>Employee View - Tech Supply</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <script>
         function updateDatabase(orderID) {
             // Send an AJAX request to `action.php`
@@ -18,9 +20,7 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    alert('Database updated successfully!');
                 location.reload();
-
                 } else {
                     alert('Failed to update database.');
                 }
@@ -31,15 +31,15 @@
         }
     </script>
 </head>
-<body>
-    <header>
-    <?php 
-    include './header.php';
-    ?>
-    </header>
 
+
+
+    <body>
+        <?php @include_once 'header.php' ?>
+
+    <section class="section">
     <div class="fulfill-orders">
-        <h1>Fulfill Orders</h1>
+        <h1 class="title">Fulfill Orders</h1>
         <div class="order-grid">
             <?php
             $query = "SELECT OrderID, ProductID, Price,`Status` FROM `ORDER` WHERE `Status` = 'Unfufilled'";
@@ -55,14 +55,14 @@
                 } else {
                     foreach ($unfulfilledOrders as $order) {
                         ?>
-                        <div class="order-card">
+                        <div class="order-card box">
                             <h2>Order #<?php echo htmlspecialchars($order['OrderID']); ?></h2>
                             <p>Product ID: <?php echo htmlspecialchars($order['ProductID']); ?></p>
                             <p>Price: £<?php echo htmlspecialchars($order['Price']); ?></p>
                             <div class="final-row">
-                                <button class="img-button" onclick="<?php $orderID = $order['OrderID']; echo "updateDatabase($orderID)"; ?>">
-                                    <img src="./img/tick.png" alt="Mark as Fulfilled" style="height: 25px;">
-                                </button>
+                            <button class="img-button button" onclick="updateDatabase(<?php echo htmlspecialchars($order['OrderID']); ?>)">
+                                <img src="./img/tick.png" alt="Mark as Fulfilled" style="height: 25px;">
+                            </button>
                             </div>
                         </div>
                         <?php
@@ -72,13 +72,16 @@
             ?>
         </div>
     </div>
+    </section>
+
+    <section class="section">
 
     <div class="contact-employees">
-        <h1>Contact Employees</h1>
-        <form method="POST" action="">
+        <h1 class="title">Contact Employees</h1>
+        <form method="POST" action="" class="box">
             <?php $searchValue = $_POST['employeeSearch'] ?? ''; ?>
-            <input type="text" name="employeeSearch" placeholder="Search employees..." class="search-employees" value="<?php echo htmlspecialchars($searchValue); ?>">
-            <button type="submit" class="search-button">Search</button>
+            <input class="input" type="text" name="employeeSearch" placeholder="Search employees..." class="search-employees" value="<?php echo htmlspecialchars($searchValue); ?>">
+            <button type="submit" class="search-button button">Search</button>
         </form>
 
         <div class="employee-list">
@@ -103,11 +106,13 @@
                 } else {
                     foreach ($employees as $employee) {
                         ?>
+                        <div class="box">
                         <div class="employee-card">
                             <h2><?php echo htmlspecialchars($employee['Name']); ?></h2>
                             <p>Role: <?php echo htmlspecialchars($employee['Role']); ?></p>
                             <p>Email: <?php echo htmlspecialchars($employee['Email']); ?></p>
-                            <button class="contact-button">Contact</button>
+                            <button class="contact-button button">Contact</button>
+                        </div>
                         </div>
                         <?php
                     }
@@ -116,6 +121,7 @@
             ?>
         </div>
     </div>
+    </section>
 </body>
 </html>
 

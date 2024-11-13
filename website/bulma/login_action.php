@@ -29,7 +29,7 @@
 		$_SESSION['FirstName'] = $row['FirstName'];
 		$_SESSION['EmployeeID'] = $row['EmployeeID'];
 
-		header('Location: EmployeeView.php');
+		header('Location: employee_view.php');
 		exit();
 	} 
 
