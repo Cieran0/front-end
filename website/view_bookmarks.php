@@ -22,7 +22,7 @@
 
   if(mysqli_num_rows($sqlView)> 0) {
     echo "    <section class=\"section\">
-<p class=\"title\">Your Recommended:</p>
+<p class=\"title\">Your Bookmarks:</p>
 <div class=\"container\">
 <div class=\"columns is-multiline\">";
 
@@ -49,12 +49,17 @@
 </div>
 </div>
 </div>";
-  }
+        }
+        
 
   echo "        </div>
   </div>
 </section>";
-}
+} else{
+    echo "<section class=\"section\"><h1 class=\"title\">
+                You have no bookmarks.
+        </h1></section>";
+    }
 
   ?>
     
