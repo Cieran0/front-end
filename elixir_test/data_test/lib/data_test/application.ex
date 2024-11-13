@@ -9,8 +9,7 @@ defmodule DataTest.Application do
     opts = [strategy: :one_for_one, name: DataTest.Supervisor] 
     {:ok, pid} = Supervisor.start_link(children, opts)
 
-    employees = DataTest.Query.list_records(DataTest.Schemas.Employee, [:branch])
-    IO.inspect(employees)
+    DataTest.do_things()
 
     {:ok, pid}
   end

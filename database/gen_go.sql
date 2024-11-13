@@ -156,7 +156,7 @@ INSERT INTO `database`.`PRODUCT`
 `SupplierID`)
 VALUES
 (1,
-"LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA ",
+"LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA",
 "TVs",
 "When was the last time your TV made you go 'wow'? This LG C4 OLED TV uses self-lit pixels for perfect blacks and brilliant highlights, it's pretty magical. You'll be able to pick out every star in a night sky.",
 1699.99,
@@ -320,11 +320,23 @@ INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
 `LastName`,
-`Email`,
-`Password`)
+`Password`,
+`Email`)
 VALUES
 (0,
+"Dill",
+"Doe",
+"password123",
+"TU@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(1,
 "Test",
-"User",
-"TU@email.com",
-"password123");
+"Tickles",
+"1Love",
+"TestTickles@coxmail.com");

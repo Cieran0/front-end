@@ -1,14 +1,4 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>Connection Test</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-</head>
-
-<body>
 <?php
-
-
 
 	session_start();
     $email = $_POST['email'];
@@ -24,6 +14,7 @@
 		$_SESSION['email'] = $email;
 		$_SESSION['password'] = $password;
 		$_SESSION['CustomerID'] = $row['CustomerID'];
+		$_SESSION['FirstName'] = $row['FirstName'];
 		header("Location: customer_dashboard.php");
 		exit();
 	} 
@@ -35,6 +26,9 @@
 		$_SESSION['loggedin'] = true;
 		$_SESSION['email'] = $email;
 		$_SESSION['password'] = $password;
+		$_SESSION['FirstName'] = $row['FirstName'];
+		$_SESSION['EmployeeID'] = $row['EmployeeID'];
+
 		header('Location: EmployeeView.php');
 		exit();
 	} 
@@ -44,10 +38,3 @@
 	$_SESSION['password'] = "";
 	header("Location: login_failed.html");
 	exit();
-	
-	//CLOSE CONNECTION
-	// mysqli_close($dbc);
-	
-?>
-</body>
-</html>

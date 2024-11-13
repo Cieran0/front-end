@@ -37,19 +37,6 @@ span.psw {
   padding-top: 16px;
 }
 
-.signup-text {
-  width: 100%;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.signup-text a {
-  text-align: center;
-  width: auto;
-  display: inline-block;
-  color: var(--TEXT_COLOUR);
-}
-
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {
