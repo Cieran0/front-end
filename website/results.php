@@ -39,11 +39,21 @@
 
     @include_once ("query.php");
 
-    $query = "SELECT * FROM PRODUCT WHERE Name LIKE '%$name%'";
+    $splitString = explode(' ', $name);
 
-    if ($category != ""){
-        $query .= "AND Category = '$category'";
+    $query = "SELECT * FROM PRODUCT WHERE Name LIKE '%" . $splitString[0] . "%'";
+
+    for ($i = 1; $i < count($splitString); $i++) {
+        $query .= " AND Name LIKE '%" . $splitString[$i] . "%'";
     }
+    
+    if (!empty($category)) {
+        $query .= " AND Category = '$category'";
+    }
+    
+    $query .= ";";
+    
+
 
     $query .= ";";
 
