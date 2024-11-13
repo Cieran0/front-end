@@ -12,11 +12,13 @@
 <body>
 
   <?php @include_once 'header.php' ?>
-
-
-
         <?php 
             @include_once("query.php");
+
+            if (isset($_SESSION['EmployeeID'])) {
+              header('Location: employee_view.php');
+              exit();
+            }
         
             $selectCategoryQuery = query("SELECT DISTINCT Category FROM PRODUCT");
             $selectRecentOrder = query("SELECT p.Category 
