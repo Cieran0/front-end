@@ -336,7 +336,83 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (1,
+"Dill2",
+"Doe",
+"password123",
+"TU2@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(2,
 "Test",
 "Tickles",
 "1Love",
 "TestTickles@coxmail.com");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(0,
+"2024-11-13",
+17.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Automatic Dog Feeder" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.FirstName = "Dill" LIMIT 1),
+0,
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(1,
+"2024-11-13",
+17.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Automatic Dog Feeder" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.FirstName = "Dill2" LIMIT 1),
+0,
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(2,
+"2024-11-13",
+17.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "PS5 Controller" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.FirstName = "Dill2" LIMIT 1),
+0,
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(3,
+"2024-11-13",
+17.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "SAMSUNG S90D 65 inch OLED 4K HDR Smart TV 2024 - QE65S90D" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.FirstName = "Dill2" LIMIT 1),
+0,
+"Fulfilled");
