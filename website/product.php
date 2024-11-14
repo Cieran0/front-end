@@ -96,7 +96,7 @@
                                 <div class="column split-col">
                             <?php
                                 $action = "bookmark.php";
-                                $bmarkVal = query("SELECT * FROM Bookmarks WHERE CustomerID = ".$_SESSION['CustomerID'].";");
+                                $bmarkVal = query("SELECT * FROM Bookmarks WHERE CustomerID = ".$_SESSION['CustomerID']." AND ProductID = $pid;");
 
                                 if(mysqli_num_rows($bmarkVal) > 0) {
                                     $action = "un_bookmark.php";    
