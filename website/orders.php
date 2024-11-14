@@ -29,7 +29,6 @@ WHERE `ORDER`.CustomerID = '".$_SESSION['CustomerID']."';
 if(mysqli_num_rows($selectOrders)>0) {
     echo "<section class=\"section\">
     <h1 class=\"title\">Your Orders:</h1>
-        <div class=\"container\">
     <div class=\"columns is-multiline\">";
 
     while($row = mysqli_fetch_array($selectOrderedProducts)){

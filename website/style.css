@@ -26,3 +26,8 @@ html, body { height: 100vh; margin: 0;   display: flex;
   width: 100%;
   bottom: 0;
 }
+
+.has-bg-img {
+  background: url('./header.jpg') center;
+  background-size: cover;
+}
