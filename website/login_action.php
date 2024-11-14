@@ -28,6 +28,7 @@
 		$_SESSION['password'] = $password;
 		$_SESSION['FirstName'] = $row['FirstName'];
 		$_SESSION['EmployeeID'] = $row['EmployeeID'];
+		$_SESSION['BranchID'] = $row['BranchID'];
 
 		header('Location: employee_view.php');
 		exit();

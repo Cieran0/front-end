@@ -21,7 +21,7 @@
                 </div>
               </form>
           </div>
-    
+      
           <!-- Right side buttons -->
           <?php 
         session_start();
