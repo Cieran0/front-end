@@ -18,20 +18,47 @@ if(isset($_SESSION['EmployeeID'])) {
     exit();
 }
 
-$selectOrders = query("SELECT * FROM ORDERS WHERE CustomerID = '".$_SESSION['CustomerID']."');");
+$selectOrders = query("SELECT * FROM `ORDER` WHERE CustomerID = '".$_SESSION['CustomerID']."';");
+$selectOrderedProducts = query("
+SELECT *
+FROM `ORDER`
+JOIN PRODUCT ON PRODUCT.ProductID = `ORDER`.ProductID
+WHERE `ORDER`.CustomerID = '".$_SESSION['CustomerID']."';
+");
 
 if(mysqli_num_rows($selectOrders)>0) {
     echo "<section class=\"section\">
-    <p class=\"title\">Your Orders:</p>
+    <h1 class=\"title\">Your Orders:</h1>
         <div class=\"container\">
     <div class=\"colums is-multiline\">";
 
+    while($row = mysqli_fetch_array($selectOrderedProducts)){
+        $img = "product.png";
+        $name = $row['Name'];
+        $date = $row['Date'];
+        $price = $row['Price'];
 
+echo "<div class=\"column is-one-fifth is-third-mobile is-one-third-tablet is-one-fifth-desktop\">
+        <div class=\"card\">
+          <div class=\"card-image\">
+            <figure class=\"image is-1by1\">
+                <img src=\"$img\" alt=\"Placeholder Image\">
+            </figure>
+        </div>
+<div class=\"card-content\">
+    <div class=\"content\">
+<p><strong>$name</strong></p>
+<p>$price</p>
+<p>Ordered on: $date</p>
+    </div>
+</div></div></div></div>
+";
+    }
 
     echo "</div></div></section>";
 }else{
     echo "<section class=\"section\">
-    <p class=\"title\">You have no orders</p> 
+    <h1 class=\"title\">You have no orders</h1> 
     </section>";
 }
 

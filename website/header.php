@@ -52,6 +52,9 @@
                         <a class=\"navbar-item\" href=\"customer_dashboard.php\">
                             Dashboard
                         </a>
+                        <a class=\"navbar-item\" href=\"orders.php\">
+                            Your Orders
+                        </a>
                         <a class=\"navbar-item\" href=\"view_bookmarks.php\">
                             View Bookmarked
                         </a>

@@ -9,6 +9,5 @@ defmodule DataTest.Query do
   end
 
   def insert(table) do
-    
   end
 end
