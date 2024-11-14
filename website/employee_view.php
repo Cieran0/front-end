@@ -213,7 +213,7 @@
                                     <button class="img-button button mt-2" onclick="updateDatabase(<?php echo htmlspecialchars($order['OrderID']); ?>)">
                                         <img src="./img/tick.png" alt="Mark as Fulfilled" style="height: 25px;">
                                     </button>
-                                    <button class="img-button button mt-2" onclick="updateDatabase(<?php echo htmlspecialchars($order['OrderID']); ?>)">
+                                    <button class="img-button button mt-2" onclick="removeOrder(<?php echo htmlspecialchars($order['OrderID']); ?>)">
                                         <img src="./img/tick.png" alt="Cancel Order" style="height: 25px;">
                                     </button>
                                 </div>
