@@ -47,7 +47,7 @@ const increaseStock = (productID) =>
 
   fetch('add_stock.php', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      headers: { 'Content-Type': 'application/x-www-form-urlenccoded' },
       body: `productID=${productID}`
   }) 
   .then(response => response.json())
@@ -63,3 +63,24 @@ const increaseStock = (productID) =>
     });
 }
 
+const removeOrder = (orderID) => 
+{
+  console.log(orderID);
+
+  fetch('remove_order.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: `orderID=${orderID}`
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      location.reload();
+    } else {
+      alert('Failed to update database.')
+    }
+  })
+  .catch(error => {
+    console.error('Error: ', error);
+  })
+}
