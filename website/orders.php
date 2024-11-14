@@ -30,7 +30,7 @@ if(mysqli_num_rows($selectOrders)>0) {
     echo "<section class=\"section\">
     <h1 class=\"title\">Your Orders:</h1>
         <div class=\"container\">
-    <div class=\"colums is-multiline\">";
+    <div class=\"columns is-multiline\">";
 
     while($row = mysqli_fetch_array($selectOrderedProducts)){
         $img = "product.png";
@@ -51,7 +51,7 @@ echo "<div class=\"column is-one-fifth is-third-mobile is-one-third-tablet is-on
 <p>$price</p>
 <p>Ordered on: $date</p>
     </div>
-</div></div></div></div>
+</div></div></div>
 ";
     }
 
