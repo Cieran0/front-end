@@ -55,6 +55,21 @@
         exit();
     }
 
+    $branch_stock = query("SELECT 
+                                    B.BranchID,
+                                    B.Location,
+                                    COALESCE(S.Stock, 0) AS Stock
+                                    FROM 
+                                        BRANCH B
+                                    LEFT JOIN 
+                                        STOCK S 
+                                    ON 
+                                        B.BranchID = S.BranchID AND S.ProductID = $pid;
+                                    "
+                    );
+
+    
+
     ?>
 
     <section class="section">
@@ -92,7 +107,25 @@
                             <div class=\"content\">";
                             
                             ?>
+                                                            <div class="field">
+                                    <label class="label">Order From</label>
+                                    <div class="select">
+                                        <select id="branchSelection">
+                                            <?php 
+                                                while ($row = mysqli_fetch_array($branch_stock)) {
+                                                    if ($row["Stock"] == 0) {
+                                                        echo "<option>". $row["Location"] .": Out of stock </option>";
+                                                    } else {
+                                                        echo "<option>". $row["Location"] .": ". $row["Stock"] . " In stock </option>";
+                                                    }
+
+                                                }
+                                            ?>
+                                        </select>
+                                    </div>
+                                </div>
                                 <div class="columns bottom-col">
+
                                 <div class="column split-col">
                             <?php
                                 $action = "bookmark.php";
