@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const setupEventListeners = () => {
   document.getElementById('openModal').addEventListener('click', openModal);
   document.getElementById('openExistingProductModal').addEventListener('click', openExistingProductModal);
+  document.getElementById('openExistingProductModal').addEventListener('click', fill_options);
   document.getElementById('saveProductButton').addEventListener('click', saveProduct);
   document.getElementById('saveExistingProductButton').addEventListener('click', saveExistingProduct);
 
@@ -122,3 +123,48 @@ const removeOrder = (orderID) =>
     console.error('Error: ', error);
   })
 }
+
+const fill_options = () => {
+
+  fetchStuff().then(data => {
+    arr = data['data'];
+    if (!arr) {
+      return;
+    }
+
+    for(i =0; i< arr.length; i++) {
+      console.log(arr[i]);
+    }
+
+  });
+
+}
+
+let cachedData = null; // Variable to store cached data
+
+const fetchStuff = () => {
+  // Check if data is already cached
+  if (cachedData) {
+    return Promise.resolve(cachedData); // Return cached data as a resolved promise
+  }
+
+  // If no cached data, perform the fetch
+  return fetch('get_all_products_not_in_branch_as_json.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        cachedData = data; // Cache the fetched data
+        return data; // Return fetched data
+      } else {
+        alert('Failed to fetch data.');
+        throw new Error('Data fetch unsuccessful.');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      throw error; // Re-throw the error for further handling
+    });
+};
