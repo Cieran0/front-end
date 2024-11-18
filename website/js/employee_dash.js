@@ -4,11 +4,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const setupEventListeners = () => {
   document.getElementById('openModal').addEventListener('click', openModal);
+  document.getElementById('openExistingProductModal').addEventListener('click', openExistingProductModal);
   document.getElementById('saveProductButton').addEventListener('click', saveProduct);
+  document.getElementById('saveExistingProductButton').addEventListener('click', saveExistingProduct);
+
 
   const closeModalElements = document.querySelectorAll('#createProductModal .delete, #createProductModal .cancel-button, #createProductModal .modal-background');
   closeModalElements.forEach(element => {
       element.addEventListener('click', closeModal);
+  });
+
+  const closeExistingModalElements = document.querySelectorAll('#existingProductModal .delete, #existingProductModal .cancel-button, #existingProductModal .modal-background');
+  closeExistingModalElements.forEach(element => {
+      element.addEventListener('click', closeExistingModal);
   });
 }
 
@@ -16,8 +24,38 @@ const openModal = () => {
   document.getElementById('createProductModal').classList.add('is-active');
 }
 
+const openExistingProductModal = () => {
+  document.getElementById('existingProductModal').classList.add('is-active');
+  console.log("test");
+}
+
 const closeModal = () => {
   document.getElementById('createProductModal').classList.remove('is-active');
+}
+
+const closeExistingModal = () => {
+  document.getElementById('existingProductModal').classList.remove('is-active');
+}
+
+const saveExistingProduct = () => {
+  const formData = new FormData(document.getElementById('existingProductForm'));
+
+  fetch('create_product.php', {
+      method: 'POST',
+      body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+      if (data.success) {
+          closeExistingModal();
+          location.reload();
+      } else {
+          alert('Error: ' + data.message);
+      }
+  })
+  .catch(error => {
+      console.error('Error:', error);
+  });
 }
 
 const saveProduct = () => {
