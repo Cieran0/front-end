@@ -181,8 +181,6 @@ if (isset($_SESSION['CustomerID'])) {
                 </nav>
             </div>
         </div>
-    </section>
-    <section class="section">
 
         <div class="columns is-variable is-multiline is-5 mt-4">
             <?php
