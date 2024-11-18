@@ -4,14 +4,6 @@ INSERT INTO `database`.`BRANCH`
 `ContactNo`)
 VALUES
 (0,
-"Online",
-"0138240404");
-INSERT INTO `database`.`BRANCH`
-(`BranchID`,
-`Location`,
-`ContactNo`)
-VALUES
-(1,
 "Dundee",
 "0138240404");
 INSERT INTO `database`.`BRANCH`
@@ -19,7 +11,7 @@ INSERT INTO `database`.`BRANCH`
 `Location`,
 `ContactNo`)
 VALUES
-(2,
+(1,
 "Glasgow",
 "0141240404");
 INSERT INTO `database`.`BRANCH`
@@ -27,7 +19,7 @@ INSERT INTO `database`.`BRANCH`
 `Location`,
 `ContactNo`)
 VALUES
-(3,
+(2,
 "Edinburgh",
 "01314040404");
 INSERT INTO `database`.`BRANCH`
@@ -35,7 +27,7 @@ INSERT INTO `database`.`BRANCH`
 `Location`,
 `ContactNo`)
 VALUES
-(4,
+(3,
 "London",
 "020202020");
 INSERT INTO `database`.`EMPLOYEE`
@@ -55,7 +47,7 @@ VALUES
 "LetMeIn1984",
 "CEO@TechSupply.co.uk",
 500000,
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Online" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`EMPLOYEE`
 (`EmployeeID`,
 `FirstName`,
