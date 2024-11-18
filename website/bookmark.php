@@ -16,7 +16,9 @@
 
     @include_once("query.php");
 	
-    $sqlSelect = query("INSERT INTO BOOKMARK (BookmarkID, ProductID, CustomerID, TimeSaved) SELECT COUNT(*), $product, $customer , NOW() FROM BOOKMARK; ");
+    $sqlSelect = query("INSERT INTO BOOKMARK (BookmarkID, ProductID, CustomerID, TimeSaved) 
+                        SELECT (COALESCE(MAX(BookmarkID), 0) + 1), $product, $customer, NOW() 
+                        FROM BOOKMARK;");
 	
     header("Location: customer_dashboard.php");
     exit();
