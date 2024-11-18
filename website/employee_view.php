@@ -202,6 +202,7 @@ if (isset($_SESSION['CustomerID'])) {
                     if ($productResult && $product = mysqli_fetch_assoc($productResult)) {
                         ?>
                         <div class="column box is-one-third">
+                            <p><?php echo htmlspecialchars($product['Name']); ?></p>
                             <p>Product ID: <?php echo htmlspecialchars($productID); ?></p>
                             <p>Stock: <?php echo htmlspecialchars($stock['Stock']); ?></p>
                             <p>Price: £<?php echo htmlspecialchars($product['BasePrice']); ?></p>
