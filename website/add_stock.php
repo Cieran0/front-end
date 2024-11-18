@@ -13,16 +13,51 @@ if (!isset($_POST['productID'])) {
     exit();
 }
 
+$employee_id = $_SESSION['EmployeeID'];
+
+$stocknum = "1";
+if (isset($_POST['stockQuantity'])) { 
+    $stocknum = $_POST['stockQuantity'];
+}
+
 $productID = intval($_POST['productID']);
+
 
 @include 'query.php';
 
-connect_db();
 
-$sql = query("UPDATE `STOCK` SET Stock = Stock + 1 WHERE `ProductID` = $productID;");
+$branchResult = query("SELECT BranchID FROM EMPLOYEE WHERE EmployeeID = $employee_id");
+if(mysqli_num_rows($branchResult)) {
+    $branch = mysqli_fetch_array($branchResult)["BranchID"];
+} else {
+    echo json_encode(['success' => false, 'error' => "Employee Not Found"]);
+    exit();
+}
+
+$exists = query("SELECT StockID FROM STOCK WHERE BranchID = $branch AND ProductID = $productID");
+
+if(mysqli_num_rows($exists)) {
+    $sql = query("UPDATE `STOCK` SET Stock = Stock + $stocknum WHERE `ProductID` = $productID AND BranchID = $branch;");
+} else {
+    error_log("Stock: $stocknum");
+    error_log("productID: $productID");
+    error_log("branchID: $branch");
+    $sql = query("
+    INSERT INTO `database`.`STOCK` (`StockID`, `Stock`, `ProductID`, `BranchID`)
+    SELECT 
+      COALESCE(MAX(StockID), 0) + 1, 
+      $stocknum, 
+      $productID, 
+      $branch
+    FROM `database`.`STOCK`;"
+    );
+
+}
+
 
 if($sql) {
     echo json_encode(['success' => true]);
 } else {
-    echo json_encode(['success' => false, 'error' => mysqli_error($dbc)]);
+    $err = mysqli_error($dbc);
+    echo json_encode(['success' => false, 'error' => $err]);
 }

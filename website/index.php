@@ -13,11 +13,12 @@
 
   <?php @include_once 'header.php' ?>
 
+  <!--
     <section class="hero is-large has-bg-img">
       <div class="hero-body">
       </div>
     </section>
-
+  -->
     <section class="section">
       <p class="title">Categories:</p>
       <div class="carousel-container">

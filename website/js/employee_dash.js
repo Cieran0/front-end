@@ -8,6 +8,7 @@ const setupEventListeners = () => {
   document.getElementById('openExistingProductModal').addEventListener('click', fill_options);
   document.getElementById('saveProductButton').addEventListener('click', saveProduct);
   document.getElementById('saveExistingProductButton').addEventListener('click', saveExistingProduct);
+  document.getElementById('existingProductsSelect').addEventListener('change', fill_details);
 
 
   const closeModalElements = document.querySelectorAll('#createProductModal .delete, #createProductModal .cancel-button, #createProductModal .modal-background');
@@ -27,7 +28,6 @@ const openModal = () => {
 
 const openExistingProductModal = () => {
   document.getElementById('existingProductModal').classList.add('is-active');
-  console.log("test");
 }
 
 const closeModal = () => {
@@ -39,12 +39,24 @@ const closeExistingModal = () => {
 }
 
 const saveExistingProduct = () => {
-  const formData = new FormData(document.getElementById('existingProductForm'));
 
-  fetch('create_product.php', {
-      method: 'POST',
-      body: formData
-  })
+  const formElement = document.getElementById('existingProductForm');
+  const formData = new FormData(formElement);
+  formData.append('productID', get_product_id());
+
+  // Convert FormData to a URL-encoded string
+  const urlEncodedData = new URLSearchParams();
+  formData.forEach((value, key) => {
+    urlEncodedData.append(key, value);
+  });
+
+  console.log(urlEncodedData);
+
+  fetch('add_stock.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: urlEncodedData.toString(),
+  }) 
   .then(response => response.json())
   .then(data => {
       if (data.success) {
@@ -52,6 +64,7 @@ const saveExistingProduct = () => {
           location.reload();
       } else {
           alert('Error: ' + data.message);
+          console.log(data);
       }
   })
   .catch(error => {
@@ -86,7 +99,7 @@ const increaseStock = (productID) =>
 
   fetch('add_stock.php', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlenccoded' },
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: `productID=${productID}`
   }) 
   .then(response => response.json())
@@ -95,6 +108,7 @@ const increaseStock = (productID) =>
         location.reload();
     } else {
         alert('Failed to update database.');
+        console.log(data);
     }
     })
     .catch(error => {
@@ -124,17 +138,62 @@ const removeOrder = (orderID) =>
   })
 }
 
-const fill_options = () => {
+const get_product_id = () => {
+  const element = document.getElementById("existingProductsSelect");
+  ProductID = element.value.split(':')[0];
+  return ProductID;
+}
 
-  fetchStuff().then(data => {
+const fill_details = () => {
+  fetchStuff().then(data => { 
+    const element = document.getElementById("existingProductsSelect");
+    const description = document.getElementById("existingDescription");
+    const basePrice = document.getElementById("existingPrice");
     arr = data['data'];
-    if (!arr) {
+    if (!arr || arr.length == 0 || !element) {
       return;
     }
 
-    for(i =0; i< arr.length; i++) {
-      console.log(arr[i]);
+    ProductID = get_product_id();
+
+    if(!ProductID || ProductID == "-1") {
+      return;
     }
+
+    //Should probably be a binary search but idk if its always sorted
+    for(i =0; i< arr.length; i++) {
+      product = arr[i];
+      if(product["ProductID"] != ProductID) {
+        continue;
+      }
+      //Product Found
+      description.value = product["Description"];
+      basePrice.value = product["BasePrice"];
+    }
+
+  })
+}
+
+const fill_options = () => {
+
+  fetchStuff().then(data => {
+    const element = document.getElementById("existingProductsSelect");
+    arr = data['data'];
+    if (!arr || arr.length == 0 || !element) {
+      return;
+    }
+
+    element.innerHTML = "";
+    for(i =0; i< arr.length; i++) {
+      product = arr[i]
+      console.log(product);
+      element.innerHTML +=  "<option>" + product["ProductID"] + ": " + product["Name"] + "</option>"
+    }
+
+    const description = document.getElementById("existingDescription");
+    const basePrice = document.getElementById("existingPrice");
+    description.value = arr[0]["Description"];
+    basePrice.value = arr[0]["BasePrice"];
 
   });
 

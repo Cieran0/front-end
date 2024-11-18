@@ -128,7 +128,7 @@ if (isset($_SESSION['CustomerID'])) {
                         <div class="modal-card">
 
                             <header class="modal-card-head">
-                                <p class="modal-card-title">Add New Product</p>
+                                <p class="modal-card-title">Add Existing Product</p>
                                 <button class="delete" aria-label="close"></button>
                             </header>
 
@@ -137,7 +137,7 @@ if (isset($_SESSION['CustomerID'])) {
                                 <div class="field">
                                     <label class="label">Select Product</label>
                                     <div class="select">
-                                        <select>
+                                        <select id="existingProductsSelect">
                                           <option>-1: Unable to load products</option>
                                         </select>
                                     </div>
@@ -146,7 +146,7 @@ if (isset($_SESSION['CustomerID'])) {
                                     <div class="field">
                                         <label class="label">Description</label>
                                         <div class="control">
-                                            <textarea class="textarea" name="description"
+                                            <textarea class="textarea" name="description" id="existingDescription"
                                                 placeholder="Enter product description" required readonly></textarea>
                                         </div>
                                     </div>
@@ -154,7 +154,7 @@ if (isset($_SESSION['CustomerID'])) {
                                     <div class="field">
                                         <label class="label">Product Price (£)</label>
                                         <div class="control">
-                                            <input class="input" type="number" name="basePrice"
+                                            <input class="input" type="number" name="basePrice" id="existingPrice"
                                                 placeholder="Enter base price" min="0" step="0.01" required readonly>
                                         </div>
                                     </div>
@@ -163,7 +163,7 @@ if (isset($_SESSION['CustomerID'])) {
                                         <label class="label">Stock Quantity</label>
                                         <div class="control">
                                             <input class="input" type="number" name="stockQuantity"
-                                                placeholder="Enter stock quantity" min="0" required readonly>
+                                                placeholder="Enter stock quantity" min="0" required>
                                         </div>
                                     </div>
                                 </form>
