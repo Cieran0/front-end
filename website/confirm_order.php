@@ -13,8 +13,10 @@
     session_start();
     $product = $_POST['ProductID'];
     $customer = $_SESSION['CustomerID'];
+    $multi_id = $_POST['MultiBuyIDs'];
 
-    if(!(isset($_SESSION['CustomerID']) && isset($_POST['ProductID']) && $_SESSION['loggedin'])){
+
+    if(!(isset($_SESSION['CustomerID']) && ( isset($_POST['ProductID']) || isset($_POST['MultiBuyIDs']) ) && $_SESSION['loggedin'])){
         header("Location: index.php");
         exit();
     }
@@ -61,7 +63,13 @@
 </div>
 
 <?php
+  if(isset($_POST['ProductID'])) {
     echo "<input type=\"text\" name=\"ProductID\" value=\"$product\" style=\"display: none;\">";
+  } else {
+    echo "<input type=\"text\" name=\"MultiBuyIDs\" value=\"$multi_id\" style=\"display: none;\">";
+
+  }
+
 ?>
 
 <div class="field is-grouped">

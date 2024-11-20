@@ -10,23 +10,32 @@
 
 	session_start();
     $product = $_POST['ProductID'];
+    $multi_ids = $_POST['MultiBuyIDs'];
     $customer = $_SESSION['CustomerID'];
     $password = $_POST['password'];
 
     @include_once("query.php");
-	
+
     $sqlSelect = query("SELECT * FROM CUSTOMER WHERE CustomerID = '$customer' AND Password = '$password';");
     $num_rows = mysqli_num_rows($sqlSelect);
-	if ($num_rows == 0)
-	{
+
+    if (isset($_POST['ProductID']) && $num_rows > 0) {
+        $sqlSelect = query("INSERT INTO `ORDER` (OrderID, Date, Price, ProductID, CustomerID, BranchID, `Status`) SELECT (COALESCE(MAX(OrderID), 0) + 1), NOW(), (SELECT BasePrice FROM `PRODUCT` WHERE ProductID = $product), $product, $customer , 0, 'Unfufilled' FROM `ORDER`; ");
+        
+    } else if (isset($_POST['MultiBuyIDs'])  && $num_rows > 0) {
+        $pids = explode(',', $multi_ids);
+        $pids = array_map('intval', $pids);
+        foreach ($pids as $pid) { 
+            error_log("HERE!! $pid");
+            $sqlSelect = query("INSERT INTO `ORDER` (OrderID, Date, Price, ProductID, CustomerID, BranchID, `Status`) SELECT (COALESCE(MAX(OrderID), 0) + 1), NOW(), (SELECT BasePrice FROM `PRODUCT` WHERE ProductID = $pid), $pid, $customer , 0, 'Unfufilled' FROM `ORDER`; ");
+        }
+
+    } else {
         header("Location: order_failed.php");
-        exit();
-	} else {
-        $sqlSelect = query("INSERT INTO `ORDER` (OrderID, Date, Price, ProductID, CustomerID, BranchID, `Status`) SELECT COUNT(*), NOW(), (SELECT BasePrice FROM `PRODUCT` WHERE ProductID = $product), $product, $customer , 0, 'Unfufilled' FROM `ORDER`; ");
-        header("Location: customer_dashboard.php");
         exit();
     }
 
+    header("Location: customer_dashboard.php");
+    exit();
 
-	
 ?>

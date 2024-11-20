@@ -6,11 +6,6 @@
 RECORDS BRANCH branch[] = {
 {
     .BranchID = INDEX,
-    .Location = "Online",
-    .ContactNo = "0138240404",
-},
-{
-    .BranchID = INDEX,
     .Location = "Dundee",
     .ContactNo = "0138240404",
 },
@@ -40,7 +35,7 @@ RECORDS EMPLOYEE employee[] = {
     .Password = "LetMeIn1984",
     .Email = "CEO@TechSupply.co.uk",
     .Salary = 500000,
-    .BranchID = ID_OF ( branch->Location == "Online" ),
+    .BranchID = ID_OF ( branch->Location == "Dundee" ),
 },
 {
     .EmployeeID = INDEX,

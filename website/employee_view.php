@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<?php 
-    include 'query.php';
-    session_start();
+<?php
+include 'query.php';
+session_start();
 
-    if (!isset($_SESSION['CustomerID']) && !isset($_SESSION['EmployeeID'])) {
-        header('Location: login.php');
-        exit(); 
-    }
+if (!isset($_SESSION['CustomerID']) && !isset($_SESSION['EmployeeID'])) {
+    header('Location: login.php');
+    exit();
+}
 
-    if (isset($_SESSION['CustomerID'])) {
-        header('Location: customer_dashboard.php');
-        exit();
-    } 
+if (isset($_SESSION['CustomerID'])) {
+    header('Location: customer_dashboard.php');
+    exit();
+}
 
 ?>
 <html>
+
 <head>
     <title>Employee View - Tech Supply</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
@@ -29,17 +30,17 @@
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: `orderID=${orderID}`
             })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    location.reload();
-                } else {
-                    alert('Failed to increase stock.');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        location.reload();
+                    } else {
+                        alert('Failed to increase stock.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
         }
     </script>
 </head>
@@ -48,75 +49,138 @@
     <?php @include_once 'header.php' ?>
 
     <section class="section">
-    <div class="manage-inventory">
-    <div class="section-header">
-    <nav class="level">
-        <div class="level-left">
-            <div class="level-item">
-                <h1 class="title">Manage Inventory</h1>
+        <div class="manage-inventory">
+            <div class="section-header">
+                <nav class="level">
+                    <div class="level-left">
+                        <div class="level-item">
+                            <h1 class="title">Manage Inventory</h1>
+                        </div>
+                    </div>
+
+                    <div class="level-right">
+                        <div class="level-item">
+                            <button class="button is-primary" id="openModal">
+                                Add new product
+                            </button>
+                        </div>
+
+                        <div class="level-item">
+                            <button class="button is-primary" id="openExistingProductModal">
+                                Add existing product
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="createProductModal" class="modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+
+                            <header class="modal-card-head">
+                                <p class="modal-card-title">Add New Product</p>
+                                <button class="delete" aria-label="close"></button>
+                            </header>
+
+                            <section class="modal-card-body">
+                                <form id="createProductForm">
+                                    <div class="field">
+                                        <label class="label">Product Name</label>
+                                        <div class="control">
+                                            <input class="input" type="text" name="productName"
+                                                placeholder="Enter product name" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <label class="label">Description</label>
+                                        <div class="control">
+                                            <textarea class="textarea" name="description"
+                                                placeholder="Enter product description" required></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <label class="label">Product Price (£)</label>
+                                        <div class="control">
+                                            <input class="input" type="number" name="basePrice"
+                                                placeholder="Enter base price" min="0" step="0.01" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <label class="label">Stock Quantity</label>
+                                        <div class="control">
+                                            <input class="input" type="number" name="stockQuantity"
+                                                placeholder="Enter stock quantity" min="0" required>
+                                        </div>
+                                    </div>
+                                </form>
+                                
+                            </section>
+                            <section class="modal-card-foot">
+                                <button class="button is-success" id="saveProductButton">Save</button>
+                                <button class="button cancel-button">Cancel</button>
+                            </section>
+                        </div>
+                    </div>
+                    <div id="existingProductModal" class="modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+
+                            <header class="modal-card-head">
+                                <p class="modal-card-title">Add Existing Product</p>
+                                <button class="delete" aria-label="close"></button>
+                            </header>
+
+                            <section class="modal-card-body">
+                                <form id="existingProductForm">
+                                <div class="field">
+                                    <label class="label">Select Product</label>
+                                    <div class="select">
+                                        <select id="existingProductsSelect">
+                                          <option>-1: Unable to load products</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                    <div class="field">
+                                        <label class="label">Description</label>
+                                        <div class="control">
+                                            <textarea class="textarea" name="description" id="existingDescription"
+                                                placeholder="Enter product description" required readonly></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <label class="label">Product Price (£)</label>
+                                        <div class="control">
+                                            <input class="input" type="number" name="basePrice" id="existingPrice"
+                                                placeholder="Enter base price" min="0" step="0.01" required readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <label class="label">Stock Quantity</label>
+                                        <div class="control">
+                                            <input class="input" type="number" name="stockQuantity"
+                                                placeholder="Enter stock quantity" min="0" required>
+                                        </div>
+                                    </div>
+                                </form>
+                            </section>
+                            <section class="modal-card-foot">
+                                <button class="button is-success" id="saveExistingProductButton">Save</button>
+                                <button class="button cancel-button">Cancel</button>
+                            </section>
+                        </div>
+
+
+                    </div>
+
+
+                </nav>
             </div>
         </div>
-
-        <div class="level-right">
-            <div class="level-item">
-                <button class="button is-primary" id="openModal"> 
-                    Add new product
-                </button>
-            </div>
-        </div>
-
-  <div id="createProductModal" class="modal">
-              <div class="modal-background"></div>
-              <div class="modal-card">
-
-                <header class="modal-card-head">
-                  <p class="modal-card-title">Add New Product</p>
-                  <button class="delete" aria-label="close"></button>
-                </header>
-
-                <section class="modal-card-body">
-                  <form id="createProductForm">
-                    <div class="field">
-                      <label class="label">Product Name</label>
-                      <div class="control">
-                        <input class="input" type="text" name="productName" placeholder="Enter product name" required>
-                      </div>
-                    </div>
-
-                    <div class="field">     
-                      <label class="label">Description</label>
-                      <div class="control">
-                        <textarea class="textarea" name="description" placeholder="Enter product description" required></textarea>
-                      </div>
-                    </div>
-
-                    <div class="field">
-                      <label class="label">Product Price (£)</label>
-                      <div class="control">
-                        <input class="input" type="number" name="basePrice" placeholder="Enter base price" min="0" step="0.01" required>
-                      </div>
-                    </div>
-
-                    <div class="field">
-                      <label class="label">Stock Quantity</label>
-                      <div class="control">
-                        <input class="input" type="number" name="stockQuantity" placeholder="Enter stock quantity" min="0" required>
-                      </div>
-                    </div>
-                  </form>
-                </section>
-
-                <footer class="modal-card-foot">
-                  <button class="button is-success" id="saveProductButton">Save</button>
-                  <button class="button cancel-button">Cancel</button>
-                </footer>
-
-              </div>
-            </div>
-</div>
-
-    </nav>
-    </div>
 
         <div class="columns is-variable is-multiline is-5 mt-4">
             <?php
@@ -129,62 +193,67 @@
             } else {
                 while ($stock = mysqli_fetch_assoc($result)) {
                     $productID = $stock['ProductID'];
-            
+
                     $productQuery = "SELECT Name, Description, BasePrice FROM PRODUCT WHERE ProductID = $productID";
                     $productResult = mysqli_query($dbc, $productQuery);
-            
+
                     if ($productResult && $product = mysqli_fetch_assoc($productResult)) {
                         ?>
-                    <div class="column box is-one-third">
-                        <p>Product ID: <?php echo htmlspecialchars($productID); ?></p>
-                        <p>Stock: <?php echo htmlspecialchars($stock['Stock']); ?></p>
-                        <p>Price: £<?php echo htmlspecialchars($product['BasePrice']); ?></p>
-                        <button class="img-button button mt-2" onclick="increaseStock(<?php echo htmlspecialchars($productID)?>)">
-                            <img src="./img/tick.png" alt="Increase Stock" style="height: 25px;">
-                        </button>
-                    </div>
-                    <?php
+                        <div class="column box is-one-third">
+                            <p><?php echo htmlspecialchars($product['Name']); ?></p>
+                            <p>Product ID: <?php echo htmlspecialchars($productID); ?></p>
+                            <p>Stock: <?php echo htmlspecialchars($stock['Stock']); ?></p>
+                            <p>Price: £<?php echo htmlspecialchars($product['BasePrice']); ?></p>
+                            <button class="img-button button mt-2"
+                                onclick="increaseStock(<?php echo htmlspecialchars($productID) ?>)">
+                                <img src="./img/tick.png" alt="Increase Stock" style="height: 25px;">
+                            </button>
+                        </div>
+                        <?php
                     } else {
                         echo "<p>Error fetching product details: " . mysqli_error($dbc) . "</p>";
                     }
                 }
             }
-        ?>
+            ?>
 
         </div>
-    </div>
-</section>
+        </div>
+    </section>
 
     <section class="modal-card-body">
-      <form id="createProductForm">
-        <div class="field">
-          <label class="label">Product Name</label>
-          <div class="control">
-            <input class="input" type="text" name="productName" placeholder="Enter product name" required>
-          </div>
-        </div>
+        <form id="createProductForm">
+            <div class="field">
+                <label class="label">Product Name</label>
+                <div class="control">
+                    <input class="input" type="text" name="productName" placeholder="Enter product name" required>
+                </div>
+            </div>
 
-        <div class="field">     
-          <label class="label">Description</label>
-          <div class="control">
-            <textarea class="textarea" name="description" placeholder="Enter product description" required></textarea>
-          </div>
-        </div>
+            <div class="field">
+                <label class="label">Description</label>
+                <div class="control">
+                    <textarea class="textarea" name="description" placeholder="Enter product description"
+                        required></textarea>
+                </div>
+            </div>
 
-        <div class="field">
-          <label class="label">Base Price (£)</label>
-          <div class="control">
-            <input class="input" type="number" name="basePrice" placeholder="Enter base price" min="0" step="0.01" required>
-          </div>
-        </div>
+            <div class="field">
+                <label class="label">Base Price (£)</label>
+                <div class="control">
+                    <input class="input" type="number" name="basePrice" placeholder="Enter base price" min="0"
+                        step="0.01" required>
+                </div>
+            </div>
 
-        <div class="field">
-          <label class="label">Stock Quantity</label>
-          <div class="control">
-            <input class="input" type="number" name="stockQuantity" placeholder="Enter stock quantity" min="0" required>
-          </div>
-        </div>
-      </form>
+            <div class="field">
+                <label class="label">Stock Quantity</label>
+                <div class="control">
+                    <input class="input" type="number" name="stockQuantity" placeholder="Enter stock quantity" min="0"
+                        required>
+                </div>
+            </div>
+        </form>
     </section>
 
     <section class="section">
@@ -210,10 +279,12 @@
                                 <p>Product ID: <?php echo htmlspecialchars($order['ProductID']); ?></p>
                                 <p>Price: £<?php echo htmlspecialchars($order['Price']); ?></p>
                                 <div class="final-row">
-                                    <button class="img-button button mt-2" onclick="updateDatabase(<?php echo htmlspecialchars($order['OrderID']); ?>)">
+                                    <button class="img-button button mt-2"
+                                        onclick="updateDatabase(<?php echo htmlspecialchars($order['OrderID']); ?>)">
                                         <img src="./img/tick.png" alt="Mark as Fulfilled" style="height: 25px;">
                                     </button>
-                                    <button class="img-button button mt-2" onclick="removeOrder(<?php echo htmlspecialchars($order['OrderID']); ?>)">
+                                    <button class="img-button button mt-2"
+                                        onclick="removeOrder(<?php echo htmlspecialchars($order['OrderID']); ?>)">
                                         <img src="./img/tick.png" alt="Cancel Order" style="height: 25px;">
                                     </button>
                                 </div>
@@ -232,7 +303,8 @@
             <h1 class="title">Contact Employees</h1>
             <form method="POST" action="" class="box">
                 <?php $searchValue = $_POST['employeeSearch'] ?? ''; ?>
-                <input class="input" type="text" name="employeeSearch" placeholder="Search employees..." value="<?php echo htmlspecialchars($searchValue); ?>">
+                <input class="input" type="text" name="employeeSearch" placeholder="Search employees..."
+                    value="<?php echo htmlspecialchars($searchValue); ?>">
                 <button type="submit" class="button mt-2">Search</button>
             </form>
 
@@ -279,7 +351,8 @@
             <h1 class="title">Contact Branches</h1>
             <form method="POST" action="" class="box">
                 <?php $searchValue = $_POST['branchSearch'] ?? ''; ?>
-                <input class="input" type="text" name="branchSearch" placeholder="Search branches..." value="<?php echo htmlspecialchars($searchValue); ?>">
+                <input class="input" type="text" name="branchSearch" placeholder="Search branches..."
+                    value="<?php echo htmlspecialchars($searchValue); ?>">
                 <button type="submit" class="button mt-2">Search</button>
             </form>
 
@@ -318,6 +391,7 @@
         </div>
     </section>
 </body>
+
 </html>
 
 <?php
