@@ -49,7 +49,6 @@ CREATE TABLE `PRODUCT` (
 	Category varchar(255) NOT NULL,
 	Description varchar(255) DEFAULT NULL,
 	BasePrice decimal(10, 2) DEFAULT NULL,
-	Discount decimal(10, 2) DEFAULT NULL,
 	SupplierID int DEFAULT NULL,
 	PRIMARY KEY(`ProductID`),
 	CONSTRAINT `fk_PRODUCT_SUPPLIER1` FOREIGN KEY (`SupplierID`) REFERENCES `SUPPLIER` (`SupplierID`) ON DELETE SET NULL ON UPDATE CASCADE
@@ -115,8 +114,7 @@ AS SELECT
 	ProductID,
 	Name,
 	Description,
-	BasePrice,
-	Discount
+	BasePrice
 FROM
 	PRODUCT;
 
@@ -144,7 +142,6 @@ SELECT
     p.ProductID,
     p.Name AS ProductName,
     p.BasePrice,
-    p.Discount,
     b.TimeSaved
 FROM 
     BOOKMARK b

@@ -6,7 +6,6 @@ SELECT
     p.ProductID,
     p.Name AS ProductName,
     p.BasePrice,
-    p.Discount,
     b.TimeSaved
 FROM 
     BOOKMARK b

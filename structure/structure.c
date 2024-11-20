@@ -54,7 +54,6 @@ TABLE {
     char Category[255] NOT_NULL;
     char Description[255] DEFAULT_NULL;
     decimal BasePrice DEFAULT_NULL;
-    decimal Discount DEFAULT_NULL;
     int SupplierID DEFAULT_NULL;
     PRIMARY_KEY ('ProductID')
     FOREIGN_KEY('SupplierID', 'SUPPLIER')
@@ -117,7 +116,6 @@ VIEW PRODUCT CustomerProductView = {
     .Name INCLUDED
     .Description INCLUDED
     .BasePrice INCLUDED
-    .Discount INCLUDED
 };
 
 VIEW SUPPLIER CustomerSupplierView = {

@@ -128,7 +128,6 @@ INSERT INTO `database`.`PRODUCT`
 `Category`,
 `Description`,
 `BasePrice`,
-`Discount`,
 `SupplierID`)
 VALUES
 (0,
@@ -136,7 +135,6 @@ VALUES
 "TVs",
 "Samsung S90D TV brings a bit of cinema magic to your living room.the TV can accurately control the shadows and highlights. Everything looks much more real with deep blacks and billions of colours that burst from the screen.",
 1599.99,
-0,
 (SELECT SupplierID FROM SUPPLIER WHERE SUPPLIER.Name = "Samsung" LIMIT 1));
 INSERT INTO `database`.`PRODUCT`
 (`ProductID`,
@@ -144,7 +142,6 @@ INSERT INTO `database`.`PRODUCT`
 `Category`,
 `Description`,
 `BasePrice`,
-`Discount`,
 `SupplierID`)
 VALUES
 (1,
@@ -152,7 +149,6 @@ VALUES
 "TVs",
 "When was the last time your TV made you go 'wow'? This LG C4 OLED TV uses self-lit pixels for perfect blacks and brilliant highlights, it's pretty magical. You'll be able to pick out every star in a night sky.",
 1699.99,
-0,
 (SELECT SupplierID FROM SUPPLIER WHERE SUPPLIER.Name = "LG" LIMIT 1));
 INSERT INTO `database`.`PRODUCT`
 (`ProductID`,
@@ -160,7 +156,6 @@ INSERT INTO `database`.`PRODUCT`
 `Category`,
 `Description`,
 `BasePrice`,
-`Discount`,
 `SupplierID`)
 VALUES
 (2,
@@ -168,7 +163,6 @@ VALUES
 "Laptops",
 "Description",
 999.99,
-0,
 (SELECT SupplierID FROM SUPPLIER WHERE SUPPLIER.Name = "LG" LIMIT 1));
 INSERT INTO `database`.`PRODUCT`
 (`ProductID`,
@@ -176,7 +170,6 @@ INSERT INTO `database`.`PRODUCT`
 `Category`,
 `Description`,
 `BasePrice`,
-`Discount`,
 `SupplierID`)
 VALUES
 (3,
@@ -184,7 +177,6 @@ VALUES
 "Desktops",
 "Description",
 999.99,
-0,
 (SELECT SupplierID FROM SUPPLIER WHERE SUPPLIER.Name = "LG" LIMIT 1));
 INSERT INTO `database`.`PRODUCT`
 (`ProductID`,
@@ -192,7 +184,6 @@ INSERT INTO `database`.`PRODUCT`
 `Category`,
 `Description`,
 `BasePrice`,
-`Discount`,
 `SupplierID`)
 VALUES
 (4,
@@ -200,7 +191,6 @@ VALUES
 "Tablets",
 "Description",
 999.99,
-0,
 (SELECT SupplierID FROM SUPPLIER WHERE SUPPLIER.Name = "LG" LIMIT 1));
 INSERT INTO `database`.`PRODUCT`
 (`ProductID`,
@@ -208,7 +198,6 @@ INSERT INTO `database`.`PRODUCT`
 `Category`,
 `Description`,
 `BasePrice`,
-`Discount`,
 `SupplierID`)
 VALUES
 (5,
@@ -216,7 +205,6 @@ VALUES
 "Controllers",
 "Description",
 999.99,
-0,
 (SELECT SupplierID FROM SUPPLIER WHERE SUPPLIER.Name = "LG" LIMIT 1));
 INSERT INTO `database`.`PRODUCT`
 (`ProductID`,
@@ -224,7 +212,6 @@ INSERT INTO `database`.`PRODUCT`
 `Category`,
 `Description`,
 `BasePrice`,
-`Discount`,
 `SupplierID`)
 VALUES
 (6,
@@ -232,7 +219,6 @@ VALUES
 "Controllers",
 "Description",
 999.99,
-0,
 (SELECT SupplierID FROM SUPPLIER WHERE SUPPLIER.Name = "LG" LIMIT 1));
 INSERT INTO `database`.`PRODUCT`
 (`ProductID`,
@@ -240,7 +226,6 @@ INSERT INTO `database`.`PRODUCT`
 `Category`,
 `Description`,
 `BasePrice`,
-`Discount`,
 `SupplierID`)
 VALUES
 (7,
@@ -248,7 +233,6 @@ VALUES
 "Drones",
 "Description",
 999.99,
-0,
 (SELECT SupplierID FROM SUPPLIER WHERE SUPPLIER.Name = "LG" LIMIT 1));
 INSERT INTO `database`.`PRODUCT`
 (`ProductID`,
@@ -256,7 +240,6 @@ INSERT INTO `database`.`PRODUCT`
 `Category`,
 `Description`,
 `BasePrice`,
-`Discount`,
 `SupplierID`)
 VALUES
 (8,
@@ -264,7 +247,6 @@ VALUES
 "Pets",
 "Description",
 999.99,
-0,
 (SELECT SupplierID FROM SUPPLIER WHERE SUPPLIER.Name = "LG" LIMIT 1));
 INSERT INTO `database`.`PRODUCT`
 (`ProductID`,
@@ -272,7 +254,6 @@ INSERT INTO `database`.`PRODUCT`
 `Category`,
 `Description`,
 `BasePrice`,
-`Discount`,
 `SupplierID`)
 VALUES
 (9,
@@ -280,7 +261,6 @@ VALUES
 "Pets",
 "Description",
 999.99,
-0,
 (SELECT SupplierID FROM SUPPLIER WHERE SUPPLIER.Name = "LG" LIMIT 1));
 INSERT INTO `database`.`PRODUCT`
 (`ProductID`,
@@ -288,7 +268,6 @@ INSERT INTO `database`.`PRODUCT`
 `Category`,
 `Description`,
 `BasePrice`,
-`Discount`,
 `SupplierID`)
 VALUES
 (10,
@@ -296,7 +275,6 @@ VALUES
 "CPUs",
 "Description",
 999.99,
-0,
 (SELECT SupplierID FROM SUPPLIER WHERE SUPPLIER.Name = "LG" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,

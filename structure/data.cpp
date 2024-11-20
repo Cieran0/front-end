@@ -91,7 +91,6 @@ RECORDS PRODUCT product[] = {
     .Category = "TVs",
     .Description = "Samsung S90D TV brings a bit of cinema magic to your living room.the TV can accurately control the shadows and highlights. Everything looks much more real with deep blacks and billions of colours that burst from the screen.",
     .BasePrice = 1599.99,
-    .Discount = 0,
     .SupplierID = ID_OF ( supplier->Name == "Samsung" ),
 },
 {
@@ -100,7 +99,6 @@ RECORDS PRODUCT product[] = {
     .Category = "TVs",
     .Description = "When was the last time your TV made you go 'wow'? This LG C4 OLED TV uses self-lit pixels for perfect blacks and brilliant highlights, it's pretty magical. You'll be able to pick out every star in a night sky.",
     .BasePrice = 1699.99,
-    .Discount = 0,
     .SupplierID = ID_OF ( supplier->Name == "LG" ),
 },
 {
@@ -109,7 +107,6 @@ RECORDS PRODUCT product[] = {
     .Category = "Laptops",
     .Description = "Description",
     .BasePrice = 999.99,
-    .Discount = 0,
     .SupplierID = ID_OF ( supplier->Name == "LG" ),
 },
 {
@@ -118,7 +115,6 @@ RECORDS PRODUCT product[] = {
     .Category = "Desktops",
     .Description = "Description",
     .BasePrice = 999.99,
-    .Discount = 0,
     .SupplierID = ID_OF ( supplier->Name == "LG" ),
 },
 {
@@ -127,7 +123,6 @@ RECORDS PRODUCT product[] = {
     .Category = "Tablets",
     .Description = "Description",
     .BasePrice = 999.99,
-    .Discount = 0,
     .SupplierID = ID_OF ( supplier->Name == "LG" ),
 },
 {
@@ -136,7 +131,6 @@ RECORDS PRODUCT product[] = {
     .Category = "Controllers",
     .Description = "Description",
     .BasePrice = 999.99,
-    .Discount = 0,
     .SupplierID = ID_OF ( supplier->Name == "LG" ),
 },
 {
@@ -145,7 +139,6 @@ RECORDS PRODUCT product[] = {
     .Category = "Controllers",
     .Description = "Description",
     .BasePrice = 999.99,
-    .Discount = 0,
     .SupplierID = ID_OF ( supplier->Name == "LG" ),
 },
 {
@@ -154,7 +147,6 @@ RECORDS PRODUCT product[] = {
     .Category = "Drones",
     .Description = "Description",
     .BasePrice = 999.99,
-    .Discount = 0,
     .SupplierID = ID_OF ( supplier->Name == "LG" ),
 },
 {
@@ -163,7 +155,6 @@ RECORDS PRODUCT product[] = {
     .Category = "Pets",
     .Description = "Description",
     .BasePrice = 999.99,
-    .Discount = 0,
     .SupplierID = ID_OF ( supplier->Name == "LG" ),
 },
 {
@@ -172,7 +163,6 @@ RECORDS PRODUCT product[] = {
     .Category = "Pets",
     .Description = "Description",
     .BasePrice = 999.99,
-    .Discount = 0,
     .SupplierID = ID_OF ( supplier->Name == "LG" ),
 },
 {
@@ -181,7 +171,6 @@ RECORDS PRODUCT product[] = {
     .Category = "CPUs",
     .Description = "Description",
     .BasePrice = 999.99,
-    .Discount = 0,
     .SupplierID = ID_OF ( supplier->Name == "LG" ),
 },
 };
