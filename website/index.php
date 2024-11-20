@@ -17,6 +17,10 @@
       <div class="hero-body">
       </div>
     </section>
+  
+  </head>
+<body>
+
 
     <section class="section">
       <p class="title">Categories:</p>
@@ -59,8 +63,7 @@
       <p class="title">All Products:</p>
       <div class="container">
         <div class="columns is-multiline">
-          <!-- Repeat for more cards -->
-          <?php
+t          <?php
 
             @include_once("query.php");
 
@@ -74,7 +77,7 @@
                     $img = "product.png";
 
 
-                    echo"<div class=\"column is-one-fifth is-third-mobile is-one-third-tablet is-one-fifth-desktop\">
+                    echo "<div class=\"column is-one-fifth is-third-mobile is-one-third-tablet is-one-fifth-desktop\">
             <div class=\"card\">
               <div class=\"card-image\">
                 <figure class=\"image is-1by1\">
