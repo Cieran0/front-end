@@ -61,12 +61,12 @@ $branchID = $_SESSION['BranchID'];
 mysqli_begin_transaction($dbc);
 
 try {
-    $countQuery = "SELECT COUNT(*) AS ProductCount FROM PRODUCT";
+    $countQuery = "SELECT (COALESCE(MAX(ProductID), 0) + 1) AS ProductCount FROM PRODUCT";
     $result = mysqli_query($dbc, $countQuery);
     if ($result) {
         $row = mysqli_fetch_array($result);
         $productCount = $row['ProductCount'];
-        $productID = $productCount + 1;
+        $productID = $productCount;
     } else {
         throw new Exception('Failed to count products: ' . mysqli_error($dbc));
     }
@@ -83,12 +83,12 @@ try {
 
     mysqli_stmt_close($stmt);
 
-    $countQuery = "SELECT COUNT(*) AS StockCount FROM STOCK";
+    $countQuery = "SELECT (COALESCE(MAX(StockID), 0) + 1) AS StockCount FROM STOCK";
     $result = mysqli_query($dbc, $countQuery);
     if ($result) {
         $row = mysqli_fetch_array($result);
         $stockCount = $row['StockCount'];
-        $stockID = $stockCount + 1;
+        $stockID = $stockCount;
     } else {
         throw new Exception('Failed to count stocks: ' . mysqli_error($dbc));
     }

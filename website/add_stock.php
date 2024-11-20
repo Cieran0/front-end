@@ -37,11 +37,12 @@ if(mysqli_num_rows($branchResult)) {
 $exists = query("SELECT StockID FROM STOCK WHERE BranchID = $branch AND ProductID = $productID");
 
 if(mysqli_num_rows($exists)) {
-    $sql = query("UPDATE `STOCK` SET Stock = Stock + $stocknum WHERE `ProductID` = $productID AND BranchID = $branch;");
+    $sql = query("
+        UPDATE `STOCK` 
+        SET Stock = GREATEST(Stock + $stocknum, 0) 
+        WHERE `ProductID` = $productID AND BranchID = $branch;
+    ");
 } else {
-    error_log("Stock: $stocknum");
-    error_log("productID: $productID");
-    error_log("branchID: $branch");
     $sql = query("
     INSERT INTO `database`.`STOCK` (`StockID`, `Stock`, `ProductID`, `BranchID`)
     SELECT 

@@ -217,10 +217,26 @@ if (isset($_SESSION['CustomerID'])) {
                             <p>Product ID: <?php echo htmlspecialchars($productID); ?></p>
                             <p>Stock: <?php echo htmlspecialchars($stock['Stock']); ?></p>
                             <p>Price: £<?php echo htmlspecialchars($product['BasePrice']); ?></p>
-                            <button class="img-button button mt-2"
-                                onclick="increaseStock(<?php echo htmlspecialchars($productID) ?>)">
-                                <img src="./img/tick.png" alt="Increase Stock" style="height: 25px;">
-                            </button>
+                            <div class="columns is-multiline is-mobile">
+                                <div class="column is-one-third has-text-centered">
+                                    <button class="img-button button mt-2"
+                                        onclick="increaseStock(<?php echo htmlspecialchars($productID) ?>)">
+                                        <img src="./img/tick.png" alt="Increase Stock" style="height: 25px;">
+                                    </button>
+                                </div>
+
+                                <div class="column is-one-third has-text-centered">
+                                    <input type="number" value="1" min="1" max="1000" class="input mt-2" id="delta_stock">
+                                </div>
+
+                                <!-- Second Button -->
+                                <div class="column is-one-third has-text-centered">
+                                    <button class="img-button button mt-2"
+                                        onclick="decreaseStock(<?php echo htmlspecialchars($productID) ?>)">
+                                        <img src="./img/tick.png" alt="Decrease Stock" style="height: 25px;">
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         <?php
                     } else {

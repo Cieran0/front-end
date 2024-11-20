@@ -84,12 +84,25 @@ const saveProduct = () => {
           closeModal();
           location.reload();
       } else {
-          alert('Error: ' + data.message);
+        console.log(data);
+          alert('Error: ' + data.error);
       }
   })
   .catch(error => {
       console.error('Error:', error);
   });
+}
+
+const clamp_delta_stock = () => {
+  const delta_stock = document.getElementById('delta_stock').value;
+
+  if(delta_stock > 1000) {
+    return 1000;
+  } else if (delta_stock < 0) {
+    return 0;
+  }
+
+  return Number(delta_stock);
 }
 
 const increaseStock = (productID) =>
@@ -99,7 +112,7 @@ const increaseStock = (productID) =>
   fetch('add_stock.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: `productID=${productID}`
+      body: `productID=${productID}&stockQuantity=${clamp_delta_stock()}`
   }) 
   .then(response => response.json())
   .then(data => {
@@ -114,6 +127,29 @@ const increaseStock = (productID) =>
         console.error('Error:', error);
     });
 }
+
+const decreaseStock = (productID) =>
+  {
+    console.log(productID);
+  
+    fetch('add_stock.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `productID=${productID}&stockQuantity=${(-1)*clamp_delta_stock()}`
+    }) 
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+          location.reload();
+      } else {
+          alert('Failed to update database.');
+          console.log(data);
+      }
+      })
+      .catch(error => {
+          console.error('Error:', error);
+      });
+  }
 
 const removeOrder = (orderID) => 
 {
