@@ -92,6 +92,19 @@ if (isset($_SESSION['CustomerID'])) {
                                     </div>
 
                                     <div class="field">
+                                        <label class="label">Category</label>
+                                        <div class="select">
+                                            <select id="categorySelect" name="category">
+                                                <option value="" disable selected>Select an option...</option>
+                                                <option>Controllers</option>
+                                                <option>Desktops</option>
+                                                <option>Pets</option>
+                                                <option>Laptops</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
                                         <label class="label">Description</label>
                                         <div class="control">
                                             <textarea class="textarea" name="description"
@@ -237,6 +250,7 @@ if (isset($_SESSION['CustomerID'])) {
                         required></textarea>
                 </div>
             </div>
+
 
             <div class="field">
                 <label class="label">Base Price (£)</label>

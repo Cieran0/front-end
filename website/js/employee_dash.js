@@ -44,7 +44,6 @@ const saveExistingProduct = () => {
   const formData = new FormData(formElement);
   formData.append('productID', get_product_id());
 
-  // Convert FormData to a URL-encoded string
   const urlEncodedData = new URLSearchParams();
   formData.forEach((value, key) => {
     urlEncodedData.append(key, value);
@@ -197,6 +196,33 @@ const fill_options = () => {
 
   });
 
+}
+
+let cachedCategories = null;
+
+const fill_categories = () => {
+  if (cachedCategories) {
+    return Promise.resolve(cachedCategories);
+  }
+
+  return fetch('get_all_categories.php', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded' },
+  })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        cachedCategories = data;
+        return data;
+      } else {
+        alert('Failed to fetch data');
+        throw new Error('data fetch successful.');
+      }
+    })
+    .catch(error => {
+      console.error('Error: ', error);
+      throw error;
+    })
 }
 
 let cachedData = null; // Variable to store cached data

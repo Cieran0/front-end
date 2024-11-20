@@ -13,7 +13,6 @@
 
   <?php @include_once 'header.php' ?>
 
-  <!--
     <section class="hero is-large has-bg-img">
       <div class="hero-body">
       </div>
@@ -52,7 +51,7 @@
 
 
         ?>
-        <!-- Add more carousel items here -->
+         Add more carousel items here
       </div>
     </section>
 
@@ -60,7 +59,7 @@
       <p class="title">All Products:</p>
       <div class="container">
         <div class="columns is-multiline">
-t          <?php
+          <?php
 
             @include_once("query.php");
 
