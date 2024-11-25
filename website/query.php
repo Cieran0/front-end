@@ -9,6 +9,8 @@ function connect_db() {
 	$server_username = "root";
 	$server_password = "root";
 
+
+
     if ($dbc === null) {
         $dbc = mysqli_connect($server, $server_username, $server_password);
 

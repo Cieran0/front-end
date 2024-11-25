@@ -29,8 +29,10 @@
 		$_SESSION['FirstName'] = $row['FirstName'];
 		$_SESSION['EmployeeID'] = $row['EmployeeID'];
 		$_SESSION['BranchID'] = $row['BranchID'];
+		$_SESSION['Role'] = $row['Role'];
 
-		header('Location: employee_view.php');
+		$redirect = 'Location: ' . strtolower($_SESSION['Role']) . '_view.php';
+		header($redirect);
 		exit();
 	} 
 

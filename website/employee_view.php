@@ -13,6 +13,12 @@ if (isset($_SESSION['CustomerID'])) {
     exit();
 }
 
+if($_SESSION['Role'] != 'Employee') {
+    $redirect = 'Location: ' . strtolower($_SESSION['Role']) . '_view.php';
+    header($redirect);
+    exit();
+}
+
 ?>
 <html>
 
