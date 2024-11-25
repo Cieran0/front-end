@@ -14,6 +14,7 @@
     $product = $_POST['ProductID'];
     $customer = $_SESSION['CustomerID'];
     $multi_id = $_POST['MultiBuyIDs'];
+    $branch_id = $_POST['BranchID'];
 
 
     if(!(isset($_SESSION['CustomerID']) && ( isset($_POST['ProductID']) || isset($_POST['MultiBuyIDs']) ) && $_SESSION['loggedin'])){
@@ -70,6 +71,9 @@
 
   }
 
+  if(isset($_POST["BranchID"])) {
+    echo "<input type=\"text\" name=\"BranchID\" value=\"$branch_id\" style=\"display: none;\">";
+  }
 ?>
 
 <div class="field is-grouped">

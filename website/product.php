@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="./js/product.js"></script>
     <style>
 
         .product-img {
@@ -64,7 +65,9 @@
                                     LEFT JOIN 
                                         STOCK S 
                                     ON 
-                                        B.BranchID = S.BranchID AND S.ProductID = $pid;
+                                        B.BranchID = S.BranchID AND S.ProductID = $pid
+                                    ORDER BY
+                                        Stock DESC;
                                     "
                     );
 
@@ -113,10 +116,11 @@
                                         <select id="branchSelection">
                                             <?php 
                                                 while ($row = mysqli_fetch_array($branch_stock)) {
+
                                                     if ($row["Stock"] == 0) {
-                                                        echo "<option>". $row["Location"] .": Out of stock </option>";
+                                                        echo "<option id=\"option_". $row["Location"] ."\" class=\"". $row["BranchID"] ."\" >". $row["Location"] .": Out of stock </option>";
                                                     } else {
-                                                        echo "<option>". $row["Location"] .": ". $row["Stock"] . " In stock </option>";
+                                                        echo "<option id=\"option_". $row["Location"] ."\" class=\"". $row["BranchID"] ."\" >". $row["Location"] .": ". $row["Stock"] . " In stock </option>";
                                                     }
 
                                                 }
@@ -139,7 +143,7 @@
                                     $action = "login.php";
                                 }
 
-                                echo "<form action=\"$action\" method=\"post\">";
+                                echo "<form action=\"$action\" method=\"post\" id=\"bookmark_form\">";
                                 echo "<input type=\"text\" name=\"ProductID\" value=\"$pid\" style=\"display: none;\">";
 
 
@@ -166,10 +170,11 @@
                                 if(!$_SESSION['loggedin']) {
                                      $action = "login.php";
                                 }
-                                echo "<form action=\"$action\" method=\"post\">";
+                                echo "<form action=\"$action\" method=\"post\" id=\"buy_form\">";
                                 echo "<input type=\"text\" name=\"ProductID\" value=\"$pid\" style=\"display: none;\">";
+                                echo "<input type=\"text\" name=\"BranchID\" style=\"display: none;\" id=\"hidden_branch_id\">";
                                 ?>
-                                <button class="button" type="submit">Buy</button>
+                                <button class="button" type="submit" id="buy_button">Buy</button>
                                 </form>
                                 </div>
                                 </div>
