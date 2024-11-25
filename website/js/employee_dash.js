@@ -93,8 +93,8 @@ const saveProduct = () => {
   });
 }
 
-const clamp_delta_stock = () => {
-  const delta_stock = document.getElementById('delta_stock').value;
+const clamp_delta_stock = (index) => {
+  const delta_stock = document.getElementById('delta_stock_' + index).value;
 
   if(delta_stock > 1000) {
     return 1000;
@@ -105,14 +105,14 @@ const clamp_delta_stock = () => {
   return Number(delta_stock);
 }
 
-const increaseStock = (productID) =>
+const increaseStock = (productID, index) =>
 {
   console.log(productID);
 
   fetch('add_stock.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: `productID=${productID}&stockQuantity=${clamp_delta_stock()}`
+      body: `productID=${productID}&stockQuantity=${clamp_delta_stock(index)}`
   }) 
   .then(response => response.json())
   .then(data => {
@@ -128,14 +128,14 @@ const increaseStock = (productID) =>
     });
 }
 
-const decreaseStock = (productID) =>
+const decreaseStock = (productID, index) =>
   {
     console.log(productID);
   
     fetch('add_stock.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `productID=${productID}&stockQuantity=${(-1)*clamp_delta_stock()}`
+        body: `productID=${productID}&stockQuantity=${(-1)*clamp_delta_stock(index)}`
     }) 
     .then(response => response.json())
     .then(data => {

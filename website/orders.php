@@ -36,25 +36,33 @@ if(mysqli_num_rows($selectOrders)>0) {
         $name = $row['Name'];
         $date = $row['Date'];
         $price = $row['Price'];
+        $stat = $row['Status'];
+        $pid = $row['ProductID'];
 
-echo "<div class=\"column is-one-fifth is-third-mobile is-one-third-tablet is-one-fifth-desktop\">
+echo "
+    <div class=\"column is-one-fifth is-third-mobile is-one-third-tablet is-one-fifth-desktop\">
+        <a href=\"product.php?ProductID=$pid\">
         <div class=\"card\">
-          <div class=\"card-image\">
-            <figure class=\"image is-1by1\">
-                <img src=\"$img\" alt=\"Placeholder Image\">
-            </figure>
+            <div class=\"card-image\">
+                <figure class=\"image is-1by1\">
+                    <img src=\"$img\" alt=\"Placeholder Image\">
+                </figure>
+                </div>
+            <div class=\"card-content\">
+                <div class=\"content\">
+                    <p><strong>$name</strong></p>
+                    <p>$price</p>
+                    <p>Ordered on: $date</p>
+                    <p>Status: $stat</p>
+                </div>
+            </div>
         </div>
-<div class=\"card-content\">
-    <div class=\"content\">
-<p><strong>$name</strong></p>
-<p>$price</p>
-<p>Ordered on: $date</p>
+        </a>
     </div>
-</div></div></div>
 ";
     }
 
-    echo "</div></div></section>";
+    echo "</div></section>";
 }else{
     echo "<section class=\"section\">
     <h1 class=\"title\">You have no orders</h1> 

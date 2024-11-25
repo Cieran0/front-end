@@ -24,7 +24,7 @@ if (isset($_SESSION['CustomerID'])) {
     <script src="./js/employee_dash.js"></script>
     <script>
         function updateDatabase(orderID) {
-            // Send an AJAX request to `action.php`
+
             fetch('fufill_order.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -204,6 +204,7 @@ if (isset($_SESSION['CustomerID'])) {
             } elseif (mysqli_num_rows($result) == 0) {
                 echo "<p>No stock items found.</p>";
             } else {
+                $x = 0;
                 while ($stock = mysqli_fetch_assoc($result)) {
                     $productID = $stock['ProductID'];
 
@@ -220,19 +221,19 @@ if (isset($_SESSION['CustomerID'])) {
                             <div class="columns is-multiline is-mobile">
                                 <div class="column is-one-third has-text-centered">
                                     <button class="img-button button mt-2"
-                                        onclick="increaseStock(<?php echo htmlspecialchars($productID) ?>)">
+                                        onclick="increaseStock(<?php echo $productID ?> , <?php echo $x ?>)">
                                         <img src="./img/tick.png" alt="Increase Stock" style="height: 25px;">
                                     </button>
                                 </div>
 
                                 <div class="column is-one-third has-text-centered">
-                                    <input type="number" value="1" min="1" max="1000" class="input mt-2" id="delta_stock">
+                                    <input type="number" value="1" min="1" max="1000" class="input mt-2" id="delta_stock_<?php echo $x ?>">
                                 </div>
 
                                 <!-- Second Button -->
                                 <div class="column is-one-third has-text-centered">
                                     <button class="img-button button mt-2"
-                                        onclick="decreaseStock(<?php echo htmlspecialchars($productID) ?>)">
+                                        onclick="decreaseStock(<?php echo $productID ?> , <?php echo $x ?>)">
                                         <img src="./img/tick.png" alt="Decrease Stock" style="height: 25px;">
                                     </button>
                                 </div>
@@ -242,6 +243,7 @@ if (isset($_SESSION['CustomerID'])) {
                     } else {
                         echo "<p>Error fetching product details: " . mysqli_error($dbc) . "</p>";
                     }
+                    $x++;
                 }
             }
             ?>
@@ -305,16 +307,16 @@ if (isset($_SESSION['CustomerID'])) {
                         foreach ($unfulfilledOrders as $order) {
                             ?>
                             <div class="order-card box cell">
-                                <h2>Order #<?php echo htmlspecialchars($order['OrderID']); ?></h2>
-                                <p>Product ID: <?php echo htmlspecialchars($order['ProductID']); ?></p>
-                                <p>Price: £<?php echo htmlspecialchars($order['Price']); ?></p>
+                                <h2>Order #<?php echo $order['OrderID']; ?></h2>
+                                <p>Product ID: <?php echo $order['ProductID']; ?></p>
+                                <p>Price: £<?php echo $order['Price']; ?></p>
                                 <div class="final-row">
                                     <button class="img-button button mt-2"
-                                        onclick="updateDatabase(<?php echo htmlspecialchars($order['OrderID']); ?>)">
+                                        onclick="updateDatabase(<?php echo $order['OrderID']; ?>)">
                                         <img src="./img/tick.png" alt="Mark as Fulfilled" style="height: 25px;">
                                     </button>
                                     <button class="img-button button mt-2"
-                                        onclick="removeOrder(<?php echo htmlspecialchars($order['OrderID']); ?>)">
+                                        onclick="removeOrder(<?php echo $order['OrderID']; ?>)">
                                         <img src="./img/tick.png" alt="Cancel Order" style="height: 25px;">
                                     </button>
                                 </div>
