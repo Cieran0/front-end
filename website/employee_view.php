@@ -95,11 +95,21 @@ if (isset($_SESSION['CustomerID'])) {
                                         <label class="label">Category</label>
                                         <div class="select">
                                             <select id="categorySelect" name="category">
-                                                <option value="" disable selected>Select an option...</option>
-                                                <option>Controllers</option>
-                                                <option>Desktops</option>
-                                                <option>Pets</option>
-                                                <option>Laptops</option>
+                                                <option selected="selected">Select an option....</option>
+                                            <?php
+                                                    $categoryQuery = "SELECT DISTINCT Category FROM `PRODUCT`";
+                                                    $categoryResult = query($categoryQuery);
+                                                    if (!$categoryResult) {
+                                                        echo "<p>sake man</p>";
+                                                    } else {
+                                                        while($row = mysqli_fetch_assoc($categoryResult)) {
+                                                            ?>
+                                                            <option><?php echo $row['Category']?></option>
+                                                            <?php
+                                                        }
+                                                        echo "<p>done</p>";
+                                                    }
+                                                ?>
                                             </select>
                                         </div>
                                     </div>
