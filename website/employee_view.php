@@ -107,7 +107,6 @@ if (isset($_SESSION['CustomerID'])) {
                                                             <option><?php echo $row['Category']?></option>
                                                             <?php
                                                         }
-                                                        echo "<p>done</p>";
                                                     }
                                                 ?>
                                             </select>
@@ -223,7 +222,9 @@ if (isset($_SESSION['CustomerID'])) {
 
                     if ($productResult && $product = mysqli_fetch_assoc($productResult)) {
                         ?>
-                        <div class="column box is-one-third">
+                        <div class="column is-one-third">
+                            <div class="box">
+
                             <p><?php echo htmlspecialchars($product['Name']); ?></p>
                             <p>Product ID: <?php echo htmlspecialchars($productID); ?></p>
                             <p>Stock: <?php echo htmlspecialchars($stock['Stock']); ?></p>
@@ -240,13 +241,13 @@ if (isset($_SESSION['CustomerID'])) {
                                     <input type="number" value="1" min="1" max="1000" class="input mt-2" id="delta_stock_<?php echo $x ?>">
                                 </div>
 
-                                <!-- Second Button -->
                                 <div class="column is-one-third has-text-centered">
                                     <button class="img-button button mt-2"
                                         onclick="decreaseStock(<?php echo $productID ?> , <?php echo $x ?>)">
                                         <img src="./img/tick.png" alt="Decrease Stock" style="height: 25px;">
                                     </button>
                                 </div>
+                            </div>
                             </div>
                         </div>
                         <?php
@@ -316,7 +317,9 @@ if (isset($_SESSION['CustomerID'])) {
                     } else {
                         foreach ($unfulfilledOrders as $order) {
                             ?>
-                            <div class="order-card box cell">
+                            <div class="cell">
+                                <div class="box">
+
                                 <h2>Order #<?php echo $order['OrderID']; ?></h2>
                                 <p>Product ID: <?php echo $order['ProductID']; ?></p>
                                 <p>Price: £<?php echo $order['Price']; ?></p>
@@ -330,6 +333,8 @@ if (isset($_SESSION['CustomerID'])) {
                                         <img src="./img/tick.png" alt="Cancel Order" style="height: 25px;">
                                     </button>
                                 </div>
+                                </div>
+
                             </div>
                             <?php
                         }
@@ -339,6 +344,8 @@ if (isset($_SESSION['CustomerID'])) {
             </div>
         </div>
     </section>
+
+    <div class="grid">
 
     <section class="section">
         <div class="">
@@ -372,12 +379,14 @@ if (isset($_SESSION['CustomerID'])) {
                     } else {
                         foreach ($employees as $employee) {
                             ?>
-                            <div class="box column is-one-third">
+                            <div class="column is-one-third">
+                                <div class="box">
                                 <h2><?php echo htmlspecialchars($employee['Name']); ?></h2>
                                 <p>Role: <?php echo htmlspecialchars($employee['Role']); ?></p>
                                 <a href="mailto:<?php echo htmlspecialchars($employee['Email']); ?>">
                                     <button class="contact-button button mt-2">Contact</button>
                                 </a>
+                            </div>
                             </div>
                             <?php
                         }
@@ -420,9 +429,12 @@ if (isset($_SESSION['CustomerID'])) {
                     } else {
                         foreach ($branches as $branch) {
                             ?>
-                            <div class="box column is-one-third">
+                            <div class="column is-one-third">
+                                <div class="box">
+
                                 <h2><?php echo htmlspecialchars($branch['Location']); ?></h2>
                                 <p>Contact: <?php echo htmlspecialchars($branch['ContactNo']); ?></p>
+                            </div>
                             </div>
                             <?php
                         }
@@ -432,6 +444,8 @@ if (isset($_SESSION['CustomerID'])) {
             </div>
         </div>
     </section>
+    </div>
+
 </body>
 
 </html>
