@@ -38,7 +38,7 @@ function save_changes() {
   
     console.log(urlEncodedData);
   
-    fetch('edit_employee.php', {
+    fetch('actions/edit_employee.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: urlEncodedData.toString(),
@@ -112,7 +112,7 @@ const fetchStuff = () => {
     }
   
     // If no cached data, perform the fetch
-    return fetch('get_weekly_hours.php', {
+    return fetch('actions/get_weekly_hours.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     })

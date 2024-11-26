@@ -12,7 +12,7 @@
 <section class="section">
 <div class="box">
 
-<form action="login_action.php" method="post">
+<form action="actions/login_action.php" method="post">
 
 <div class="field">
   <label class="label">Email</label>

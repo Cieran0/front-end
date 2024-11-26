@@ -31,7 +31,7 @@ if($_SESSION['Role'] != 'Employee') {
     <script>
         function updateDatabase(orderID) {
 
-            fetch('fufill_order.php', {
+            fetch('actions/fufill_order.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: `orderID=${orderID}`

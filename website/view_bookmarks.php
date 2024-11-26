@@ -118,7 +118,7 @@
     </form>
 
     <?php     
-    $action = "clear_bookmarks.php";   
+    $action = "actions/clear_bookmarks.php";   
     echo "<form action=\"$action\" method=\"post\">";
     ?>
     <button class="button is-primary" type="submit">

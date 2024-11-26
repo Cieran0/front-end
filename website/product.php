@@ -132,12 +132,12 @@
 
                                 <div class="column split-col">
                             <?php
-                                $action = "bookmark.php";
+                                $action = "actions/bookmark.php";
                                 if(isset($_SESSION['CustomerID'])) {
                                     $bmarkVal = query("SELECT * FROM Bookmarks WHERE CustomerID = ".$_SESSION['CustomerID']." AND ProductID = $pid;");
 
                                     if(mysqli_num_rows($bmarkVal) > 0) {
-                                        $action = "un_bookmark.php";    
+                                        $action = "actions/un_bookmark.php";    
                                     }
                                 } else {
                                     $action = "login.php";
@@ -152,7 +152,7 @@
                                 
                                 <button class="button" type="submit">
                                     <?php
-                                    if($action == "un_bookmark.php"){
+                                    if($action == "actions/un_bookmark.php"){
                                         echo "Remove bookmark";
                                     }
                                     else{

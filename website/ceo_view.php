@@ -58,7 +58,7 @@ if (isset($_SESSION['CustomerID'])) {
                                         </figure>                                                                        
                                     </button>   
 
-                                    <form method="post" action="./delete_employee.php">
+                                    <form method="post" action="./actions/delete_employee.php">
                                         <input type="hidden" name="EmployeeID" value="<?php echo $row['EmployeeID'] ?>"/>
                                         <button title="Delete employee record....">
                                             <figure class="image is-24x24">

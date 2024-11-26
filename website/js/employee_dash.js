@@ -51,7 +51,7 @@ const saveExistingProduct = () => {
 
   console.log(urlEncodedData);
 
-  fetch('add_stock.php', {
+  fetch('actions/add_stock.php', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: urlEncodedData.toString(),
@@ -95,7 +95,7 @@ const saveProduct = () => {
   // Proceed if all required fields are valid
   const formData = new FormData(form);
 
-  fetch('create_product.php', {
+  fetch('actions/create_product.php', {
     method: 'POST',
     body: formData
   })
@@ -131,7 +131,7 @@ const increaseStock = (productID, index) =>
 {
   console.log(productID);
 
-  fetch('add_stock.php', {
+  fetch('actions/add_stock.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: `productID=${productID}&stockQuantity=${clamp_delta_stock(index)}`
@@ -154,7 +154,7 @@ const decreaseStock = (productID, index) =>
   {
     console.log(productID);
   
-    fetch('add_stock.php', {
+    fetch('actions/add_stock.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: `productID=${productID}&stockQuantity=${(-1)*clamp_delta_stock(index)}`
@@ -177,7 +177,7 @@ const removeOrder = (orderID) =>
 {
   console.log(orderID);
 
-  fetch('remove_order.php', {
+  fetch('actions/remove_order.php', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: `orderID=${orderID}`
@@ -292,7 +292,7 @@ const fetchStuff = () => {
   }
 
   // If no cached data, perform the fetch
-  return fetch('get_all_products_not_in_branch_as_json.php', {
+  return fetch('actions/get_all_products_not_in_branch_as_json.php', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
   })

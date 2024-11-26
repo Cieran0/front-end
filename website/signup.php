@@ -12,7 +12,7 @@
 <section class="section">
 <div class="box">
 
-<form action="signup_action.php" method="post">
+<form action="actions/signup_action.php" method="post">
 <div class="field">
   <label class="label">First Name</label>
   <div class="control">

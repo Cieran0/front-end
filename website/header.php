@@ -73,7 +73,7 @@
                             $page_3_heading
                         </a>
                         <hr class=\"navbar-divider\">
-                        <a class=\"navbar-item\" href=\"logout.php\">
+                        <a class=\"navbar-item\" href=\"actions/logout.php\">
                             Logout
                         </a>
                     </div>

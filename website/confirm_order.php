@@ -27,7 +27,7 @@
 <section class="section">
 <div class="box">
 
-<form action="order_action.php" method="post">
+<form action="actions/order_action.php" method="post">
 <div class="field">
   <label class="label">Cardholder Name</label>
   <div class="control">
