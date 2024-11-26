@@ -16,12 +16,10 @@ try {
     mysqli_begin_transaction($dbc);
 
     
-    $stmt = mysqli_prepare($dbc, "DELETE FROM EMPLOYEE WHERE EmployeeID = ?");
-    mysqli_stmt_bind_param($stmt, 'i', $employeeId);
-    $executeResult = mysqli_stmt_execute($stmt);
+    $executeResult = query("CALL DeleteEmployee($employeeID)");
 
     if ($executeResult) {
-        mysqli_commit($dbc);
+        mysqli_commit(mysql: $dbc);
         header('Location: /ceo_view.php');
         exit();
     } else {

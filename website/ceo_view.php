@@ -38,7 +38,7 @@ if (isset($_SESSION['CustomerID'])) {
                         <select id="EmployeeSelect">
                             <option disabled selected> Select Employee...</option>
                             <?php 
-                                $employeeQuery = "SELECT * FROM CEOView WHERE NOT `ROLE` = 'CEO';";
+                                $employeeQuery = "CALL GetEmployeesForCEO()";
                                 $employeeResult = query($employeeQuery);
                                 while($row = mysqli_fetch_assoc($employeeResult)) {
                                     echo '<option>' . $row['EmployeeID'] . ": " . $row['FirstName'] . " " . $row['LastName'] . "</option>";

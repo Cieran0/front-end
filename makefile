@@ -20,3 +20,4 @@ gen_reset: go
 reset: gen_reset
 	mysql -uroot -proot database < database/gen_reset.sql
 	mysql -uroot -proot database < database/gen_go.sql
+	mysql -uroot -proot database < database/procedures.sql

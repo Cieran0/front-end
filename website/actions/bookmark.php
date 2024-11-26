@@ -14,9 +14,7 @@
 
     @include '../query.php';
 	
-    $sqlSelect = query("INSERT INTO BOOKMARK (BookmarkID, ProductID, CustomerID, TimeSaved) 
-                        SELECT (COALESCE(MAX(BookmarkID), 0) + 1), $product, $customer, NOW() 
-                        FROM BOOKMARK;");
+    $sqlSelect = query("CALL InsertBookmark($product, $customer);");
 	
     header("Location: /view_bookmarks.php");
     exit();

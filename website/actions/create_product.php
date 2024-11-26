@@ -64,11 +64,9 @@ $employee_id = mysqli_real_escape_string($dbc, $_SESSION['EmployeeID']);
 
 mysqli_begin_transaction($dbc);
 
+$branchID = $_SESSION['BranchID'];
+
 try {
-    // Get next ProductID
-    $pid_query = query("SELECT COALESCE(MAX(ProductID), 0) + 1 AS NextProductID FROM PRODUCT;");
-    $row = $pid_query->fetch_assoc();
-    $pid = $row['NextProductID'];
 
     // Validate supplier
     $supplier_check = query("SELECT SupplierID FROM `database`.`SUPPLIER` WHERE Name = '$supp'");
@@ -78,33 +76,12 @@ try {
     $supplier_row = $supplier_check->fetch_assoc();
     $supp_id = $supplier_row['SupplierID'];
 
+
     // Insert into PRODUCT table
-    $insert_product_query = query("
-        INSERT INTO `database`.`PRODUCT`
-        (`ProductID`, `Name`, `Category`, `Description`, `BasePrice`, `SupplierID`)
-        VALUES
-        ($pid, '$productName', '$category', '$description', $basePrice, $supp_id);
-    ");
+    $insert_product_query = query("CALL InsertProduct('$productName', '$description', $basePrice, $supp_id, $stockQuantity, $branchID)");
+
     if (!$insert_product_query) {
         throw new Exception("Failed to insert product: " . $dbc->error);
-    }
-
-    // Insert into STOCK table
-    $insert_stock_query = query("
-        INSERT INTO `database`.`STOCK` (`StockID`, `Stock`, `ProductID`, `BranchID`)
-        SELECT 
-          COALESCE(MAX(StockID), 0) + 1, 
-          $stockQuantity, 
-          $pid, 
-          (
-            SELECT BranchID 
-            FROM `database`.`EMPLOYEE` 
-            WHERE EmployeeID = '$employee_id'
-          )
-        FROM `database`.`STOCK`;
-    ");
-    if (!$insert_stock_query) {
-        throw new Exception("Failed to insert stock: " . $dbc->error);
     }
 
     // Commit the transaction

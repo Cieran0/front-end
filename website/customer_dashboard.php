@@ -99,7 +99,7 @@ AND p1.ProductID NOT IN (
               while ($row = mysqli_fetch_array($selectCategoryQuery)) {
               
                   $category = $row['Category'];
-                  $img = "product.png";
+                  $img = "images/product.png";
               
                   echo"<div class=\"column is-one-fifth is-third-mobile is-one-third-tablet is-one-fifth-desktop\">
         <div class=\"card\">
