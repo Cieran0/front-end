@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <?php 
-include 'query.php';
+include '/query.php';
 session_start();
 
 if (!isset($_SESSION['CustomerID']) && !isset($_SESSION['EmployeeID'])) {
-    header('Location: login.php');
+    header('Location: /login.php');
     exit();
 }
 
 if (isset($_SESSION['CustomerID'])) {
-    header('Location: customer_dashboard.php');
+    header('Location: /customer_dashboard.php');
     exit();
 }
 ?>
@@ -22,6 +22,51 @@ if (isset($_SESSION['CustomerID'])) {
 </head>
 <body>
     <?php @include_once 'header.php' ?>
+    <?php @include_once 'query.php' ?>
+
+    <div id="staffModal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Add Existing Product</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <form id="EmployeeForm">
+                <div class="field">
+                    <label class="label">Edit Employee</label>
+                    <div class="select">
+                        <select id="EmployeeSelect">
+                            <option disabled selected> Select Employee...</option>
+                            <?php 
+                        
+                                $eid = $_SESSION['EmployeeID'];
+                                $employeeQuery = "SELECT * FROM ManagerView WHERE NOT `ROLE` = 'CEO' AND NOT `ROLE` = 'Manager' AND BranchID = (SELECT BranchID From ManagerView WHERE EmployeeID = $eid);";
+                                $employeeResult = query($employeeQuery);
+                                while($row = mysqli_fetch_assoc($employeeResult)) {
+                                    echo '<option>' . $row['EmployeeID'] . ": " . $row['FirstName'] . " " . $row['LastName'] . "</option>";
+                                }
+                            ?>
+                        </select>
+                    </div>
+                </div>
+                    <div class="field">
+                        <label class="label">Weekly Hours</label>
+                        <div class="control">
+                            <input class="input" type="number" name="WeeklyHours" id="weeklyHoursSelect"
+                                placeholder="Enter new weekly hours" min="1" max="100" required>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <section class="modal-card-foot">
+                <button class="button is-success" id="saveChangesButton">Save</button>
+                <button class="button cancel-button" id="cancel">Cancel</button>
+            </section>
+        </div>
+    </div>
+
+
     <section class="section">
         <div class="manage-staff">
             <h1 class="title">
