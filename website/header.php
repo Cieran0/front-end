@@ -2,7 +2,7 @@
         <div class="navbar-brand">
           <!-- Logo or brand -->
           <a class="navbar-item" href="index.php">
-            <img src="logo.png" alt="Logo">
+            <img src="./images/logo.png" alt="Logo">
           </a>
         </div>
     

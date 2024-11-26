@@ -54,7 +54,7 @@ AND p1.ProductID NOT IN (
                 $pid = $row["ProductID"];
                 $name = $row["Name"];
                 $price = $row["BasePrice"];
-                $img = "product.png";
+                $img = "/images/product.png";
 
                 echo"<div class=\"column is-one-fifth is-third-mobile is-one-third-tablet is-one-fifth-desktop\">
         <div class=\"card\">

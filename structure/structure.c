@@ -108,7 +108,9 @@ VIEW EMPLOYEE ManagerView = {
     .EmployeeID INCLUDED
     .FirstName INCLUDED
     .LastName INCLUDED
+    .Role INCLUDED
     .Email INCLUDED
+    .WeeklyHours INCLUDED
     .BranchID INCLUDED
 };
 

@@ -173,59 +173,7 @@ if($_SESSION['Role'] != 'Employee') {
                                 </section>
                         </div>
                     </div>
-                    <div id="existingProductModal" class="modal">
-                        <div class="modal-background"></div>
-                        <div class="modal-card">
-
-                            <header class="modal-card-head">
-                                <p class="modal-card-title">Add Existing Product</p>
-                                <button class="delete" aria-label="close"></button>
-                            </header>
-
-                            <section class="modal-card-body">
-                                <form id="existingProductForm">
-                                <div class="field">
-                                    <label class="label">Select Product</label>
-                                    <div class="select">
-                                        <select id="existingProductsSelect">
-                                          <option>-1: Unable to load products</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                    <div class="field">
-                                        <label class="label">Description</label>
-                                        <div class="control">
-                                            <textarea class="textarea" name="description" id="existingDescription"
-                                                placeholder="Enter product description" required readonly></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="field">
-                                        <label class="label">Product Price (£)</label>
-                                        <div class="control">
-                                            <input class="input" type="number" name="basePrice" id="existingPrice"
-                                                placeholder="Enter base price" min="0" step="0.01" required readonly>
-                                        </div>
-                                    </div>
-
-                                    <div class="field">
-                                        <label class="label">Stock Quantity</label>
-                                        <div class="control">
-                                            <input class="input" type="number" name="stockQuantity"
-                                                placeholder="Enter stock quantity" min="0" required>
-                                        </div>
-                                    </div>
-                                </form>
-                            </section>
-                            <section class="modal-card-foot">
-                                <button class="button is-success" id="saveExistingProductButton">Save</button>
-                                <button class="button cancel-button">Cancel</button>
-                            </section>
-                        </div>
-
-
-                    </div>
+                    
 
 
                 </nav>
@@ -261,7 +209,7 @@ if($_SESSION['Role'] != 'Employee') {
                                 <div class="column is-one-third has-text-centered">
                                     <button class="img-button button mt-2"
                                         onclick="increaseStock(<?php echo $productID ?> , <?php echo $x ?>)">
-                                        <img src="./img/tick.png" alt="Increase Stock" style="height: 25px;">
+                                        <img src="./images/tick.png" alt="Increase Stock" style="height: 25px;">
                                     </button>
                                 </div>
 
@@ -272,7 +220,7 @@ if($_SESSION['Role'] != 'Employee') {
                                 <div class="column is-one-third has-text-centered">
                                     <button class="img-button button mt-2"
                                         onclick="decreaseStock(<?php echo $productID ?> , <?php echo $x ?>)">
-                                        <img src="./img/tick.png" alt="Decrease Stock" style="height: 25px;">
+                                        <img src="./images/tick.png" alt="Decrease Stock" style="height: 25px;">
                                     </button>
                                 </div>
                             </div>
@@ -354,11 +302,11 @@ if($_SESSION['Role'] != 'Employee') {
                                 <div class="final-row">
                                     <button class="img-button button mt-2"
                                         onclick="updateDatabase(<?php echo $order['OrderID']; ?>)">
-                                        <img src="./img/tick.png" alt="Mark as Fulfilled" style="height: 25px;">
+                                        <img src="./images/tick.png" alt="Mark as Fulfilled" style="height: 25px;">
                                     </button>
                                     <button class="img-button button mt-2"
                                         onclick="removeOrder(<?php echo $order['OrderID']; ?>)">
-                                        <img src="./img/tick.png" alt="Cancel Order" style="height: 25px;">
+                                        <img src="./images/tick.png" alt="Cancel Order" style="height: 25px;">
                                     </button>
                                 </div>
                                 </div>

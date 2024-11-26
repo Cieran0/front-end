@@ -31,7 +31,7 @@
                 while ($row = mysqli_fetch_array($sqlSelect)) {
    
                     $category = $row['Category'];
-                    $img = "product.png";
+                    $img = "images/product.png";
 
                     echo "<div class=\"carousel-item\">
                     <div class=\"box\">
@@ -71,7 +71,7 @@
                     $pid = $row["ProductID"];
                     $name = $row["Name"];
                     $price = $row["BasePrice"];
-                    $img = "product.png";
+                    $img = "images/product.png";
 
 
                     echo "<div class=\"column is-one-fifth is-third-mobile is-one-third-tablet is-one-fifth-desktop\">

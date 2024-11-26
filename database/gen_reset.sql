@@ -105,7 +105,9 @@ AS SELECT
 	EmployeeID,
 	FirstName,
 	LastName,
+	Role,
 	Email,
+	WeeklyHours,
 	BranchID
 FROM
 	EMPLOYEE;

@@ -89,7 +89,7 @@
                     <article class=\"media\">
                         <div class=\"media-left\">
                             <figure class=\"image\">
-                                <img src=\"product.png\" class=\"search-img\" alt=\"Image\" />
+                                <img src=\"images/product.png\" class=\"search-img\" alt=\"Image\" />
                             </figure>
                         </div>
                         <div class=\"media-content\">

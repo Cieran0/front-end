@@ -54,7 +54,7 @@ if (isset($_SESSION['CustomerID'])) {
                                 <div class="level-right">
                                     <button title="Edit employee details...">
                                         <figure class="image is-24x24">
-                                            <img src="./pencil.png" />
+                                            <img src="./images/pencil.png" />
                                         </figure>                                                                        
                                     </button>   
 
@@ -62,7 +62,7 @@ if (isset($_SESSION['CustomerID'])) {
                                         <input type="hidden" name="EmployeeID" value="<?php echo $row['EmployeeID'] ?>"/>
                                         <button title="Delete employee record....">
                                             <figure class="image is-24x24">
-                                                <img src="./cross.webp" />
+                                                <img src="./images//cross.webp" />
                                             </figure>                                                                        
                                         </button>
                                     </form>
