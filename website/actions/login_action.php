@@ -4,7 +4,7 @@
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    @include_once("query.php");
+    @include '../query.php';
 	
     $sqlSelect = query("SELECT * FROM CUSTOMER WHERE Email = '$email' AND Password = '$password'");
     

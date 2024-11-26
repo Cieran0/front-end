@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-include 'query.php';  // Includes the query.php file where query() and $db are initialized
+include '/query.php';  // Includes the /query.php file where query() and $db are initialized
 session_start();
 
 if (!isset($_SESSION['CustomerID']) && !isset($_SESSION['EmployeeID'])) {

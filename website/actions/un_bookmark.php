@@ -14,7 +14,7 @@
     $product = $_POST['ProductID'];
     $customer = $_SESSION['CustomerID'];
 
-    @include_once("query.php");
+    @include '../query.php';
 	
     $sqlSelect = query("DELETE FROM BOOKMARK WHERE ProductID = ". $product ." AND CustomerID = ". $customer ."; ");
 	

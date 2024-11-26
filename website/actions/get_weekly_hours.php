@@ -1,5 +1,5 @@
 <?php 
-include 'query.php';
+include '/query.php';
 session_start();
 
 if (!isset($_SESSION['EmployeeID'])) {
@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 $EmployeeID = $_SESSION['EmployeeID'];
-@include_once("query.php");
+@include '../query.php';
 
 try {
     $result = query("SELECT EmployeeID, WeeklyHours FROM ManagerView WHERE NOT `ROLE` = 'CEO' AND NOT `ROLE` = 'Manager' AND BranchID = (SELECT BranchID From ManagerView WHERE EmployeeID = $EmployeeID);");

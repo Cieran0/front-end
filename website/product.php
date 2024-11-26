@@ -40,7 +40,7 @@
     $title = "";
 
 
-    @include_once ("query.php");
+    @include_once ("/query.php");
 
     $sqlSelect = query("SELECT * FROM PRODUCT WHERE ProductID = $pid;");
 

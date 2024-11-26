@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php 
-include 'query.php';
+include '/query.php';
 session_start();
 
 if (!isset($_SESSION['CustomerID']) && !isset($_SESSION['EmployeeID'])) {

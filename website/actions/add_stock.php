@@ -23,7 +23,7 @@ if (isset($_POST['stockQuantity'])) {
 $productID = intval($_POST['productID']);
 
 
-@include 'query.php';
+@include '../query.php';
 
 
 $branchResult = query("SELECT BranchID FROM EMPLOYEE WHERE EmployeeID = $employee_id");

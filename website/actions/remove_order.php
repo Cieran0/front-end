@@ -18,7 +18,7 @@ if (!isset($_POST['orderID'])) {
 
 $orderID = intval($_POST['orderID']);
 
-@include 'query.php';
+@include '../query.php';
 
 connect_db();
 

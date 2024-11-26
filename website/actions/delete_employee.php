@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-@include 'query.php';
+@include '../query.php';
 connect_db();
 
 if (isset($_POST['EmployeeID'])) {

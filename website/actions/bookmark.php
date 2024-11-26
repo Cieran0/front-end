@@ -12,7 +12,7 @@
     $product = $_POST['ProductID'];
     $customer = $_SESSION['CustomerID'];
 
-    @include_once("query.php");
+    @include '../query.php';
 	
     $sqlSelect = query("INSERT INTO BOOKMARK (BookmarkID, ProductID, CustomerID, TimeSaved) 
                         SELECT (COALESCE(MAX(BookmarkID), 0) + 1), $product, $customer, NOW() 

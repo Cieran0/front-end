@@ -23,7 +23,7 @@
       <p class="title">Categories:</p>
       <div class="carousel-container">
         <?php 
-            @include_once("query.php");
+            @include_once("/query.php");
         
             $sqlSelect = query("SELECT DISTINCT Category FROM PRODUCT;");
 
@@ -62,7 +62,7 @@
         <div class="columns is-multiline">
           <?php
 
-            @include_once("query.php");
+            @include_once("/query.php");
 
             $sqlSelect = query("SELECT * FROM PRODUCT;");
 

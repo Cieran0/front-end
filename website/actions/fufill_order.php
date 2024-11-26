@@ -16,7 +16,7 @@ if (!isset($_POST['orderID']) || empty($_POST['orderID'])) {
 
 $orderID = intval($_POST['orderID']); // Sanitize input
 
-@include 'query.php'; // Include database query functions
+@include '../query.php';
 
 connect_db(); // Connect to the database
 

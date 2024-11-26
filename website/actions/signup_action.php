@@ -30,7 +30,7 @@
         exit();
     }
 
-    @include_once("query.php");
+    @include '../query.php';
 
     $sqlCheck = query("SELECT * FROM CUSTOMER WHERE Email = '$email'");
     

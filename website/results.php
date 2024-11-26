@@ -37,7 +37,7 @@
         $title = "All Products";
     }
 
-    @include_once ("query.php");
+    @include_once ("/query.php");
 
     $splitString = explode(' ', $name);
 

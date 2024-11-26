@@ -10,7 +10,7 @@
 
 <?php
 session_start();
-@include_once 'query.php';
+@include '../query.php';
 
 
 if (!isset($_SESSION['CustomerID'])) {

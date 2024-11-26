@@ -26,8 +26,7 @@ if (!isset($_POST['WeeklyHours'])) {
 $manager = $_SESSION['EmployeeID'];
 $employee_id = $_POST['EmployeeID'];
 $new_hours = intval( $_POST['WeeklyHours'] );
-
-@include 'query.php';
+@include '../query.php';
 
 
 $employee_test = query("SELECT EmployeeID FROM EMPLOYEE WHERE EmployeeID = $employee_id");

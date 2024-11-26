@@ -19,7 +19,7 @@
         $branch = 0;
     }
 
-    @include_once("query.php");
+    @include '../query.php';
 
     $sqlSelect = query("SELECT * FROM CUSTOMER WHERE CustomerID = '$customer' AND Password = '$password';");
     $num_rows = mysqli_num_rows($sqlSelect);

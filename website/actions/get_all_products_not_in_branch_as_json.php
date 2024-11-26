@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 session_start();
 
 $EmployeeID = $_SESSION['EmployeeID'];
-@include_once("query.php");
+@include '../query.php';
 
 try {
     $result = query("SELECT p.*
