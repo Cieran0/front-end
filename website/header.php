@@ -40,6 +40,20 @@
                   </div>";
         } else {
             $name = $_SESSION['FirstName'];
+            $page_2 = "orders.php";
+            $page_2_heading = "Your Orders";
+
+            $page_3 = "view_bookmarks.php";
+            $page_3_heading = "View Bookmarks";
+
+            if (isset($_SESSION["EmployeeID"])) { 
+              $page_2_heading = "Your Summary"; 
+              $page_2 = "employee_summary.php";
+              $page_3_heading = "Performance";
+              $page_3 = "performance.php";
+            }
+
+          
             echo "
             <div class=\"navbar-end\">
                 <div class=\"navbar-item has-dropdown is-hoverable\">
@@ -52,11 +66,11 @@
                         <a class=\"navbar-item\" href=\"customer_dashboard.php\">
                             Dashboard
                         </a>
-                        <a class=\"navbar-item\" href=\"orders.php\">
-                            Your Orders
+                        <a class=\"navbar-item\" href=\"$page_2\">
+                            $page_2_heading
                         </a>
-                        <a class=\"navbar-item\" href=\"view_bookmarks.php\">
-                            View Bookmarked
+                        <a class=\"navbar-item\" href=\"$page_3\">
+                            $page_3_heading
                         </a>
                         <hr class=\"navbar-divider\">
                         <a class=\"navbar-item\" href=\"logout.php\">

@@ -43,3 +43,8 @@ CREATE FULLTEXT INDEX idx_product_name_description ON PRODUCT (Name, Description
 -- Other Important Indexes
 CREATE UNIQUE INDEX idx_supplier_contactno ON SUPPLIER (ContactNo);
 CREATE INDEX idx_bookmark_timesaved ON BOOKMARK (TimeSaved);
+
+
+CREATE VIEW EmployeeDataView AS
+SELECT EmployeeID, FirstName, LastName, Role, Email, Salary, WeeklyHours, BranchID
+FROM EMPLOYEE
