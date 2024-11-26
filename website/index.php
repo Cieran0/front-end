@@ -1,3 +1,4 @@
+<?php require 'query.php'; ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -62,7 +63,6 @@
         <div class="columns is-multiline">
           <?php
 
-            @include_once("/query.php");
 
             $sqlSelect = query("SELECT * FROM PRODUCT;");
 

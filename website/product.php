@@ -40,7 +40,7 @@
     $title = "";
 
 
-    @include_once ("/query.php");
+    require "query.php";
 
     $sqlSelect = query("SELECT * FROM PRODUCT WHERE ProductID = $pid;");
 
@@ -93,7 +93,7 @@
                     <article class=\"media\">
                         <div class=\"media-left\">
                             <figure class=\"image\">
-                                <img src=\"product.png\" class=\"product-img\" alt=\"Image\" />
+                                <img src=\"images/product.png\" class=\"product-img\" alt=\"Image\" />
                             </figure>
                         </div>
                         <div class=\"media-content\">

@@ -14,14 +14,49 @@
         }
 
     </style>
+    <script>
+        function toggleInput(checkboxId, inputId) {
+            const checkbox = document.getElementById(checkboxId);
+            const input = document.getElementById(inputId);
+            input.disabled = !checkbox.checked;
+
+            return checkbox.checked;
+        }
+
+        function toggleNum(checkboxId, inputId) {
+            alive = toggleInput(checkboxId, inputId);
+            const place = document.getElementById(inputId);
+            if(alive && place.value < 1) {
+                place.value = 1;
+            }
+
+        }
+
+        function clamp_value(element, min, max) {
+            if (element.value < min) {
+                element.value = min
+            } else if (element.value > max ) {
+                element.value = max;
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => { 
+            document.getElementById('MinPriceInput').addEventListener('change', () => { clamp_value(document.getElementById('MinPriceInput'), 1, 1000000) })
+            document.getElementById('MaxPriceInput').addEventListener('change', () => {  clamp_value(document.getElementById('MaxPriceInput'), 1, 1000000) })
+        });
+    </script>
   </head>
 <body>
 
-  <?php @include_once 'header.php' ?>
-
-  <?php
+    <?php include_once "header.php" ?>
+    
+    <?php
+    require "query.php";
     $name = $_GET['search'];
     $category = $_GET['category'];
+    $supplier = $_GET['supplier'];
+    $max_price = $_GET['MaxPrice'];
+    $min_price = $_GET['MinPrice'];
     $none = "";
     $title = "";
     if ( isset($_GET["search"]) && isset($_GET["category"])) {
@@ -50,12 +85,22 @@
     if (!empty($category)) {
         $query .= " AND Category = '$category'";
     }
+
+    if(!empty($supplier)) {
+        $query .= " AND SupplierID = (SELECT SupplierID FROM SUPPLIER WHERE NAME = '$supplier')";
+    }
     
+    if(!empty($max_price)) {
+        $query .= " AND BasePrice <= $max_price";
+    }
+
+    if(!empty($min_price)) {
+        $query .= " AND BasePrice >= $min_price";
+    }
+
     $query .= ";";
     
-
-
-    $query .= ";";
+    error_log($query);
 
     $sqlSelect = query($query);
 
@@ -70,6 +115,77 @@
     <section class="section">
     <div class="columns is-multiline">
         <div class="column is-one-quarter is-one-quarter-mobile is-one-quarter-tablet is-one-quarter-desktop">
+            <h1 class="subtitle">Filters</h1>
+            <form>
+                <label class="checkbox">
+                    <input type="checkbox" id="CategoryButton" onclick="toggleInput('CategoryButton', 'CategorySelect')"/>
+                    Category
+                </label>
+                <div class="field">
+                    <div class="select">
+                        <select id="CategorySelect" name="category" disabled>
+                            <?php 
+
+                            $categories = query("SELECT DISTINCT Category FROM PRODUCT;");
+
+                            while ($row = mysqli_fetch_array($categories)) {
+                                echo "<option>". $row["Category"] ."</option>";
+                            }
+                            
+                            ?>
+                        </select>
+                    </div>
+                </div>
+
+                <label class="checkbox">
+                    <input type="checkbox" id="SupplierButton" onclick="toggleInput('SupplierButton', 'SupplierSelect')"/>
+                    Supplier
+                </label>
+                <div class="field">
+                    <div class="select">
+                        <select id="SupplierSelect" name="supplier" disabled>
+                            <?php 
+
+                            $categories = query("SELECT Name FROM SUPPLIER;");
+
+                            while ($row = mysqli_fetch_array($categories)) {
+                                echo "<option>". $row["Name"] ."</option>";
+                            }
+                            
+                            ?>
+                        </select>
+                    </div>
+                </div>
+
+                <label class="checkbox">
+                    <input type="checkbox" id="MaxPriceButton" onclick="toggleNum('MaxPriceButton', 'MaxPriceInput')"/>
+                    Max Price
+                </label>
+                <div class="field">
+                    <div class="control">
+                    <input class="input" type="number" name="MaxPrice" id="MaxPriceInput"
+                    placeholder="Max Price" min="1" max="10000" disabled>
+                    </div>
+                </div>
+
+                <label class="checkbox">
+                    <input type="checkbox" id="MinPriceButton" onclick="toggleNum('MinPriceButton', 'MinPriceInput')"/>
+                    Min Price
+                </label>
+                <div class="field">
+                    <div class="control">
+                    <input class="input" type="number" name="MinPrice" id="MinPriceInput"
+                    placeholder="Max Price" min="0" max="10000" disabled>
+                    </div>
+                </div>
+
+                <?php echo "<input type=\"text\" name=\"search\" value=\"$name\" style=\"display: none;\">" ?>
+
+                <button class="button is-primary">
+                    Apply Filters
+                </button>
+
+            </form>
         </div>
         
         <div class="column is-half is-one-mobile is-half-tablet is-half-desktop">

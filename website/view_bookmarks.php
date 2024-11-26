@@ -24,7 +24,7 @@
   
   session_start();
   @include_once 'header.php';
-  @include_once '/query.php';
+  require "query.php";
 
   $sqlView = query("SELECT * FROM Bookmarks WHERE CustomerID = ". $_SESSION['CustomerID'] .";");
 ?>

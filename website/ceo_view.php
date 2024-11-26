@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php 
-include '/query.php';
+require 'query.php';
 session_start();
 
 if (!isset($_SESSION['CustomerID']) && !isset($_SESSION['EmployeeID'])) {
@@ -22,7 +22,6 @@ if (isset($_SESSION['CustomerID'])) {
 </head>
 <body>
     <?php @include_once 'header.php' ?>
-    <?php @include_once 'query.php' ?>
 
     <div id="staffModal" class="modal">
         <div class="modal-background"></div>
