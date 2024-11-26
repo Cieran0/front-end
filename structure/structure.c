@@ -26,6 +26,7 @@ TABLE {
     char Password[255] DEFAULT_NULL;
     char Email[255] DEFAULT_NULL;
     decimal Salary DEFAULT_NULL;
+    int WeeklyHours NOT_NULL;
     int BranchID DEFAULT_NULL;
     PRIMARY_KEY ('EmployeeID')
     FOREIGN_KEY ('BranchID', 'BRANCH')

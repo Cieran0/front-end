@@ -38,6 +38,7 @@ INSERT INTO `database`.`EMPLOYEE`
 `Password`,
 `Email`,
 `Salary`,
+`WeeklyHours`,
 `BranchID`)
 VALUES
 (0,
@@ -47,6 +48,7 @@ VALUES
 "LetMeIn1984",
 "CEO@TechSupply.co.uk",
 500000,
+1,
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`EMPLOYEE`
 (`EmployeeID`,
@@ -56,6 +58,7 @@ INSERT INTO `database`.`EMPLOYEE`
 `Password`,
 `Email`,
 `Salary`,
+`WeeklyHours`,
 `BranchID`)
 VALUES
 (1,
@@ -65,6 +68,7 @@ VALUES
 "N3p0B4by",
 "StephenS@TechSupply.co.uk",
 51230.41,
+40,
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`EMPLOYEE`
 (`EmployeeID`,
@@ -74,6 +78,7 @@ INSERT INTO `database`.`EMPLOYEE`
 `Password`,
 `Email`,
 `Salary`,
+`WeeklyHours`,
 `BranchID`)
 VALUES
 (2,
@@ -83,6 +88,7 @@ VALUES
 "JohnnyB3Qu1ck",
 "DoeJo@TechSupply.co.uk",
 37728.94,
+100,
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`EMPLOYEE`
 (`EmployeeID`,
@@ -92,6 +98,7 @@ INSERT INTO `database`.`EMPLOYEE`
 `Password`,
 `Email`,
 `Salary`,
+`WeeklyHours`,
 `BranchID`)
 VALUES
 (3,
@@ -101,6 +108,7 @@ VALUES
 "<3John",
 "JaneD@TechSupply.co.uk",
 35241.73,
+50,
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`SUPPLIER`
 (`SupplierID`,

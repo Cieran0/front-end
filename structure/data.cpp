@@ -35,6 +35,7 @@ RECORDS EMPLOYEE employee[] = {
     .Password = "LetMeIn1984",
     .Email = "CEO@TechSupply.co.uk",
     .Salary = 500000,
+    .WeeklyHours = 1,
     .BranchID = ID_OF ( branch->Location == "Dundee" ),
 },
 {
@@ -45,6 +46,7 @@ RECORDS EMPLOYEE employee[] = {
     .Password = "N3p0B4by",
     .Email = "StephenS@TechSupply.co.uk",
     .Salary = 51230.41,
+    .WeeklyHours = 40,
     .BranchID = ID_OF ( branch->Location == "Dundee" ),
 },
 {
@@ -55,6 +57,7 @@ RECORDS EMPLOYEE employee[] = {
     .Password = "JohnnyB3Qu1ck",
     .Email = "DoeJo@TechSupply.co.uk",
     .Salary = 37728.94,
+    .WeeklyHours = 100,
     .BranchID = ID_OF ( branch->Location == "Dundee" ),
 },
 {
@@ -65,6 +68,7 @@ RECORDS EMPLOYEE employee[] = {
     .Password = "<3John",
     .Email = "JaneD@TechSupply.co.uk",
     .Salary = 35241.73,
+    .WeeklyHours = 50,
     .BranchID = ID_OF ( branch->Location == "Dundee" ),
 },
 };
