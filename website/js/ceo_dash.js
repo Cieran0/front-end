@@ -157,3 +157,18 @@ const fetchStuff = () => {
         throw error; // Re-throw the error for further handling
       });
   };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const dropdownButton = document.getElementById('sortDropdownButton');
+    const dropdown = dropdownButton.closest('.dropdown');
+
+    dropdownButton.addEventListener('click', () => {
+        dropdown.classList.toggle('is-active');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!dropdown.contains(event.target)) {
+            dropdown.classList.remove('is-active');
+        }
+    });
+});

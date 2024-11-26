@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php 
-require 'query.php';
+include '/query.php';
 session_start();
 
 if (!isset($_SESSION['CustomerID']) && !isset($_SESSION['EmployeeID'])) {
@@ -22,6 +22,7 @@ if (isset($_SESSION['CustomerID'])) {
 </head>
 <body>
     <?php @include_once 'header.php' ?>
+    <?php @include_once 'query.php' ?>
 
     <div id="staffModal" class="modal">
         <div class="modal-background"></div>
@@ -38,7 +39,7 @@ if (isset($_SESSION['CustomerID'])) {
                         <select id="EmployeeSelect">
                             <option disabled selected> Select Employee...</option>
                             <?php 
-                                $employeeQuery = "CALL GetEmployeesForCEO()";
+                                $employeeQuery = "SELECT * FROM CEOView WHERE NOT `ROLE` = 'CEO'";
                                 $employeeResult = query($employeeQuery);
                                 while($row = mysqli_fetch_assoc($employeeResult)) {
                                     echo '<option>' . $row['EmployeeID'] . ": " . $row['FirstName'] . " " . $row['LastName'] . "</option>";
@@ -133,6 +134,69 @@ if (isset($_SESSION['CustomerID'])) {
                     <?php
                 }
             }
+            ?>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="branch-stats">
+            <div class="level">
+                <div class="level-left">
+                    <h1 class="title">
+                        Branch Performance
+                    </h1>
+                </div>
+                <div class="level-right">
+                <div class="dropdown is-right">
+            <div class="dropdown-trigger">
+                <button class="button" id="sortDropdownButton" aria-haspopup="false" aria-controls="dropdown-menu">
+                <span>Sort</span>
+                <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+                </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                <div class="dropdown-content">
+                <a href="ceo_view.php?order=asc" class="dropdown-item"> Sort Total Order Value: Ascending </a>
+                <a href="ceo_view.php?order=desc" class="dropdown-item"> Sort Total Order Value: Descending </a>
+                </div>
+            </div>
+            </div>
+        </div>
+                </div>
+               
+        <div class="columns is-multiline is-variable is-5 mt-4">
+            <?php 
+
+                (isset($_GET['order']) && $_GET['order'] == 'asc') ? $order = 'ASC' : $order = 'DESC';
+                $branchQuery = "SELECT 
+                    BRANCH.BranchID,
+                    BRANCH.Location,
+                    COUNT(`ORDER`.OrderID) AS TotalOrders,
+                    SUM(`ORDER`.Price) AS TotalOrderPrice
+                FROM 
+                    BRANCH
+                LEFT JOIN 
+                    `ORDER` ON BRANCH.BranchID = `ORDER`.BranchID
+                GROUP BY 
+                    BRANCH.BranchID, BRANCH.Location, BRANCH.ContactNo
+                ORDER BY 
+                    TotalOrderPrice " . $order;
+
+                $branchResult = query($branchQuery);
+                while ($row = mysqli_fetch_assoc($branchResult)) {
+                    ?>
+                    <div class="column is-one-third">
+                        <div class="box">
+                            <p><?php echo "Branch ID: " . $row['BranchID']?></p>
+                            <p><?php echo "Branch Location: " . $row['Location']?></p>
+                            <p><?php echo "Total Orders: " . $row['TotalOrders'] ?></p>
+                            <p><?php echo "Total Order Value: £" . number_format($row['TotalOrderPrice']) ?></p>
+                        </div>
+                    </div>
+                <?php
+                }
             ?>
         </div>
     </section>
