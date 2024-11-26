@@ -72,26 +72,48 @@ const saveExistingProduct = () => {
 }
 
 const saveProduct = () => {
-  const formData = new FormData(document.getElementById('createProductForm'));
+  const form = document.getElementById('createProductForm');
+  
+  // Check if all required fields are filled
+  const requiredFields = form.querySelectorAll('[required]');
+  let allFieldsValid = true;
+
+  requiredFields.forEach(field => {
+    if (!field.value.trim()) {
+      allFieldsValid = false;
+      field.classList.add('error'); // Optional: Add an error class for styling
+    } else {
+      field.classList.remove('error'); // Remove error class if field is valid
+    }
+  });
+
+  if (!allFieldsValid) {
+    alert('Please fill in all required fields.');
+    return; // Stop execution if validation fails
+  }
+
+  // Proceed if all required fields are valid
+  const formData = new FormData(form);
 
   fetch('create_product.php', {
-      method: 'POST',
-      body: formData
+    method: 'POST',
+    body: formData
   })
   .then(response => response.json())
   .then(data => {
-      if (data.success) {
-          closeModal();
-          location.reload();
-      } else {
-        console.log(data);
-          alert('Error: ' + data.error);
-      }
+    if (data.success) {
+      closeModal();
+      location.reload();
+    } else {
+      console.log(data);
+      alert('Error: ' + data.error);
+    }
   })
   .catch(error => {
-      console.error('Error:', error);
+    console.error('Error:', error);
   });
-}
+};
+
 
 const clamp_delta_stock = (index) => {
   const delta_stock = document.getElementById('delta_stock_' + index).value;

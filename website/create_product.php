@@ -11,23 +11,27 @@ if (!isset($_SESSION['EmployeeID'])) {
 
 $errors = [];
 
+// Validation
 if (isset($_POST['productName']) && !empty(trim($_POST['productName']))) {
-    $productName = trim($_POST['productName']);
-    $productName = mysqli_real_escape_string($dbc, $productName);
+    $productName = mysqli_real_escape_string($dbc, trim($_POST['productName']));
 } else {
     $errors[] = 'Product name is required.';
 }
 
-if (isset($_POST['category']) && !empty(trim($_POST['category']))) {
-    $category = trim($_POST['category']);
-    $category = mysqli_real_escape_string($dbc, $category);
+if (isset($_POST['supplier']) && !empty(trim($_POST['supplier']))) {
+    $supp = mysqli_real_escape_string($dbc, trim($_POST['supplier']));
 } else {
-    $errors[] = 'Category is required';
+    $errors[] = 'Supplier is required.';
+}
+
+if (isset($_POST['category']) && !empty(trim($_POST['category']))) {
+    $category = mysqli_real_escape_string($dbc, trim($_POST['category']));
+} else {
+    $errors[] = 'Category is required.';
 }
 
 if (isset($_POST['description']) && !empty(trim($_POST['description']))) {
-    $description = trim($_POST['description']);
-    $description = mysqli_real_escape_string($dbc, $description);
+    $description = mysqli_real_escape_string($dbc, trim($_POST['description']));
 } else {
     $errors[] = 'Product description is required.';
 }
@@ -50,67 +54,66 @@ if (isset($_POST['stockQuantity']) && is_numeric($_POST['stockQuantity'])) {
     $errors[] = 'Valid stock quantity is required.';
 }
 
+// Stop if there are validation errors
 if (!empty($errors)) {
     echo json_encode(['success' => false, 'errors' => $errors]);
     exit();
 }
 
-$branchID = $_SESSION['BranchID'];
-
+$employee_id = mysqli_real_escape_string($dbc, $_SESSION['EmployeeID']);
 
 mysqli_begin_transaction($dbc);
 
 try {
-    $countQuery = "SELECT (COALESCE(MAX(ProductID), 0) + 1) AS ProductCount FROM PRODUCT";
-    $result = mysqli_query($dbc, $countQuery);
-    if ($result) {
-        $row = mysqli_fetch_array($result);
-        $productCount = $row['ProductCount'];
-        $productID = $productCount;
-    } else {
-        throw new Exception('Failed to count products: ' . mysqli_error($dbc));
+    // Get next ProductID
+    $pid_query = query("SELECT COALESCE(MAX(ProductID), 0) + 1 AS NextProductID FROM PRODUCT;");
+    $row = $pid_query->fetch_assoc();
+    $pid = $row['NextProductID'];
+
+    // Validate supplier
+    $supplier_check = query("SELECT SupplierID FROM `database`.`SUPPLIER` WHERE Name = '$supp'");
+    if ($supplier_check->num_rows == 0) {
+        throw new Exception("Supplier not found.");
+    }
+    $supplier_row = $supplier_check->fetch_assoc();
+    $supp_id = $supplier_row['SupplierID'];
+
+    // Insert into PRODUCT table
+    $insert_product_query = query("
+        INSERT INTO `database`.`PRODUCT`
+        (`ProductID`, `Name`, `Category`, `Description`, `BasePrice`, `SupplierID`)
+        VALUES
+        ($pid, '$productName', '$category', '$description', $basePrice, $supp_id);
+    ");
+    if (!$insert_product_query) {
+        throw new Exception("Failed to insert product: " . $dbc->error);
     }
 
-    $productInsertQuery = "INSERT INTO PRODUCT (ProductID, Name, Category, Description, BasePrice) VALUES (?, ?, ?, ?, ?)";
-    $stmt = mysqli_prepare($dbc, $productInsertQuery);
-    mysqli_stmt_bind_param($stmt, 'isssd', $productID, $productName, $category, $description, $basePrice);
-    mysqli_stmt_execute($stmt);
-
-    if (mysqli_stmt_errno($stmt) == 0) {
-    } else {
-        throw new Exception('Failed to insert product data: ' . mysqli_stmt_error($stmt));
+    // Insert into STOCK table
+    $insert_stock_query = query("
+        INSERT INTO `database`.`STOCK` (`StockID`, `Stock`, `ProductID`, `BranchID`)
+        SELECT 
+          COALESCE(MAX(StockID), 0) + 1, 
+          $stockQuantity, 
+          $pid, 
+          (
+            SELECT BranchID 
+            FROM `database`.`EMPLOYEE` 
+            WHERE EmployeeID = '$employee_id'
+          )
+        FROM `database`.`STOCK`;
+    ");
+    if (!$insert_stock_query) {
+        throw new Exception("Failed to insert stock: " . $dbc->error);
     }
 
-    mysqli_stmt_close($stmt);
-
-    $countQuery = "SELECT (COALESCE(MAX(StockID), 0) + 1) AS StockCount FROM STOCK";
-    $result = mysqli_query($dbc, $countQuery);
-    if ($result) {
-        $row = mysqli_fetch_array($result);
-        $stockCount = $row['StockCount'];
-        $stockID = $stockCount;
-    } else {
-        throw new Exception('Failed to count stocks: ' . mysqli_error($dbc));
-    }
-
-    $stockInsertQuery = "INSERT INTO STOCK (StockID, Stock, ProductID, BranchID) VALUES (?, ?, ?, ?)";
-    $stmt = mysqli_prepare($dbc, $stockInsertQuery);
-    mysqli_stmt_bind_param($stmt, 'iiii', $stockID, $stockQuantity, $productID, $branchID);
-    mysqli_stmt_execute($stmt);
-
-    if (mysqli_stmt_errno($stmt) == 0) {
-        mysqli_commit($dbc);
-        echo json_encode(['success' => true]);
-    } else {
-        throw new Exception('Failed to insert stock data: ' . mysqli_stmt_error($stmt));
-    }
-
-    mysqli_stmt_close($stmt);
+    // Commit the transaction
+    mysqli_commit($dbc);
+    echo json_encode(['success' => true]);
 
 } catch (Exception $e) {
+    // Rollback the transaction on error
     mysqli_rollback($dbc);
     echo json_encode(['success' => false, 'error' => $e->getMessage()]);
 }
-
-mysqli_close($dbc);
 ?>

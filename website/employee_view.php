@@ -100,8 +100,8 @@ if($_SESSION['Role'] != 'Employee') {
                                     <div class="field">
                                         <label class="label">Category</label>
                                         <div class="select">
-                                            <select id="categorySelect" name="category">
-                                                <option selected="selected">Select an option....</option>
+                                            <select id="categorySelect" name="category" required>
+                                                <option disabled selected>Select an option....</option>
                                             <?php
                                                     $categoryQuery = "SELECT DISTINCT Category FROM `PRODUCT`";
                                                     $categoryResult = query($categoryQuery);
@@ -111,6 +111,28 @@ if($_SESSION['Role'] != 'Employee') {
                                                         while($row = mysqli_fetch_assoc($categoryResult)) {
                                                             ?>
                                                             <option><?php echo $row['Category']?></option>
+                                                            <?php
+                                                        }
+                                                    }
+                                                ?>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <label class="label">Supplier</label>
+                                        <div class="select">
+                                            <select id="categorySupplier" name="supplier" required>
+                                                <option disabled selected>Select an option....</option>
+                                            <?php
+                                                    $categoryQuery = "SELECT * FROM `SUPPLIER`";
+                                                    $categoryResult = query($categoryQuery);
+                                                    if (!$categoryResult) {
+                                                        echo "<p>sake man</p>";
+                                                    } else {
+                                                        while($row = mysqli_fetch_assoc($categoryResult)) {
+                                                            ?>
+                                                            <option><?php echo $row['Name']?></option>
                                                             <?php
                                                         }
                                                     }
@@ -142,13 +164,13 @@ if($_SESSION['Role'] != 'Employee') {
                                                 placeholder="Enter stock quantity" min="0" required>
                                         </div>
                                     </div>
-                                </form>
-                                
-                            </section>
-                            <section class="modal-card-foot">
-                                <button class="button is-success" id="saveProductButton">Save</button>
-                                <button class="button cancel-button">Cancel</button>
-                            </section>
+                                    
+                                </section>
+                            </form>
+                                <section class="modal-card-foot">
+                                    <button class="button is-success" id="saveProductButton">Save</button>
+                                    <button class="button cancel-button">Cancel</button>
+                                </section>
                         </div>
                     </div>
                     <div id="existingProductModal" class="modal">
