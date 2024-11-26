@@ -2,14 +2,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('saveChangesButton').addEventListener('click', save_changes)
     document.getElementById('cancel').addEventListener('click', cancel)
+    document.getElementById('cross').addEventListener('click', cancel)
     document.getElementById('EmployeeSelect').addEventListener('change', fill_de);
     document.getElementById('weeklyHoursSelect').addEventListener('change', clamp_wh)
 })
 
 function open_modal(id) {
-    document.getElementById('staffModal').classList.add('is-active');
-}
+  const employeeSelect = document.getElementById('EmployeeSelect');
+  const options = employeeSelect.options;
 
+  for (let i = 0; i < options.length; i++) {
+      if (options[i].value.split(':')[0] === id.toString()) { // Match ID
+          employeeSelect.selectedIndex = i;
+          break;
+      }
+  }
+
+  fill_de();
+
+  document.getElementById('staffModal').classList.add('is-active');
+}
 function cancel() {
     document.getElementById('staffModal').classList.remove('is-active');
 }
@@ -59,6 +71,7 @@ function save_changes() {
 
 function clamp_wh() {
     const element = document.getElementById("weeklyHoursSelect");
+    const element2 = document.getElementById("weeklyHoursSelect");
 
     if(element.value > 100) {
         element.value = 100;
@@ -112,7 +125,7 @@ const fetchStuff = () => {
     }
   
     // If no cached data, perform the fetch
-    return fetch('actions/get_weekly_hours.php', {
+    return fetch('actions/get_employee_details.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     })

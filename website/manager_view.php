@@ -27,8 +27,8 @@ if (isset($_SESSION['CustomerID'])) {
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
-                <p class="modal-card-title">Add Existing Product</p>
-                <button class="delete" aria-label="close"></button>
+                <p class="modal-card-title">Edit Employee</p>
+                <button class="delete" aria-label="close" id="cross"></button>
             </header>
             <section class="modal-card-body">
                 <form id="EmployeeForm">

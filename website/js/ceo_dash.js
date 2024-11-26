@@ -2,12 +2,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('saveChangesButton').addEventListener('click', save_changes)
     document.getElementById('cancel').addEventListener('click', cancel)
+    document.getElementById('cross').addEventListener('click', cancel)
     document.getElementById('EmployeeSelect').addEventListener('change', fill_de);
     document.getElementById('weeklyHoursSelect').addEventListener('change', clamp_wh)
 })
 
 function open_modal(id) {
-    document.getElementById('staffModal').classList.add('is-active');
+  const employeeSelect = document.getElementById('EmployeeSelect');
+  const options = employeeSelect.options;
+
+  for (let i = 0; i < options.length; i++) {
+      if (options[i].value.split(':')[0] === id.toString()) { // Match ID
+          employeeSelect.selectedIndex = i;
+          break;
+      }
+  }
+
+  fill_de();
+
+  document.getElementById('staffModal').classList.add('is-active');
 }
 
 function cancel() {
@@ -30,6 +43,7 @@ function save_changes() {
     // Proceed if all required fields are valid
     const formData = new FormData(form);
     formData.append('EmployeeID', get_employee_id());
+    formData.append('Role', document.getElementById('RoleSelect').value);
 
     const urlEncodedData = new URLSearchParams();
     formData.forEach((value, key) => {
@@ -59,11 +73,19 @@ function save_changes() {
 
 function clamp_wh() {
     const element = document.getElementById("weeklyHoursSelect");
+    const element2 = document.getElementById("SalarySelect");
 
     if(element.value > 100) {
         element.value = 100;
     } else if (element.value < 1) {
         element.value = 1;
+    }
+
+
+    if(element2.value > 1000000) {
+      element2.value = 1000000;
+    } else if (element.value < 1) {
+      element2.value = 1;
     }
 }
 
@@ -79,6 +101,8 @@ function fill_de() {
     fetchStuff().then(data => { 
         const element = document.getElementById("EmployeeSelect");
         const weeklyHorus = document.getElementById("weeklyHoursSelect");
+        const salary = document.getElementById("SalarySelect");
+        const role = document.getElementById('RoleSelect');
         arr = data['data'];
         if (!arr || arr.length == 0 || !element) {
           return;
@@ -98,6 +122,8 @@ function fill_de() {
           }
           //Product Found
           weeklyHorus.value = product["WeeklyHours"];
+          salary.value = product["Salary"]
+          role.value = product['Role']
         }
     
       })
@@ -112,7 +138,7 @@ const fetchStuff = () => {
     }
   
     // If no cached data, perform the fetch
-    return fetch('actions/get_weekly_hours.php', {
+    return fetch('actions/get_employee_details.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     })

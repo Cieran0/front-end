@@ -28,8 +28,8 @@ if (isset($_SESSION['CustomerID'])) {
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
-                <p class="modal-card-title">Add Existing Product</p>
-                <button class="delete" aria-label="close"></button>
+                <p class="modal-card-title">Edit Employee</p>
+                <button class="delete" aria-label="close" id="cross"></button>
             </header>
             <section class="modal-card-body">
                 <form id="EmployeeForm">
@@ -39,9 +39,7 @@ if (isset($_SESSION['CustomerID'])) {
                         <select id="EmployeeSelect">
                             <option disabled selected> Select Employee...</option>
                             <?php 
-                        
-                                $eid = $_SESSION['EmployeeID'];
-                                $employeeQuery = "SELECT * FROM ManagerView WHERE NOT `ROLE` = 'CEO' AND NOT `ROLE` = 'Manager' AND BranchID = (SELECT BranchID From ManagerView WHERE EmployeeID = $eid);";
+                                $employeeQuery = "SELECT * FROM CEOView WHERE NOT `ROLE` = 'CEO';";
                                 $employeeResult = query($employeeQuery);
                                 while($row = mysqli_fetch_assoc($employeeResult)) {
                                     echo '<option>' . $row['EmployeeID'] . ": " . $row['FirstName'] . " " . $row['LastName'] . "</option>";
@@ -50,11 +48,29 @@ if (isset($_SESSION['CustomerID'])) {
                         </select>
                     </div>
                 </div>
+
+                <div class="field">
+                    <label class="label">Select Role</label>
+                    <div class="select">
+                        <select id="RoleSelect">
+                            <option disabled selected> Select Role...</option>
+                            <option>Employee</option>
+                            <option>Manager</option>
+                        </select>
+                    </div>
+                </div>
                     <div class="field">
                         <label class="label">Weekly Hours</label>
                         <div class="control">
                             <input class="input" type="number" name="WeeklyHours" id="weeklyHoursSelect"
                                 placeholder="Enter new weekly hours" min="1" max="100" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Salary</label>
+                        <div class="control">
+                            <input class="input" type="number" name="Salary" id="SalarySelect"
+                                placeholder="Enter new salary" min="1" max="1000000" step="0.01" required>
                         </div>
                     </div>
                 </form>
@@ -75,7 +91,7 @@ if (isset($_SESSION['CustomerID'])) {
         </div>
         <div class="columns is-variable is-multiline is-5 mt-4">
             <?php
-            $employeeQuery = "SELECT * FROM EMPLOYEE WHERE NOT `ROLE` = 'CEO'";
+            $employeeQuery = "SELECT * FROM CEOView WHERE NOT `ROLE` = 'CEO'";
             $employeeResult = query($employeeQuery);
             if (!$employeeResult) {
                 echo "Couldn't find employees";
@@ -97,7 +113,7 @@ if (isset($_SESSION['CustomerID'])) {
                                 <div class="level-left">
                                 </div>
                                 <div class="level-right">
-                                    <button title="Edit employee details...">
+                                    <button title="Edit employee details..." onclick="open_modal(<?php echo $row['EmployeeID'] ?>)">
                                         <figure class="image is-24x24">
                                             <img src="./images/pencil.png" />
                                         </figure>                                                                        

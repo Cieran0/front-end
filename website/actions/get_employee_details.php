@@ -16,7 +16,12 @@ $EmployeeID = $_SESSION['EmployeeID'];
 @include '../query.php';
 
 try {
-    $result = query("SELECT EmployeeID, WeeklyHours FROM ManagerView WHERE NOT `ROLE` = 'CEO' AND NOT `ROLE` = 'Manager' AND BranchID = (SELECT BranchID From ManagerView WHERE EmployeeID = $EmployeeID);");
+    $details_query = "SELECT EmployeeID, WeeklyHours, FROM ManagerView WHERE NOT `ROLE` = 'CEO' AND NOT `ROLE` = 'Manager' AND BranchID = (SELECT BranchID From ManagerView WHERE EmployeeID = $EmployeeID);";
+    if ($_SESSION['Role'] == 'CEO') {
+        $details_query = "SELECT EmployeeID, WeeklyHours, Salary, `Role` FROM CEOView WHERE NOT `ROLE` = 'CEO';";
+    }
+
+    $result = query($details_query);
 
     if ($result) {
         $products = [];

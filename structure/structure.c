@@ -99,8 +99,10 @@ VIEW EMPLOYEE CEOView = {
     .EmployeeID INCLUDED
     .FirstName INCLUDED
     .LastName INCLUDED
+    .Role INCLUDED
     .Email INCLUDED
     .Salary INCLUDED
+    .WeeklyHours INCLUDED
     .BranchID INCLUDED
 };
 
