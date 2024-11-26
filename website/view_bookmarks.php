@@ -117,6 +117,15 @@
     </button>
     </form>
 
+    <?php     
+    $action = "clear_bookmarks.php";   
+    echo "<form action=\"$action\" method=\"post\">";
+    ?>
+    <button class="button is-primary" type="submit">
+          Remove All!
+    </button>
+    </form>
+
       </div>
     </div>
   </div>

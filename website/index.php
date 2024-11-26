@@ -52,7 +52,7 @@
 
 
         ?>
-         Add more carousel items here
+         
       </div>
     </section>
 
