@@ -32,7 +32,7 @@
     $pid = $_GET['ProductID'];
 
     if(!isset($_GET['ProductID']) || $pid == "") {
-      header("Location: index.php");
+      header("Location: /index.php");
       exit();
     }
     $logged_in = $_SESSION['loggedin'];
@@ -52,7 +52,7 @@
             $category = $row["Category"];
         }
     } else {
-        header("Location: index.php");
+        header("Location: /index.php");
         exit();
     }
 

@@ -59,11 +59,11 @@
         }
 
     } else {
-        header("Location: order_failed.php");
+        header("Location: /order_failed.php");
         exit();
     }
 
-    header("Location: customer_dashboard.php");
+    header("Location: /customer_dashboard.php");
     exit();
 
 ?>

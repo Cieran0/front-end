@@ -8,8 +8,6 @@
 <body>
 <?php
 
-
-
 	session_start();
     $product = $_POST['ProductID'];
     $customer = $_SESSION['CustomerID'];
@@ -20,9 +18,7 @@
                         SELECT (COALESCE(MAX(BookmarkID), 0) + 1), $product, $customer, NOW() 
                         FROM BOOKMARK;");
 	
-    header("Location: view_bookmarks.php");
+    header("Location: /view_bookmarks.php");
     exit();
 	
 ?>
-</body>
-</html>

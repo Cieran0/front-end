@@ -18,7 +18,7 @@
 
 
     if(!(isset($_SESSION['CustomerID']) && ( isset($_POST['ProductID']) || isset($_POST['MultiBuyIDs']) ) && $_SESSION['loggedin'])){
-        header("Location: index.php");
+        header("Location: /index.php");
         exit();
     }
 

@@ -18,7 +18,7 @@
 	
     $sqlSelect = query("DELETE FROM BOOKMARK WHERE ProductID = ". $product ." AND CustomerID = ". $customer ."; ");
 	
-    header("Location: view_bookmarks.php");
+    header("Location: /view_bookmarks.php");
     exit();
 	
 ?>

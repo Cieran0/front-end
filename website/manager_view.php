@@ -4,12 +4,12 @@ include 'query.php';
 session_start();
 
 if (!isset($_SESSION['CustomerID']) && !isset($_SESSION['EmployeeID'])) {
-    header('Location: login.php');
+    header('Location: /login.php');
     exit();
 }
 
 if (isset($_SESSION['CustomerID'])) {
-    header('Location: customer_dashboard.php');
+    header('Location: /customer_dashboard.php');
     exit();
 }
 ?>

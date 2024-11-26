@@ -14,19 +14,19 @@
 
     if (empty($firstname) || empty($lastname) || empty($email) || empty($password)) {
         $_SESSION['signup_error'] = "All fields are required.";
-        header("Location: signup_failed.php");
+        header("Location: /signup_failed.php");
         exit();
     }
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $_SESSION['signup_error'] = "Invalid email format.";
-        header("Location: signup_failed.php");
+        header("Location: /signup_failed.php");
         exit();
     }
 
     if (strlen($password) < 8) {
         $_SESSION['signup_error'] = "Password must be at least 8 characters long.";
-        header("Location: signup_failed.php");
+        header("Location: /signup_failed.php");
         exit();
     }
 
@@ -36,7 +36,7 @@
     
     if (mysqli_num_rows($sqlCheck) > 0) {
         $_SESSION['signup_error'] = "Email already in use.";
-        header("Location: signup_failed.php");
+        header("Location: /signup_failed.php");
         exit();
     } else {
         $sqlMaxId = query("SELECT MAX(CustomerID) AS max_id FROM CUSTOMER");
@@ -53,10 +53,10 @@
             $_SESSION['FirstName'] = $firstname;
             $_SESSION['CustomerID'] = $newCustomerId;
             $_SESSION['password'] = $password;
-            header("Location: customer_dashboard.php");
+            header("Location: /customer_dashboard.php");
         } else {
             $_SESSION['signup_error'] = "Signup failed. Please try again.";
-            header("Location: signup_failed.php");
+            header("Location: /signup_failed.php");
             exit();
         }
     }

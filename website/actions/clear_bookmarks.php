@@ -23,11 +23,11 @@ $deleteQuery = "DELETE FROM BOOKMARK WHERE CustomerID = $customerID";
 
 if (query($deleteQuery)) {
     
-    header("Location: view_bookmarks.php?message=All bookmarks removed successfully");
+    header("Location: /view_bookmarks.php?message=All bookmarks removed successfully");
     exit;
 } else {
     
-    header("Location: view_bookmarks.php?error=Failed to remove bookmarks");
+    header("Location: /view_bookmarks.php?error=Failed to remove bookmarks");
     exit;
 }
 ?>

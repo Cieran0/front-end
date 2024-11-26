@@ -16,7 +16,7 @@
             @include_once("query.php");
 
             if (isset($_SESSION['EmployeeID'])) {
-              header('Location: employee_view.php');
+              header('Location: /employee_view.php');
               exit();
             }
         

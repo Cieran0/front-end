@@ -22,7 +22,7 @@ try {
 
     if ($executeResult) {
         mysqli_commit($dbc);
-        header('Location: ceo_view.php');
+        header('Location: /ceo_view.php');
         exit();
     } else {
         mysqli_rollback($dbc);
