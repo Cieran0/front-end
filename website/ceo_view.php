@@ -246,10 +246,36 @@ if($_SESSION['Role'] != 'CEO') {
                     <button class="button" onclick = "open_add()">Add Employee</button>
                 </div>
             </div>
+            
+        <div class="level">
+           <div class="level-left">
+                <form method="GET" action="ceo_view.php">
+                    <input class="input" type="text" name="search" placeholder="Search for employees..." 
+                    value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
+                </form>
+           </div> 
+           <div class="level-right">
+                <button class="button" type="submit">Search</button>
+           </div>
         </div>
+        
+        </div>
+
         <div class="columns is-variable is-multiline is-5 mt-4">
             <?php
-            $employeeQuery = "SELECT * FROM CEOView WHERE NOT `ROLE` = 'CEO'";
+            $name = isset($_GET['search']) ? trim($_GET['search']) : '';
+
+            if (!empty($name)) {
+                $employeeQuery = "
+                    SELECT * 
+                    FROM CEOView 
+                    WHERE NOT `ROLE` = 'CEO' 
+                    AND Concat(FirstName, ' ', LastName) LIKE '%$name%'
+                ";
+            } else {
+                $employeeQuery = "SELECT * FROM CEOView WHERE NOT `ROLE` = 'CEO'";
+            }
+            
             $employeeResult = query($employeeQuery);
             if (!$employeeResult) {
                 echo "Couldn't find employees";
@@ -333,7 +359,6 @@ if($_SESSION['Role'] != 'CEO') {
             $branchQuery = "SELECT 
                 BRANCH.BranchID,
                 BRANCH.Location,
-                ORDER.Date,
                 SUM(CASE WHEN `ORDER`.`Status` = 'Fulfilled' THEN 1 ELSE 0 END) AS TotalFulfilled,
                 COUNT(`ORDER`.OrderID) AS TotalOrders,
                 SUM(`ORDER`.Price) AS TotalOrderPrice
@@ -371,12 +396,6 @@ if($_SESSION['Role'] != 'CEO') {
                                             data: yValues_<?php echo $row['BranchID']; ?>
                                         }]
                                     },
-                                    options: {
-                                        title: {
-                                            display: true,
-                                            text: "Branch Performance"
-                                        }
-                                    }
                                 });
                             </script>
 
