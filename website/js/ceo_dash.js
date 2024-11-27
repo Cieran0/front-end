@@ -5,6 +5,15 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('cross').addEventListener('click', cancel)
     document.getElementById('EmployeeSelect').addEventListener('change', fill_de);
     document.getElementById('weeklyHoursSelect').addEventListener('change', clamp_wh)
+    
+    document.getElementById('hours').addEventListener('change', clamp_wh)
+    document.getElementById('AddSalarySelect').addEventListener('change', clamp_wh)
+    
+    document.getElementById('saveNewButton').addEventListener('click', save_new)
+    
+    document.getElementById('cancelAdd').addEventListener('click', cancel)
+    document.getElementById('add_cross').addEventListener('click', cancel)
+    
 })
 
 function open_modal(id) {
@@ -25,6 +34,7 @@ function open_modal(id) {
 
 function cancel() {
     document.getElementById('staffModal').classList.remove('is-active');
+    document.getElementById('addStaffModal').classList.remove('is-active');
 }
 
 function save_changes() {
@@ -71,9 +81,45 @@ function save_changes() {
     });
 }
 
+function save_new() {
+  const form = document.getElementById('AddEmployeeForm');
+
+
+  // Proceed if all required fields are valid
+  const formData = new FormData(form);
+
+  const urlEncodedData = new URLSearchParams();
+  formData.forEach((value, key) => {
+    urlEncodedData.append(key, value);
+  });
+
+  console.log(urlEncodedData);
+
+  fetch('actions/add_employee.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: urlEncodedData.toString(),
+  }) 
+  .then(response => response.json())
+  .then(data => {
+      if (data.success) {
+          location.reload();
+      } else {
+          alert('Error: ' + data.message);
+          console.log(data);
+      }
+  })
+  .catch(error => {
+      console.error('Error:', error);
+  });
+}
+
 function clamp_wh() {
     const element = document.getElementById("weeklyHoursSelect");
     const element2 = document.getElementById("SalarySelect");
+
+    const element3 = document.getElementById("hours");
+    const element4 = document.getElementById("AddSalarySelect");
 
     if(element.value > 100) {
         element.value = 100;
@@ -81,11 +127,22 @@ function clamp_wh() {
         element.value = 1;
     }
 
+    if(element3.value > 100) {
+      element3.value = 100;
+    } else if (element3.value < 1) {
+      element3.value = 1;
+    }
 
     if(element2.value > 1000000) {
       element2.value = 1000000;
-    } else if (element.value < 1) {
+    } else if (element2.value < 1) {
       element2.value = 1;
+    }
+
+    if(element4.value > 1000000) {
+      element4.value = 1000000;
+    } else if (element4.value < 1) {
+      element4.value = 1;
     }
 }
 

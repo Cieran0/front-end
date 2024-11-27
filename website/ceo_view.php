@@ -130,20 +130,20 @@ if($_SESSION['Role'] != 'CEO') {
         </div>
     </div>
 
-    <div id="staffModal" class="modal is-active">
+    <div id="addStaffModal" class="modal">
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
                 <p class="modal-card-title">Edit Employee</p>
-                <button class="delete" aria-label="close" id="cross"></button>
+                <button class="delete" aria-label="close" id="add_cross"></button>
             </header>
             <section class="modal-card-body">
-                <form id="EmployeeForm">
+                <form id="AddEmployeeForm">
 
                 <div class="field">
                     <label class="label">Select Role</label>
                     <div class="select">
-                        <select id="RoleSelect">
+                        <select id="AddRoleSelect" name="role">
                             <option disabled selected> Select Role...</option>
                             <option>Employee</option>
                             <option>Manager</option>
@@ -153,8 +153,8 @@ if($_SESSION['Role'] != 'CEO') {
                 <div class="field">
                     <label class="label">Select Branch</label>
                     <div class="select">
-                        <select id="location">
-                            <option disabled selected> Select Role...</option>
+                        <select id="AddLocationSelect" name="location">
+                            <option disabled selected> Select Branch...</option>
                             <?php 
                             $result = query("
                             SELECT 
@@ -196,21 +196,21 @@ if($_SESSION['Role'] != 'CEO') {
                         <label class="label">Weekly Hours</label>
                         <div class="control">
                             <input class="input" type="number" name="hours" id="hours"
-                                placeholder="Enter new salary" min="1" max="1000000" step="0.01" required>
+                                placeholder="Enter new hours" min="1" max="100" step="1" required>
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">Salary</label>
                         <div class="control">
-                            <input class="input" type="number" name="Salary" id="SalarySelect"
+                            <input class="input" type="number" name="Salary" id="AddSalarySelect"
                                 placeholder="Enter new salary" min="1" max="1000000" step="0.01" required>
                         </div>
                     </div>
                 </form>
             </section>
             <section class="modal-card-foot">
-                <button class="button is-success" id="saveChangesButton">Save</button>
-                <button class="button cancel-button" id="cancel">Cancel</button>
+                <button class="button is-success" id="saveNewButton">Save</button>
+                <button class="button cancel-button" id="cancelAdd">Cancel</button>
             </section>
         </div>
     </div>
