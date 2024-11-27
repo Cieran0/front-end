@@ -36,22 +36,28 @@ BEGIN
     DECLARE p_ProductID INT;
     DECLARE p_BranchID INT;
 
-    -- Update Order Status
-    UPDATE `ORDER`
-    SET `Status` = 'Fulfilled'
-    WHERE OrderID = p_OrderID;
-
     -- Fetch Product and Branch Details
     SELECT ProductID, BranchID
     INTO p_ProductID, p_BranchID
     FROM `ORDER`
     WHERE OrderID = p_OrderID;
 
-    -- Update Stock
-    UPDATE STOCK
-    SET Stock = Stock - 1
-    WHERE BranchID = p_BranchID
-    AND ProductID = p_ProductID;
+    -- Check if stock is greater than 0 before updating
+    IF (SELECT Stock FROM STOCK WHERE BranchID = p_BranchID AND ProductID = p_ProductID) > 0 THEN
+        -- Update Stock
+        UPDATE STOCK
+        SET Stock = Stock - 1
+        WHERE BranchID = p_BranchID
+        AND ProductID = p_ProductID;
+    ELSE
+    -- Fail if stock <= 0
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Insufficient stock to fulfill the order';
+    END IF;
+
+    -- Update Order Status
+    UPDATE `ORDER`
+    SET `Status` = 'Fulfilled'
+    WHERE OrderID = p_OrderID;
 END$$
 
 -- Stored Procedure: Insert New Product

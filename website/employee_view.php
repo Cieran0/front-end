@@ -41,7 +41,7 @@ if($_SESSION['Role'] != 'Employee') {
                     if (data.success) {
                         location.reload();
                     } else {
-                        alert('Failed to increase stock.');
+                        alert(data.error);
                     }
                 })
                 .catch(error => {

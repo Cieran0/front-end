@@ -15,7 +15,7 @@ go:
 gen_reset: go
 	python3 random_py/data.py > structure/data.cpp
 	./$(EXECUTABLE)
-	cat database/bookmarks_view.sql >> database/gen_reset.sql
+	cat database/other.sql >> database/gen_reset.sql
 
 
 reset: gen_reset

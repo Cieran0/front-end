@@ -21,7 +21,7 @@
         
 
             //DONT TOUCH THIS PLEASE - ITS MAGIC
-        $selectRecentOrder = query("
+        $recommended = query("
 SELECT DISTINCT p1.* 
 FROM PRODUCT p1
 JOIN `ORDER` o1 ON o1.ProductID = p1.ProductID
@@ -42,13 +42,13 @@ AND p1.ProductID NOT IN (
         
         );
 
-            if(mysqli_num_rows($selectRecentOrder)> 0) {
+            if(mysqli_num_rows($recommended)> 0) {
               echo "    <section class=\"section\">
       <p class=\"title\">Your Recommended:</p>
       <div class=\"container\">
       <div class=\"columns is-multiline\">";
 
-              while ($row =mysqli_fetch_array($selectRecentOrder)) {
+              while ($row =mysqli_fetch_array($recommended)) {
                 $pid = $row["ProductID"];
                 $name = $row["Name"];
                 $price = $row["BasePrice"];

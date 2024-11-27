@@ -33,17 +33,6 @@ CREATE UNIQUE INDEX idx_customer_email ON CUSTOMER (Email);
 CREATE INDEX idx_order_date ON `ORDER` (Date);
 CREATE INDEX idx_order_status ON `ORDER` (Status);
 
--- Composite Indexes
-CREATE INDEX idx_product_category_baseprice ON PRODUCT (Category, BasePrice);
-CREATE INDEX idx_order_customerid_date ON `ORDER` (CustomerID, Date);
-
--- Full-Text Index (optional for search functionality)
-CREATE FULLTEXT INDEX idx_product_name_description ON PRODUCT (Name, Description);
-
--- Other Important Indexes
-CREATE UNIQUE INDEX idx_supplier_contactno ON SUPPLIER (ContactNo);
-CREATE INDEX idx_bookmark_timesaved ON BOOKMARK (TimeSaved);
-
 
 CREATE VIEW EmployeeDataView AS
 SELECT EmployeeID, FirstName, LastName, Role, Email, Salary, WeeklyHours, BranchID
