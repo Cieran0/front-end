@@ -325,31 +325,26 @@ f"""{{
 
 
 def generate_random_date():
-    # Get today's date
-    today = datetime.date.today()
-    
-    # Generate a random number of days between 0 and 730 (365 days * 2 for two years)
-    delta_days = random.randint(0, 730)
-    
-    # Subtract the random days from today's date
-    random_date = today - datetime.timedelta(days=delta_days)
-    
-    # Format the date as a string "YYYY-MM-DD"
-    return random_date.strftime("%Y-%m-%d")
+    """Generates a random date within the last 2 years."""
+    start_date = datetime.datetime.now() - datetime.timedelta(days=730)  # 2 years ago
+    end_date = datetime.datetime.now()
+    return (start_date + (end_date - start_date) * random.random()).strftime("%Y-%m-%d")
 
 def generate_order_data(customers, products, branches, num_orders=10):
     print("RECORDS ORDER order[] = {")
-    
-    statuses = ["Fulfilled", "Unfufilled"]
     
     for _ in range(num_orders):
         customer = random.choice(customers)
         product = random.choice(products)
         branch = random.choice(branches)
-        status = random.choice(statuses)
         
         # Generate a random date within the last 2 years
         order_date = generate_random_date()
+        
+        # Calculate the status
+        order_date_obj = datetime.datetime.strptime(order_date, "%Y-%m-%d")
+        days_diff = (datetime.datetime.now() - order_date_obj).days
+        status = "Unfulfilled" if days_diff <= 30 else "Fulfilled"
         
         print(f'''{{
     .OrderID = INDEX,
@@ -384,7 +379,7 @@ products = generate_product_data()
 
 generate_stock_data(products, branches);
 
-customers = generate_customer_data(60);
+customers = generate_customer_data(100);
 
-generate_order_data(customers, products, branches, num_orders=150);
+generate_order_data(customers, products, branches, num_orders=400);
 

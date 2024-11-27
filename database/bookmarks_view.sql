@@ -47,4 +47,15 @@ CREATE INDEX idx_bookmark_timesaved ON BOOKMARK (TimeSaved);
 
 CREATE VIEW EmployeeDataView AS
 SELECT EmployeeID, FirstName, LastName, Role, Email, Salary, WeeklyHours, BranchID
-FROM EMPLOYEE
+FROM EMPLOYEE;
+
+CREATE VIEW `database`.`BranchOrderSummary` AS
+SELECT 
+    `Branch`.`BranchID`,
+    `Branch`.`Location`,
+    COUNT(CASE WHEN `ORDER`.`Status` = 'Fulfilled' THEN 1 END) AS FulfilledOrders,
+    COUNT(CASE WHEN `ORDER`.`Status` = 'Unfulfilled' THEN 1 END) AS UnfulfilledOrders
+FROM `database`.`ORDER` AS `ORDER`
+JOIN `database`.`BRANCH` AS `Branch`
+    ON `ORDER`.`BranchID` = `Branch`.`BranchID`
+GROUP BY `ORDER`.`BranchID`, `Branch`.`Location`;

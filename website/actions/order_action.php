@@ -25,7 +25,7 @@
     $num_rows = mysqli_num_rows($sqlSelect);
 
     if (isset($_POST['ProductID']) && $num_rows > 0) {
-        $sqlSelect = query("INSERT INTO `ORDER` (OrderID, Date, Price, ProductID, CustomerID, BranchID, `Status`) SELECT (COALESCE(MAX(OrderID), 0) + 1), NOW(), (SELECT BasePrice FROM `PRODUCT` WHERE ProductID = $product), $product, $customer , $branch, 'Unfufilled' FROM `ORDER`; ");
+        $sqlSelect = query("INSERT INTO `ORDER` (OrderID, Date, Price, ProductID, CustomerID, BranchID, `Status`) SELECT (COALESCE(MAX(OrderID), 0) + 1), NOW(), (SELECT BasePrice FROM `PRODUCT` WHERE ProductID = $product), $product, $customer , $branch, 'Unfulfilled' FROM `ORDER`; ");
         
     } else if (isset($_POST['MultiBuyIDs'])  && $num_rows > 0) {
         $pids = explode(',', $multi_ids);
@@ -54,7 +54,7 @@
                                     $pid, 
                                     $customer, 
                                     $bestBranch, 
-                                    'Unfufilled' 
+                                    'Unfulfilled' 
                                 FROM `ORDER`;");
         }
 

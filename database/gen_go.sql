@@ -36,56 +36,56 @@ INSERT INTO `database`.`BRANCH`
 `ContactNo`)
 VALUES
 (4,
-"Belfast",
-"5620367593");
+"Sheffield",
+"3010588746");
 INSERT INTO `database`.`BRANCH`
 (`BranchID`,
 `Location`,
 `ContactNo`)
 VALUES
 (5,
-"Liverpool",
-"9227705794");
+"Bath",
+"2093821750");
 INSERT INTO `database`.`BRANCH`
 (`BranchID`,
 `Location`,
 `ContactNo`)
 VALUES
 (6,
-"York",
-"8198413473");
+"Newcastle",
+"6364163849");
 INSERT INTO `database`.`BRANCH`
 (`BranchID`,
 `Location`,
 `ContactNo`)
 VALUES
 (7,
-"Birmingham",
-"2798030991");
+"Brighton",
+"8468937336");
 INSERT INTO `database`.`BRANCH`
 (`BranchID`,
 `Location`,
 `ContactNo`)
 VALUES
 (8,
-"Nottingham",
-"1596218538");
+"Manchester",
+"5537373826");
 INSERT INTO `database`.`BRANCH`
 (`BranchID`,
 `Location`,
 `ContactNo`)
 VALUES
 (9,
-"Cambridge",
-"5335431187");
+"Nottingham",
+"6534006950");
 INSERT INTO `database`.`BRANCH`
 (`BranchID`,
 `Location`,
 `ContactNo`)
 VALUES
 (10,
-"Newcastle",
-"3265493791");
+"Oxford",
+"6317953376");
 INSERT INTO `database`.`EMPLOYEE`
 (`EmployeeID`,
 `FirstName`,
@@ -178,14 +178,14 @@ INSERT INTO `database`.`EMPLOYEE`
 `BranchID`)
 VALUES
 (4,
-"Hannah",
-"Irwin",
+"Ethan",
+"Anderson",
 "Employee",
-"hannah9382",
-"HIrwin134@TechSupply.co.uk",
-117023.18,
-70,
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+"ethan5246",
+"EAnderson481@TechSupply.co.uk",
+117456.46,
+40,
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`EMPLOYEE`
 (`EmployeeID`,
 `FirstName`,
@@ -199,13 +199,13 @@ INSERT INTO `database`.`EMPLOYEE`
 VALUES
 (5,
 "Hannah",
-"Garcia",
-"Employee",
-"hannah2079",
-"HGarcia451@TechSupply.co.uk",
-109805.09,
+"Evans",
+"Manager",
+"hannah4468",
+"HEvans762@TechSupply.co.uk",
+84741.18,
 80,
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`EMPLOYEE`
 (`EmployeeID`,
 `FirstName`,
@@ -218,14 +218,14 @@ INSERT INTO `database`.`EMPLOYEE`
 `BranchID`)
 VALUES
 (6,
-"Bob",
-"Garcia",
-"Manager",
-"bob2057",
-"BGarcia892@TechSupply.co.uk",
-90262.92,
-40,
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+"Alice",
+"Fisher",
+"Employee",
+"alice4517",
+"AFisher887@TechSupply.co.uk",
+64333.55,
+80,
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`EMPLOYEE`
 (`EmployeeID`,
 `FirstName`,
@@ -238,14 +238,14 @@ INSERT INTO `database`.`EMPLOYEE`
 `BranchID`)
 VALUES
 (7,
-"David",
-"Clark",
+"Charlie",
+"Evans",
 "Employee",
-"david2107",
-"DClark495@TechSupply.co.uk",
-69846.52,
-60,
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+"charlie8812",
+"CEvans178@TechSupply.co.uk",
+84590.64,
+40,
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`EMPLOYEE`
 (`EmployeeID`,
 `FirstName`,
@@ -259,13 +259,13 @@ INSERT INTO `database`.`EMPLOYEE`
 VALUES
 (8,
 "George",
-"Evans",
+"Garcia",
 "Manager",
-"george7101",
-"GEvans254@TechSupply.co.uk",
-91093.63,
-50,
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+"george3090",
+"GGarcia435@TechSupply.co.uk",
+110040.06,
+60,
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`EMPLOYEE`
 (`EmployeeID`,
 `FirstName`,
@@ -278,14 +278,14 @@ INSERT INTO `database`.`EMPLOYEE`
 `BranchID`)
 VALUES
 (9,
-"Alice",
-"Hill",
+"Ethan",
+"Fisher",
 "Employee",
-"alice3515",
-"AHill382@TechSupply.co.uk",
-34112.88,
-100,
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+"ethan3324",
+"EFisher281@TechSupply.co.uk",
+38978.1,
+50,
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`EMPLOYEE`
 (`EmployeeID`,
 `FirstName`,
@@ -298,14 +298,14 @@ INSERT INTO `database`.`EMPLOYEE`
 `BranchID`)
 VALUES
 (10,
-"Alice",
-"Evans",
-"Employee",
-"alice1728",
-"AEvans223@TechSupply.co.uk",
-104953.66,
-70,
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
+"David",
+"Fisher",
+"Manager",
+"david8050",
+"DFisher167@TechSupply.co.uk",
+99798.79,
+60,
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`EMPLOYEE`
 (`EmployeeID`,
 `FirstName`,
@@ -318,193 +318,13 @@ INSERT INTO `database`.`EMPLOYEE`
 `BranchID`)
 VALUES
 (11,
-"Charlie",
-"Irwin",
-"Employee",
-"charlie8609",
-"CIrwin227@TechSupply.co.uk",
-64109.88,
-60,
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
-INSERT INTO `database`.`EMPLOYEE`
-(`EmployeeID`,
-`FirstName`,
-`LastName`,
-`Role`,
-`Password`,
-`Email`,
-`Salary`,
-`WeeklyHours`,
-`BranchID`)
-VALUES
-(12,
-"Ethan",
-"Garcia",
-"Employee",
-"ethan4360",
-"EGarcia118@TechSupply.co.uk",
-46308.26,
-100,
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
-INSERT INTO `database`.`EMPLOYEE`
-(`EmployeeID`,
-`FirstName`,
-`LastName`,
-`Role`,
-`Password`,
-`Email`,
-`Salary`,
-`WeeklyHours`,
-`BranchID`)
-VALUES
-(13,
 "Alice",
 "Jackson",
-"Manager",
-"alice6463",
-"AJackson401@TechSupply.co.uk",
-61007.09,
-100,
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
-INSERT INTO `database`.`EMPLOYEE`
-(`EmployeeID`,
-`FirstName`,
-`LastName`,
-`Role`,
-`Password`,
-`Email`,
-`Salary`,
-`WeeklyHours`,
-`BranchID`)
-VALUES
-(14,
-"Julia",
-"Hill",
-"Manager",
-"julia7045",
-"JHill307@TechSupply.co.uk",
-85170.79,
-100,
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
-INSERT INTO `database`.`EMPLOYEE`
-(`EmployeeID`,
-`FirstName`,
-`LastName`,
-`Role`,
-`Password`,
-`Email`,
-`Salary`,
-`WeeklyHours`,
-`BranchID`)
-VALUES
-(15,
-"Ian",
-"Irwin",
-"Manager",
-"ian9155",
-"IIrwin484@TechSupply.co.uk",
-32827.47,
+"Employee",
+"alice1400",
+"AJackson875@TechSupply.co.uk",
+60205.82,
 70,
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
-INSERT INTO `database`.`EMPLOYEE`
-(`EmployeeID`,
-`FirstName`,
-`LastName`,
-`Role`,
-`Password`,
-`Email`,
-`Salary`,
-`WeeklyHours`,
-`BranchID`)
-VALUES
-(16,
-"Julia",
-"Davis",
-"Employee",
-"julia9292",
-"JDavis622@TechSupply.co.uk",
-44522.97,
-50,
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
-INSERT INTO `database`.`EMPLOYEE`
-(`EmployeeID`,
-`FirstName`,
-`LastName`,
-`Role`,
-`Password`,
-`Email`,
-`Salary`,
-`WeeklyHours`,
-`BranchID`)
-VALUES
-(17,
-"David",
-"Anderson",
-"Employee",
-"david8525",
-"DAnderson704@TechSupply.co.uk",
-64486.89,
-40,
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
-INSERT INTO `database`.`EMPLOYEE`
-(`EmployeeID`,
-`FirstName`,
-`LastName`,
-`Role`,
-`Password`,
-`Email`,
-`Salary`,
-`WeeklyHours`,
-`BranchID`)
-VALUES
-(18,
-"David",
-"Fisher",
-"Employee",
-"david8804",
-"DFisher689@TechSupply.co.uk",
-91014.66,
-40,
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
-INSERT INTO `database`.`EMPLOYEE`
-(`EmployeeID`,
-`FirstName`,
-`LastName`,
-`Role`,
-`Password`,
-`Email`,
-`Salary`,
-`WeeklyHours`,
-`BranchID`)
-VALUES
-(19,
-"David",
-"Irwin",
-"Employee",
-"david8913",
-"DIrwin693@TechSupply.co.uk",
-50909.84,
-50,
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
-INSERT INTO `database`.`EMPLOYEE`
-(`EmployeeID`,
-`FirstName`,
-`LastName`,
-`Role`,
-`Password`,
-`Email`,
-`Salary`,
-`WeeklyHours`,
-`BranchID`)
-VALUES
-(20,
-"Ian",
-"Garcia",
-"Employee",
-"ian2961",
-"IGarcia230@TechSupply.co.uk",
-67481.24,
-40,
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`EMPLOYEE`
 (`EmployeeID`,
@@ -517,15 +337,195 @@ INSERT INTO `database`.`EMPLOYEE`
 `WeeklyHours`,
 `BranchID`)
 VALUES
-(21,
-"David",
-"Irwin",
+(12,
+"George",
+"Hill",
 "Employee",
-"david1969",
-"DIrwin523@TechSupply.co.uk",
-84191.03,
+"george3204",
+"GHill381@TechSupply.co.uk",
+113808.48,
 50,
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
+INSERT INTO `database`.`EMPLOYEE`
+(`EmployeeID`,
+`FirstName`,
+`LastName`,
+`Role`,
+`Password`,
+`Email`,
+`Salary`,
+`WeeklyHours`,
+`BranchID`)
+VALUES
+(13,
+"Hannah",
+"Fisher",
+"Employee",
+"hannah8220",
+"HFisher620@TechSupply.co.uk",
+93391.74,
+70,
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
+INSERT INTO `database`.`EMPLOYEE`
+(`EmployeeID`,
+`FirstName`,
+`LastName`,
+`Role`,
+`Password`,
+`Email`,
+`Salary`,
+`WeeklyHours`,
+`BranchID`)
+VALUES
+(14,
+"Fiona",
+"Hill",
+"Manager",
+"fiona9258",
+"FHill920@TechSupply.co.uk",
+45888.12,
+60,
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
+INSERT INTO `database`.`EMPLOYEE`
+(`EmployeeID`,
+`FirstName`,
+`LastName`,
+`Role`,
+`Password`,
+`Email`,
+`Salary`,
+`WeeklyHours`,
+`BranchID`)
+VALUES
+(15,
+"George",
+"Clark",
+"Employee",
+"george1487",
+"GClark409@TechSupply.co.uk",
+116537.07,
+60,
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
+INSERT INTO `database`.`EMPLOYEE`
+(`EmployeeID`,
+`FirstName`,
+`LastName`,
+`Role`,
+`Password`,
+`Email`,
+`Salary`,
+`WeeklyHours`,
+`BranchID`)
+VALUES
+(16,
+"Ethan",
+"Davis",
+"Employee",
+"ethan1858",
+"EDavis585@TechSupply.co.uk",
+97160.4,
+40,
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
+INSERT INTO `database`.`EMPLOYEE`
+(`EmployeeID`,
+`FirstName`,
+`LastName`,
+`Role`,
+`Password`,
+`Email`,
+`Salary`,
+`WeeklyHours`,
+`BranchID`)
+VALUES
+(17,
+"Bob",
+"Fisher",
+"Manager",
+"bob6111",
+"BFisher692@TechSupply.co.uk",
+35411.97,
+60,
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
+INSERT INTO `database`.`EMPLOYEE`
+(`EmployeeID`,
+`FirstName`,
+`LastName`,
+`Role`,
+`Password`,
+`Email`,
+`Salary`,
+`WeeklyHours`,
+`BranchID`)
+VALUES
+(18,
+"Ethan",
+"Brown",
+"Manager",
+"ethan7109",
+"EBrown108@TechSupply.co.uk",
+81479.95,
+100,
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
+INSERT INTO `database`.`EMPLOYEE`
+(`EmployeeID`,
+`FirstName`,
+`LastName`,
+`Role`,
+`Password`,
+`Email`,
+`Salary`,
+`WeeklyHours`,
+`BranchID`)
+VALUES
+(19,
+"George",
+"Fisher",
+"Manager",
+"george1711",
+"GFisher122@TechSupply.co.uk",
+84428.27,
+40,
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
+INSERT INTO `database`.`EMPLOYEE`
+(`EmployeeID`,
+`FirstName`,
+`LastName`,
+`Role`,
+`Password`,
+`Email`,
+`Salary`,
+`WeeklyHours`,
+`BranchID`)
+VALUES
+(20,
+"David",
+"Brown",
+"Employee",
+"david8991",
+"DBrown543@TechSupply.co.uk",
+96394.13,
+70,
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
+INSERT INTO `database`.`EMPLOYEE`
+(`EmployeeID`,
+`FirstName`,
+`LastName`,
+`Role`,
+`Password`,
+`Email`,
+`Salary`,
+`WeeklyHours`,
+`BranchID`)
+VALUES
+(21,
+"Charlie",
+"Evans",
+"Employee",
+"charlie1102",
+"CEvans916@TechSupply.co.uk",
+61998.22,
+80,
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`EMPLOYEE`
 (`EmployeeID`,
 `FirstName`,
@@ -538,14 +538,14 @@ INSERT INTO `database`.`EMPLOYEE`
 `BranchID`)
 VALUES
 (22,
-"Charlie",
-"Anderson",
+"Hannah",
+"Hill",
 "Employee",
-"charlie1965",
-"CAnderson626@TechSupply.co.uk",
-72896.81,
-80,
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+"hannah8517",
+"HHill930@TechSupply.co.uk",
+109617.1,
+40,
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`EMPLOYEE`
 (`EmployeeID`,
 `FirstName`,
@@ -559,12 +559,12 @@ INSERT INTO `database`.`EMPLOYEE`
 VALUES
 (23,
 "David",
-"Garcia",
+"Clark",
 "Employee",
-"david8253",
-"DGarcia710@TechSupply.co.uk",
-114511.5,
-80,
+"david2908",
+"DClark749@TechSupply.co.uk",
+41719.19,
+70,
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`SUPPLIER`
 (`SupplierID`,
@@ -1155,7 +1155,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (0,
-13,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1165,7 +1165,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (1,
-11,
+7,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1175,7 +1175,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (2,
-11,
+2,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1185,7 +1185,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (3,
-4,
+9,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1195,7 +1195,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (4,
-16,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1205,7 +1205,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (5,
-4,
+16,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1215,7 +1215,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (6,
-18,
+19,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1225,7 +1225,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (7,
-16,
+15,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1235,7 +1235,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (8,
-6,
+20,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1245,7 +1245,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (9,
-5,
+6,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1255,7 +1255,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (10,
-6,
+10,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1265,7 +1265,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (11,
-19,
+18,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1275,7 +1275,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (12,
-9,
+4,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1285,7 +1285,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (13,
-7,
+10,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1295,7 +1295,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (14,
-13,
+14,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1305,7 +1305,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (15,
-3,
+11,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1315,7 +1315,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (16,
-12,
+18,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1325,7 +1325,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (17,
-14,
+1,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1335,7 +1335,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (18,
-14,
+3,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1345,7 +1345,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (19,
-12,
+4,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1355,7 +1355,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (20,
-15,
+7,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1365,7 +1365,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (21,
-13,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1375,7 +1375,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (22,
-1,
+14,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1385,7 +1385,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (23,
-20,
+11,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1395,7 +1395,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (24,
-19,
+17,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1405,7 +1405,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (25,
-4,
+10,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1415,7 +1415,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (26,
-8,
+14,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1425,7 +1425,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (27,
-3,
+18,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1435,7 +1435,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (28,
-4,
+1,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1445,7 +1445,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (29,
-13,
+20,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1455,7 +1455,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (30,
-9,
+13,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1465,7 +1465,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (31,
-5,
+14,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1475,7 +1475,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (32,
-7,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1485,7 +1485,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (33,
-14,
+19,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1495,7 +1495,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (34,
-19,
+4,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1505,7 +1505,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (35,
-15,
+8,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1515,7 +1515,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (36,
-5,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1525,7 +1525,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (37,
-7,
+19,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1535,7 +1535,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (38,
-15,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1545,7 +1545,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (39,
-15,
+13,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1555,7 +1555,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (40,
-7,
+16,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1565,7 +1565,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (41,
-9,
+17,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1575,7 +1575,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (42,
-2,
+5,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1585,7 +1585,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (43,
-12,
+1,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1595,7 +1595,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (44,
-17,
+14,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1605,7 +1605,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (45,
-13,
+18,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1615,7 +1615,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (46,
-1,
+7,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1625,7 +1625,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (47,
-9,
+7,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1635,7 +1635,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (48,
-8,
+13,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1645,7 +1645,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (49,
-3,
+9,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1655,7 +1655,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (50,
-2,
+18,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1665,7 +1665,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (51,
-11,
+3,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1675,7 +1675,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (52,
-12,
+4,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1685,7 +1685,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (53,
-4,
+14,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1695,7 +1695,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (54,
-11,
+19,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1705,7 +1705,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (55,
-16,
+14,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1715,7 +1715,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (56,
-3,
+16,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1725,7 +1725,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (57,
-12,
+6,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1735,7 +1735,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (58,
-1,
+11,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1745,7 +1745,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (59,
-9,
+14,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1755,7 +1755,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (60,
-16,
+14,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1775,7 +1775,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (62,
-10,
+6,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1785,7 +1785,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (63,
-17,
+2,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1795,7 +1795,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (64,
-16,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1805,7 +1805,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (65,
-6,
+15,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1815,7 +1815,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (66,
-18,
+11,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1825,7 +1825,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (67,
-7,
+4,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1835,7 +1835,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (68,
-19,
+18,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1845,7 +1845,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (69,
-17,
+18,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1855,7 +1855,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (70,
-8,
+4,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1865,7 +1865,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (71,
-13,
+10,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1875,7 +1875,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (72,
-18,
+16,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1885,7 +1885,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (73,
-8,
+4,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1895,7 +1895,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (74,
-18,
+7,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1905,7 +1905,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (75,
-15,
+19,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1915,7 +1915,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (76,
-8,
+16,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1925,7 +1925,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (77,
-11,
+1,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1935,7 +1935,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (78,
-18,
+11,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1945,7 +1945,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (79,
-15,
+7,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1955,7 +1955,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (80,
-3,
+5,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1965,7 +1965,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (81,
-16,
+15,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1975,7 +1975,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (82,
-18,
+13,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1985,7 +1985,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (83,
-20,
+1,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -1995,7 +1995,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (84,
-17,
+3,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2005,7 +2005,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (85,
-14,
+15,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2015,7 +2015,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (86,
-18,
+17,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2025,7 +2025,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (87,
-15,
+13,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2035,7 +2035,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (88,
-14,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2045,7 +2045,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (89,
-3,
+8,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2055,7 +2055,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (90,
-15,
+1,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2065,7 +2065,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (91,
-18,
+7,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2075,7 +2075,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (92,
-15,
+1,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2085,7 +2085,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (93,
-18,
+17,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2095,7 +2095,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (94,
-6,
+3,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2105,7 +2105,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (95,
-4,
+1,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2115,7 +2115,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (96,
-10,
+9,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2125,7 +2125,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (97,
-7,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2135,7 +2135,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (98,
-11,
+20,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2155,7 +2155,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (100,
-18,
+4,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2165,7 +2165,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (101,
-20,
+13,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2175,7 +2175,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (102,
-3,
+16,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2185,7 +2185,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (103,
-1,
+19,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2195,7 +2195,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (104,
-8,
+4,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2205,7 +2205,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (105,
-15,
+3,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2215,7 +2215,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (106,
-6,
+5,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2225,7 +2225,7 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (107,
-9,
+17,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1));
 INSERT INTO `database`.`STOCK`
@@ -2235,9 +2235,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (108,
-2,
+6,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2245,9 +2245,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (109,
-5,
+2,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2255,9 +2255,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (110,
-16,
+20,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2265,9 +2265,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (111,
-20,
+18,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2275,9 +2275,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (112,
-20,
+5,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2285,9 +2285,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (113,
-16,
+14,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2295,9 +2295,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (114,
-16,
+15,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2305,9 +2305,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (115,
-12,
+4,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2315,9 +2315,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (116,
-4,
+20,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2325,9 +2325,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (117,
-19,
+9,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2335,9 +2335,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (118,
-9,
+7,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2345,9 +2345,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (119,
-2,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2355,9 +2355,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (120,
-17,
+16,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2365,9 +2365,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (121,
-3,
+2,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2375,9 +2375,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (122,
-9,
+7,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2385,9 +2385,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (123,
-10,
+8,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2395,9 +2395,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (124,
-17,
+11,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2405,9 +2405,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (125,
-3,
+13,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2415,9 +2415,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (126,
-1,
+8,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2425,9 +2425,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (127,
-2,
+8,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2435,9 +2435,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (128,
-13,
+3,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2445,9 +2445,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (129,
-20,
+9,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2455,9 +2455,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (130,
-5,
+17,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2465,9 +2465,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (131,
-5,
+9,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2475,9 +2475,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (132,
-11,
+19,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2485,9 +2485,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (133,
-3,
+16,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2495,9 +2495,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (134,
-11,
+19,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2505,9 +2505,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (135,
-15,
+8,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2515,9 +2515,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (136,
-10,
+17,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2525,9 +2525,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (137,
-4,
+5,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2535,9 +2535,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (138,
-18,
+16,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2545,9 +2545,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (139,
-20,
+6,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2555,9 +2555,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (140,
-17,
+20,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2565,9 +2565,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (141,
-15,
+14,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2575,9 +2575,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (142,
-4,
+10,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2585,9 +2585,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (143,
-6,
+18,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2595,9 +2595,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (144,
-17,
+10,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2605,9 +2605,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (145,
-3,
+19,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2615,9 +2615,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (146,
-7,
+18,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2625,9 +2625,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (147,
-3,
+9,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2635,9 +2635,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (148,
-13,
+10,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2645,9 +2645,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (149,
-14,
+20,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2655,9 +2655,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (150,
-2,
+18,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2665,9 +2665,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (151,
-17,
+10,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2675,9 +2675,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (152,
-1,
+18,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2685,9 +2685,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (153,
-20,
+1,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2695,9 +2695,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (154,
-18,
+10,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2705,9 +2705,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (155,
-6,
+7,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2715,9 +2715,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (156,
-16,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2725,9 +2725,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (157,
-2,
+6,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2735,9 +2735,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (158,
-2,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2745,9 +2745,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (159,
-3,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2755,9 +2755,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (160,
-16,
+8,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2765,9 +2765,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (161,
-3,
+8,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2775,9 +2775,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (162,
-13,
+9,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2785,9 +2785,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (163,
-15,
+7,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2795,9 +2795,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (164,
-3,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2807,7 +2807,7 @@ VALUES
 (165,
 15,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2815,9 +2815,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (166,
-14,
+15,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2825,9 +2825,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (167,
-3,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2835,9 +2835,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (168,
-1,
+15,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2845,9 +2845,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (169,
-18,
+20,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2855,9 +2855,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (170,
-18,
+15,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2865,9 +2865,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (171,
-13,
+19,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2875,9 +2875,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (172,
-8,
+16,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2885,9 +2885,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (173,
-9,
+6,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2895,9 +2895,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (174,
-10,
+3,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2905,9 +2905,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (175,
-20,
+10,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2915,9 +2915,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (176,
-1,
+10,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2925,9 +2925,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (177,
-10,
+13,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2935,9 +2935,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (178,
-12,
+16,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2945,9 +2945,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (179,
-19,
+10,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2955,9 +2955,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (180,
-15,
+19,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2965,9 +2965,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (181,
-3,
+17,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2975,9 +2975,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (182,
-2,
+11,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2985,9 +2985,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (183,
-6,
+3,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -2995,9 +2995,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (184,
-11,
+2,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3005,9 +3005,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (185,
-7,
+5,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3015,9 +3015,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (186,
-9,
+7,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3025,9 +3025,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (187,
-13,
+11,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3037,7 +3037,7 @@ VALUES
 (188,
 1,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3045,9 +3045,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (189,
-13,
+15,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3055,9 +3055,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (190,
-9,
+10,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3065,9 +3065,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (191,
-17,
+11,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3075,9 +3075,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (192,
-15,
+16,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3085,9 +3085,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (193,
-18,
+14,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3095,9 +3095,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (194,
-14,
+4,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3105,9 +3105,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (195,
-10,
+7,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3115,9 +3115,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (196,
-9,
+20,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3125,9 +3125,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (197,
-4,
+18,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3135,9 +3135,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (198,
-6,
+20,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3145,9 +3145,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (199,
-4,
+8,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3155,9 +3155,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (200,
-17,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3165,9 +3165,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (201,
-17,
+6,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3175,9 +3175,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (202,
-18,
+7,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3185,9 +3185,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (203,
-17,
+7,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3197,7 +3197,7 @@ VALUES
 (204,
 15,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3205,9 +3205,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (205,
-6,
+4,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3215,9 +3215,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (206,
-7,
+5,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3225,9 +3225,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (207,
-3,
+15,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3235,9 +3235,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (208,
-10,
+15,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3247,7 +3247,7 @@ VALUES
 (209,
 5,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3255,9 +3255,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (210,
-5,
+10,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3265,9 +3265,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (211,
-2,
+20,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3275,9 +3275,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (212,
-18,
+4,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3285,9 +3285,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (213,
-3,
+5,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3295,9 +3295,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (214,
-14,
+13,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3305,9 +3305,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (215,
-9,
+6,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3315,9 +3315,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (216,
-10,
+5,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3325,9 +3325,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (217,
-6,
+18,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3335,9 +3335,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (218,
-14,
+13,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3347,7 +3347,7 @@ VALUES
 (219,
 8,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3355,9 +3355,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (220,
-20,
+19,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3365,9 +3365,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (221,
-4,
+3,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3375,9 +3375,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (222,
-16,
+1,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3385,9 +3385,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (223,
-4,
+20,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3395,9 +3395,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (224,
-19,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3407,7 +3407,7 @@ VALUES
 (225,
 1,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3415,9 +3415,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (226,
-3,
+13,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3425,9 +3425,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (227,
-16,
+19,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3435,9 +3435,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (228,
-11,
+8,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3445,9 +3445,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (229,
-13,
+2,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3455,9 +3455,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (230,
-12,
+16,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3465,9 +3465,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (231,
-6,
+19,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3475,9 +3475,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (232,
-16,
+8,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3485,9 +3485,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (233,
-11,
+17,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3495,9 +3495,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (234,
-1,
+4,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3505,9 +3505,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (235,
-12,
+16,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3515,9 +3515,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (236,
-20,
+5,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3525,9 +3525,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (237,
-19,
+17,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3535,9 +3535,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (238,
-19,
+16,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3545,9 +3545,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (239,
-18,
+2,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3555,9 +3555,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (240,
-18,
+11,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3565,9 +3565,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (241,
-2,
+16,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3575,9 +3575,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (242,
-16,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3585,9 +3585,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (243,
-10,
+2,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3595,9 +3595,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (244,
-12,
+5,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3605,9 +3605,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (245,
-15,
+9,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3615,9 +3615,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (246,
-15,
+1,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3627,7 +3627,7 @@ VALUES
 (247,
 16,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3635,9 +3635,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (248,
-20,
+3,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3645,9 +3645,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (249,
-12,
+10,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3655,9 +3655,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (250,
-12,
+9,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3665,9 +3665,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (251,
-6,
+5,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3675,9 +3675,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (252,
-19,
+18,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3685,9 +3685,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (253,
-6,
+14,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3695,9 +3695,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (254,
-2,
+18,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3705,9 +3705,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (255,
-8,
+10,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3715,9 +3715,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (256,
-9,
+6,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3725,9 +3725,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (257,
-4,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3735,9 +3735,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (258,
-2,
+3,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3745,9 +3745,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (259,
-3,
+16,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3755,9 +3755,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (260,
-14,
+20,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3765,9 +3765,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (261,
-13,
+10,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3775,9 +3775,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (262,
-16,
+19,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3785,9 +3785,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (263,
-12,
+19,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3795,9 +3795,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (264,
-5,
+1,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3805,9 +3805,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (265,
-8,
+19,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3815,9 +3815,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (266,
-15,
+10,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3825,9 +3825,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (267,
-9,
+2,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3837,7 +3837,7 @@ VALUES
 (268,
 13,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3845,9 +3845,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (269,
-18,
+2,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3855,9 +3855,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (270,
-11,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3865,9 +3865,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (271,
-17,
+15,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3875,9 +3875,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (272,
-4,
+1,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3885,9 +3885,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (273,
-19,
+14,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3895,9 +3895,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (274,
-9,
+19,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3905,9 +3905,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (275,
-3,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3915,9 +3915,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (276,
-10,
+3,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3925,9 +3925,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (277,
-7,
+20,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3935,9 +3935,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (278,
-16,
+18,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3945,9 +3945,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (279,
-15,
+16,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3955,9 +3955,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (280,
-12,
+5,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3965,9 +3965,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (281,
-11,
+16,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3975,9 +3975,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (282,
-7,
+13,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3985,9 +3985,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (283,
-8,
+17,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -3995,9 +3995,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (284,
-14,
+11,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -4005,9 +4005,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (285,
-19,
+20,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -4015,9 +4015,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (286,
-2,
+19,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -4025,9 +4025,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (287,
-9,
+2,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -4035,9 +4035,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (288,
-16,
+3,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -4045,9 +4045,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (289,
-12,
+6,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -4057,7 +4057,7 @@ VALUES
 (290,
 2,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -4065,9 +4065,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (291,
-2,
+9,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -4075,9 +4075,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (292,
-7,
+10,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -4085,9 +4085,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (293,
-9,
+11,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -4095,9 +4095,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (294,
-1,
+19,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -4105,9 +4105,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (295,
-5,
+9,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`STOCK`
 (`StockID`,
 `Stock`,
@@ -4115,9 +4115,9 @@ INSERT INTO `database`.`STOCK`
 `BranchID`)
 VALUES
 (296,
-6,
+12,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1));
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1));
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4150,10 +4150,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (2,
-"George",
-"Clark",
-"george9397",
-"gecl938@email.com");
+"Paula",
+"Brown",
+"paula4477",
+"pabr831@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4162,10 +4162,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (3,
-"Tina",
-"Davis",
-"tina2936",
-"tida414@email.com");
+"Charlie",
+"Evans",
+"charlie8649",
+"chev825@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4174,10 +4174,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (4,
-"Tina",
-"Brown",
-"tina6187",
-"tibr985@email.com");
+"Kevin",
+"Taylor",
+"kevin6514",
+"keta762@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4186,10 +4186,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (5,
-"Michael",
-"Irwin",
-"michael9162",
-"miir105@email.com");
+"Tina",
+"Smith",
+"tina5045",
+"tism686@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4198,10 +4198,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (6,
-"Quinn",
-"Perez",
-"quinn7307",
-"qupe217@email.com");
+"Bob",
+"Smith",
+"bob5358",
+"bosm166@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4210,10 +4210,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (7,
-"Tina",
-"Perez",
-"tina3906",
-"tipe534@email.com");
+"Laura",
+"Hill",
+"laura4848",
+"lahi919@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4222,10 +4222,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (8,
-"Sam",
-"Clark",
-"sam6591",
-"sacl384@email.com");
+"Fiona",
+"Owens",
+"fiona9663",
+"fiow782@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4234,10 +4234,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (9,
-"Charlie",
-"Davis",
-"charlie7933",
-"chda822@email.com");
+"Alice",
+"Anderson",
+"alice9586",
+"alan804@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4246,10 +4246,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (10,
-"Sam",
+"Paula",
 "Nelson",
-"sam4298",
-"sane182@email.com");
+"paula1290",
+"pane442@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4258,10 +4258,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (11,
-"Julia",
-"Quinn",
-"julia7013",
-"juqu815@email.com");
+"Diana",
+"Roberts",
+"diana7249",
+"diro197@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4270,10 +4270,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (12,
-"Bob",
-"Brown",
-"bob1252",
-"bobr707@email.com");
+"Sam",
+"Fisher",
+"sam4655",
+"safi534@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4282,10 +4282,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (13,
-"Quinn",
-"Lopez",
-"quinn9441",
-"qulo738@email.com");
+"Julia",
+"Irwin",
+"julia3993",
+"juir809@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4294,10 +4294,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (14,
-"Natalie",
-"Fisher",
-"natalie1215",
-"nafi919@email.com");
+"Hannah",
+"Nelson",
+"hannah6513",
+"hane250@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4306,10 +4306,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (15,
-"George",
-"Fisher",
-"george7988",
-"gefi179@email.com");
+"Laura",
+"Evans",
+"laura1515",
+"laev750@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4318,10 +4318,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (16,
-"Oscar",
-"Quinn",
-"oscar5664",
-"osqu480@email.com");
+"Fiona",
+"Anderson",
+"fiona1825",
+"fian644@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4330,10 +4330,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (17,
-"Tina",
-"Garcia",
-"tina6565",
-"tiga603@email.com");
+"Rachel",
+"Fisher",
+"rachel4165",
+"rafi911@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4342,10 +4342,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (18,
-"Charlie",
-"Smith",
-"charlie6986",
-"chsm925@email.com");
+"Michael",
+"Fisher",
+"michael4880",
+"mifi772@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4354,10 +4354,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (19,
-"George",
-"Garcia",
-"george1532",
-"gega975@email.com");
+"Quinn",
+"Anderson",
+"quinn4318",
+"quan379@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4366,10 +4366,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (20,
-"Oscar",
-"Hill",
-"oscar5106",
-"oshi731@email.com");
+"Tina",
+"Perez",
+"tina2252",
+"tipe514@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4378,10 +4378,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (21,
-"Laura",
-"Roberts",
-"laura9391",
-"laro346@email.com");
+"Julia",
+"Lopez",
+"julia5409",
+"julo221@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4392,8 +4392,8 @@ VALUES
 (22,
 "Oscar",
 "Owens",
-"oscar9840",
-"osow699@email.com");
+"oscar4286",
+"osow916@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4402,10 +4402,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (23,
-"Ethan",
-"Irwin",
-"ethan7564",
-"etir116@email.com");
+"Tina",
+"Fisher",
+"tina1834",
+"tifi494@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4414,10 +4414,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (24,
-"Hannah",
-"Evans",
-"hannah5863",
-"haev529@email.com");
+"Diana",
+"Quinn",
+"diana3620",
+"diqu170@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4426,10 +4426,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (25,
-"Michael",
-"Fisher",
-"michael7289",
-"mifi121@email.com");
+"Oscar",
+"Evans",
+"oscar3491",
+"osev213@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4438,10 +4438,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (26,
-"Julia",
-"Owens",
-"julia5627",
-"juow461@email.com");
+"Laura",
+"Nelson",
+"laura5826",
+"lane907@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4450,10 +4450,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (27,
-"Oscar",
-"Hill",
-"oscar3492",
-"oshi808@email.com");
+"Rachel",
+"Anderson",
+"rachel2192",
+"raan813@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4462,10 +4462,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (28,
-"Hannah",
-"Perez",
-"hannah6411",
-"hape661@email.com");
+"Oscar",
+"Quinn",
+"oscar8140",
+"osqu541@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4474,10 +4474,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (29,
-"Laura",
-"Fisher",
-"laura4766",
-"lafi941@email.com");
+"Fiona",
+"Clark",
+"fiona6812",
+"ficl529@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4486,10 +4486,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (30,
-"Diana",
-"Evans",
-"diana3074",
-"diev452@email.com");
+"Michael",
+"Roberts",
+"michael9739",
+"miro664@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4498,10 +4498,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (31,
-"Ian",
-"Miller",
-"ian4662",
-"iami466@email.com");
+"Julia",
+"Jackson",
+"julia7655",
+"juja110@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4510,10 +4510,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (32,
-"Hannah",
-"Irwin",
-"hannah7794",
-"hair603@email.com");
+"Ian",
+"Anderson",
+"ian4858",
+"iaan271@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4522,10 +4522,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (33,
-"Natalie",
-"Anderson",
-"natalie8694",
-"naan625@email.com");
+"Charlie",
+"Clark",
+"charlie2145",
+"chcl500@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4534,10 +4534,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (34,
-"Rachel",
+"Charlie",
 "Fisher",
-"rachel9306",
-"rafi180@email.com");
+"charlie1655",
+"chfi689@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4546,10 +4546,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (35,
-"Charlie",
-"Evans",
-"charlie3096",
-"chev357@email.com");
+"Bob",
+"Clark",
+"bob6196",
+"bocl131@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4558,10 +4558,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (36,
-"Alice",
-"Taylor",
-"alice9174",
-"alta877@email.com");
+"Kevin",
+"Evans",
+"kevin5229",
+"keev936@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4570,10 +4570,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (37,
-"Sam",
-"Clark",
-"sam6827",
-"sacl740@email.com");
+"Fiona",
+"Roberts",
+"fiona6175",
+"firo162@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4582,10 +4582,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (38,
-"Fiona",
-"Evans",
-"fiona1606",
-"fiev204@email.com");
+"Laura",
+"Perez",
+"laura8455",
+"lape996@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4595,9 +4595,9 @@ INSERT INTO `database`.`CUSTOMER`
 VALUES
 (39,
 "Quinn",
-"Jackson",
-"quinn8198",
-"quja554@email.com");
+"Owens",
+"quinn2573",
+"quow851@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4606,10 +4606,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (40,
-"Bob",
-"Roberts",
-"bob8409",
-"boro389@email.com");
+"Paula",
+"Jackson",
+"paula1888",
+"paja922@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4618,10 +4618,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (41,
-"Paula",
-"King",
-"paula4050",
-"paki120@email.com");
+"Julia",
+"Taylor",
+"julia9843",
+"juta757@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4630,10 +4630,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (42,
-"Diana",
-"Nelson",
-"diana6431",
-"dine789@email.com");
+"Michael",
+"Miller",
+"michael5057",
+"mimi632@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4642,10 +4642,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (43,
-"Julia",
-"Roberts",
-"julia3195",
-"juro307@email.com");
+"George",
+"Smith",
+"george5517",
+"gesm731@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4654,10 +4654,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (44,
-"Bob",
-"King",
-"bob4247",
-"boki102@email.com");
+"Diana",
+"Evans",
+"diana2015",
+"diev933@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4666,10 +4666,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (45,
-"Ian",
-"Miller",
-"ian7565",
-"iami400@email.com");
+"Michael",
+"Roberts",
+"michael6714",
+"miro702@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4678,10 +4678,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (46,
-"Bob",
-"Taylor",
-"bob2831",
-"bota955@email.com");
+"Diana",
+"King",
+"diana8916",
+"diki187@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4690,10 +4690,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (47,
-"Paula",
+"Quinn",
 "Lopez",
-"paula7857",
-"palo893@email.com");
+"quinn9598",
+"qulo525@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4702,10 +4702,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (48,
-"Alice",
-"Lopez",
-"alice3924",
-"allo722@email.com");
+"Michael",
+"Roberts",
+"michael9041",
+"miro350@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4714,10 +4714,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (49,
-"Sam",
-"Fisher",
-"sam3023",
-"safi161@email.com");
+"Natalie",
+"Clark",
+"natalie8692",
+"nacl891@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4726,10 +4726,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (50,
-"Oscar",
-"Evans",
-"oscar6869",
-"osev172@email.com");
+"Michael",
+"Quinn",
+"michael6889",
+"miqu626@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4738,10 +4738,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (51,
-"Michael",
-"Miller",
-"michael4778",
-"mimi129@email.com");
+"Natalie",
+"Anderson",
+"natalie2770",
+"naan844@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4750,10 +4750,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (52,
-"Charlie",
-"Clark",
-"charlie3581",
-"chcl696@email.com");
+"Diana",
+"Taylor",
+"diana3424",
+"dita817@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4762,10 +4762,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (53,
-"Quinn",
-"Perez",
-"quinn3938",
-"qupe268@email.com");
+"Michael",
+"Smith",
+"michael3882",
+"mism575@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4774,10 +4774,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (54,
-"Rachel",
-"Owens",
-"rachel7905",
-"raow928@email.com");
+"Paula",
+"Irwin",
+"paula7216",
+"pair334@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4786,10 +4786,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (55,
-"George",
-"Evans",
-"george9500",
-"geev420@email.com");
+"Ian",
+"Perez",
+"ian8055",
+"iape182@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4798,10 +4798,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (56,
-"Rachel",
-"Evans",
-"rachel4176",
-"raev778@email.com");
+"Paula",
+"Fisher",
+"paula7049",
+"pafi803@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4810,10 +4810,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (57,
-"Alice",
-"Quinn",
-"alice5501",
-"alqu756@email.com");
+"Natalie",
+"Smith",
+"natalie1987",
+"nasm953@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4822,10 +4822,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (58,
-"Charlie",
-"Smith",
-"charlie4236",
-"chsm191@email.com");
+"Natalie",
+"Irwin",
+"natalie8221",
+"nair967@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4834,10 +4834,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (59,
-"Michael",
-"Irwin",
-"michael6681",
-"miir225@email.com");
+"Charlie",
+"Evans",
+"charlie8785",
+"chev849@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4846,10 +4846,10 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (60,
-"Julia",
-"Clark",
-"julia2714",
-"jucl784@email.com");
+"Diana",
+"Garcia",
+"diana6099",
+"diga895@email.com");
 INSERT INTO `database`.`CUSTOMER`
 (`CustomerID`,
 `FirstName`,
@@ -4858,10 +4858,490 @@ INSERT INTO `database`.`CUSTOMER`
 `Email`)
 VALUES
 (61,
+"Fiona",
+"Brown",
+"fiona7102",
+"fibr445@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(62,
+"Ian",
+"Quinn",
+"ian7546",
+"iaqu281@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(63,
+"Ian",
+"King",
+"ian8566",
+"iaki555@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(64,
+"Ethan",
+"Clark",
+"ethan4794",
+"etcl163@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(65,
+"Julia",
+"Owens",
+"julia5836",
+"juow238@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(66,
+"George",
+"Roberts",
+"george8577",
+"gero674@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(67,
+"Oscar",
+"Fisher",
+"oscar8602",
+"osfi563@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(68,
+"Michael",
+"Roberts",
+"michael5146",
+"miro750@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(69,
+"Oscar",
+"Nelson",
+"oscar2878",
+"osne269@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(70,
 "Diana",
-"Miller",
-"diana8827",
-"dimi664@email.com");
+"Smith",
+"diana7767",
+"dism776@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(71,
+"Charlie",
+"Irwin",
+"charlie7598",
+"chir933@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(72,
+"Charlie",
+"Owens",
+"charlie4659",
+"chow426@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(73,
+"Alice",
+"Quinn",
+"alice8299",
+"alqu850@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(74,
+"Rachel",
+"Quinn",
+"rachel4192",
+"raqu602@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(75,
+"Fiona",
+"Quinn",
+"fiona6489",
+"fiqu506@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(76,
+"Fiona",
+"Smith",
+"fiona2717",
+"fism599@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(77,
+"Laura",
+"Clark",
+"laura7182",
+"lacl194@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(78,
+"Tina",
+"Evans",
+"tina7949",
+"tiev478@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(79,
+"Kevin",
+"Perez",
+"kevin4961",
+"kepe567@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(80,
+"Laura",
+"Owens",
+"laura6587",
+"laow283@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(81,
+"Michael",
+"Garcia",
+"michael9138",
+"miga493@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(82,
+"Julia",
+"Davis",
+"julia1022",
+"juda947@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(83,
+"George",
+"Brown",
+"george8550",
+"gebr785@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(84,
+"Kevin",
+"Fisher",
+"kevin3663",
+"kefi936@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(85,
+"Kevin",
+"Jackson",
+"kevin1045",
+"keja339@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(86,
+"Natalie",
+"Clark",
+"natalie3712",
+"nacl936@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(87,
+"George",
+"Roberts",
+"george4987",
+"gero380@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(88,
+"Hannah",
+"Davis",
+"hannah3206",
+"hada883@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(89,
+"Hannah",
+"Hill",
+"hannah2779",
+"hahi690@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(90,
+"Hannah",
+"Quinn",
+"hannah1857",
+"haqu981@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(91,
+"Julia",
+"Quinn",
+"julia1515",
+"juqu555@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(92,
+"Ethan",
+"Hill",
+"ethan4497",
+"ethi230@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(93,
+"Hannah",
+"Roberts",
+"hannah7787",
+"haro165@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(94,
+"Laura",
+"Brown",
+"laura8044",
+"labr201@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(95,
+"Oscar",
+"Nelson",
+"oscar7268",
+"osne893@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(96,
+"Rachel",
+"Taylor",
+"rachel1552",
+"rata216@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(97,
+"Julia",
+"Brown",
+"julia8358",
+"jubr241@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(98,
+"Diana",
+"Jackson",
+"diana7880",
+"dija912@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(99,
+"Ian",
+"Garcia",
+"ian4659",
+"iaga913@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(100,
+"Quinn",
+"Smith",
+"quinn3196",
+"qusm353@email.com");
+INSERT INTO `database`.`CUSTOMER`
+(`CustomerID`,
+`FirstName`,
+`LastName`,
+`Password`,
+`Email`)
+VALUES
+(101,
+"Natalie",
+"Quinn",
+"natalie6156",
+"naqu744@email.com");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -4872,11 +5352,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (0,
-"2024-09-22",
-999.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "TU@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"2023-02-03",
+849.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "tipe514@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -4888,42 +5368,10 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (1,
-"2024-07-20",
-1199.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miir225@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
-"Fulfilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(2,
-"2022-12-07",
-1099.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "diev452@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
-"Unfufilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(3,
-"2023-07-25",
-1299.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iami400@email.com" LIMIT 1),
+"2023-12-17",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "paja922@email.com" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
@@ -4935,12 +5383,44 @@ INSERT INTO `database`.`ORDER`
 `BranchID`,
 `Status`)
 VALUES
+(2,
+"2023-11-09",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "quow851@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(3,
+"2023-12-27",
+329.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "diki187@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
 (4,
-"2024-03-08",
-1199.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "qupe268@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"2024-01-17",
+949.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "diqu170@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -4952,11 +5432,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (5,
-"2024-02-14",
-999.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "naan625@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1),
+"2023-01-07",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "pabr831@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -4968,12 +5448,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (6,
-"2023-03-03",
-1199.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "paki120@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1),
-"Unfufilled");
+"2024-02-20",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osne893@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -4984,11 +5464,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (7,
-"2023-01-27",
-2399.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osow699@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1),
+"2023-11-25",
+699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "tifi494@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5000,10 +5480,10 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (8,
-"2023-05-15",
-799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "tibr985@email.com" LIMIT 1),
+"2023-10-08",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iaki555@email.com" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
@@ -5016,12 +5496,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (9,
-"2023-01-10",
-999.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "raow928@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1),
-"Unfufilled");
+"2023-02-16",
+329.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "dita817@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5032,11 +5512,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (10,
-"2023-01-09",
-1699.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gefi179@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1),
+"2023-09-28",
+699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "qusm353@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5048,12 +5528,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (11,
-"2024-06-06",
-999.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "boro389@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1),
-"Unfufilled");
+"2023-08-29",
+849.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osne269@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5064,12 +5544,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (12,
-"2024-08-29",
-1499.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juro307@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
-"Unfufilled");
+"2024-01-18",
+1199.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juja110@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5080,11 +5560,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (13,
-"2023-11-17",
-649.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "naan625@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1),
+"2023-01-28",
+379.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osne269@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5096,11 +5576,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (14,
-"2023-08-15",
-1699.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "haev529@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"2023-03-17",
+699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "pair334@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5112,11 +5592,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (15,
-"2023-06-21",
-799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miir105@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"2024-09-17",
+949.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "dija912@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5128,11 +5608,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (16,
-"2024-06-11",
-999.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "sacl740@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"2023-11-19",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miga493@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5144,11 +5624,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (17,
-"2024-03-11",
-799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "dimi664@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"2023-08-08",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "raqu602@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5160,12 +5640,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (18,
-"2023-11-18",
-849.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "haev529@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
-"Unfufilled");
+"2023-06-20",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "haqu981@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5176,10 +5656,10 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (19,
-"2023-07-08",
-699.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "sane182@email.com" LIMIT 1),
+"2023-08-04",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "tipe514@email.com" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
@@ -5192,12 +5672,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (20,
-"2023-06-29",
-329.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gega975@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
-"Unfufilled");
+"2024-09-04",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "mifi772@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5208,12 +5688,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (21,
-"2024-05-05",
-1699.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "geev420@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
-"Unfufilled");
+"2023-06-04",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "mimi632@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5224,11 +5704,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (22,
-"2024-11-06",
-699.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chsm925@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1),
+"2023-02-05",
+2399.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "fian644@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5240,11 +5720,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (23,
-"2024-08-03",
-1099.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iami400@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"2024-09-14",
+379.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juta757@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5256,12 +5736,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (24,
-"2024-09-23",
-999.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "sacl384@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
-"Unfufilled");
+"2023-02-26",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "nair967@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5272,12 +5752,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (25,
-"2023-06-23",
-329.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "dimi664@email.com" LIMIT 1),
+"2023-03-13",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "etcl163@email.com" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
-"Unfufilled");
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5288,12 +5768,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (26,
-"2024-06-23",
-799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "bobr707@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
-"Unfufilled");
+"2024-06-03",
+1799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "qusm353@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5304,11 +5784,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (27,
-"2023-04-04",
-1299.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "raow928@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1),
+"2023-10-08",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chev825@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5320,12 +5800,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (28,
-"2024-04-02",
-1099.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "bota955@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1),
-"Unfufilled");
+"2024-11-01",
+379.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "pabr831@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Unfulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5336,12 +5816,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (29,
-"2023-01-23",
-1499.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chev357@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
-"Unfufilled");
+"2023-12-10",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "laow283@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5352,12 +5832,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (30,
-"2024-10-25",
-1499.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "alta877@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1),
-"Unfufilled");
+"2023-12-19",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miga493@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5368,12 +5848,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (31,
-"2024-02-23",
-1099.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "safi161@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1),
-"Unfufilled");
+"2024-10-11",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "mifi772@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5384,12 +5864,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (32,
-"2023-11-05",
-349.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juro307@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1),
-"Unfufilled");
+"2023-05-29",
+649.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "tism686@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5400,11 +5880,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (33,
-"2023-03-02",
-999.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "naan625@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"2023-05-13",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "kefi936@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5416,12 +5896,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (34,
-"2024-11-08",
-949.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "paki120@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1),
-"Unfufilled");
+"2022-12-29",
+1799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "keev936@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5432,12 +5912,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (35,
-"2023-08-22",
+"2023-09-09",
 349.99,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "mimi129@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1),
-"Unfufilled");
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gesm731@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5448,11 +5928,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (36,
-"2023-07-10",
-799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "TU@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1),
+"2023-06-10",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osev213@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5464,11 +5944,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (37,
-"2023-08-25",
-799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miir225@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1),
+"2024-05-19",
+949.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gebr785@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5480,12 +5960,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (38,
-"2023-08-21",
-799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "boro389@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1),
-"Unfufilled");
+"2022-12-06",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "tipe514@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5496,12 +5976,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (39,
-"2024-10-28",
-999.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "etir116@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
-"Unfufilled");
+"2023-02-14",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iape182@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5512,11 +5992,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (40,
-"2022-12-30",
-799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "alta877@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"2024-06-21",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "nacl936@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5528,11 +6008,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (41,
-"2023-02-16",
-1799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "sacl384@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"2023-01-11",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juir809@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5544,12 +6024,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (42,
-"2023-07-31",
-1499.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "raow928@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1),
-"Unfufilled");
+"2023-12-26",
+1799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gero380@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5560,12 +6040,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (43,
-"2024-06-13",
-899.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "boro389@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1),
-"Unfufilled");
+"2024-08-14",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osne269@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5576,11 +6056,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (44,
-"2024-08-23",
-329.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "diev452@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1),
+"2023-06-19",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "safi534@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5592,11 +6072,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (45,
-"2024-10-31",
-1299.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juqu815@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"2024-05-23",
+849.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chfi689@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5608,12 +6088,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (46,
-"2024-05-18",
-379.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "qupe268@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
-"Unfufilled");
+"2023-05-20",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "qulo525@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5624,12 +6104,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (47,
-"2023-03-22",
+"2024-11-08",
 1699.99,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "naan625@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1),
-"Unfufilled");
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "firo162@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Unfulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5640,12 +6120,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (48,
-"2023-01-05",
-1299.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "mifi121@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1),
-"Unfufilled");
+"2024-08-24",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iaki555@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5656,12 +6136,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (49,
-"2024-04-23",
-1099.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "TU2@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
-"Unfufilled");
+"2023-05-02",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "mimi632@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5672,12 +6152,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (50,
-"2022-12-17",
-379.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "allo722@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
-"Unfufilled");
+"2023-01-26",
+1799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "ethi230@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5688,12 +6168,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (51,
-"2023-11-10",
-1799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "palo893@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1),
-"Unfufilled");
+"2024-05-10",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "haro165@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5704,11 +6184,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (52,
-"2024-04-06",
-949.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chcl696@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"2024-08-26",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "kefi936@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5720,12 +6200,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (53,
-"2024-03-14",
-699.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iami466@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
-"Unfufilled");
+"2024-05-27",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chow426@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5736,12 +6216,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (54,
-"2023-06-06",
-329.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "palo893@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1),
-"Unfufilled");
+"2024-02-24",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "lahi919@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5752,12 +6232,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (55,
-"2024-11-19",
-899.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "lafi941@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
-"Unfufilled");
+"2024-07-14",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "fian644@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5768,12 +6248,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (56,
-"2024-10-19",
-1699.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "boro389@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
-"Unfufilled");
+"2023-03-13",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iaan271@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5784,12 +6264,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (57,
-"2023-05-31",
+"2024-05-22",
 699.99,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "bobr707@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1),
-"Unfufilled");
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juja110@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5800,11 +6280,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (58,
-"2023-08-31",
-1799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juow461@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1),
+"2024-06-11",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "qusm353@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5816,12 +6296,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (59,
-"2024-01-19",
-1499.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "sacl384@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
-"Unfufilled");
+"2023-09-21",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miro750@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5832,12 +6312,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (60,
-"2024-02-15",
-1699.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "naan625@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
-"Unfufilled");
+"2023-03-19",
+329.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "bocl131@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5848,11 +6328,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (61,
-"2024-11-27",
-1299.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "TU2@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1),
+"2024-05-11",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "quan379@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5864,12 +6344,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (62,
-"2023-04-27",
-799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "quja554@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
-"Unfufilled");
+"2024-10-31",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "firo162@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Unfulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5880,11 +6360,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (63,
-"2024-10-25",
-1499.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "qupe268@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"2023-07-03",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iaqu281@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5896,11 +6376,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (64,
-"2024-07-11",
+"2024-08-25",
 1099.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chda822@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "dism776@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5912,11 +6392,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (65,
-"2024-03-21",
-349.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "oshi731@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1),
+"2023-04-25",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "TU@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5928,11 +6408,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (66,
-"2023-10-11",
-999.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chda822@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1),
+"2023-07-19",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "naqu744@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5944,11 +6424,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (67,
-"2024-07-12",
-349.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juqu815@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"2024-01-25",
+849.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "pafi803@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5960,12 +6440,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (68,
-"2024-02-08",
-349.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "naan625@email.com" LIMIT 1),
+"2023-06-02",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "labr201@email.com" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
-"Unfufilled");
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -5976,11 +6456,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (69,
-"2024-06-07",
-1299.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "qupe268@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1),
+"2024-03-06",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "ficl529@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -5992,11 +6472,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (70,
-"2023-07-10",
-799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osow699@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"2024-06-06",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "tism686@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -6008,11 +6488,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (71,
-"2024-02-28",
-1199.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "quja554@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"2024-04-30",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "rafi911@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -6024,12 +6504,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (72,
-"2024-05-28",
-1299.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iami400@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
-"Unfufilled");
+"2023-06-05",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "rata216@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -6040,11 +6520,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (73,
-"2023-02-22",
-379.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "jucl784@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1),
+"2023-08-13",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "dism776@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -6056,12 +6536,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (74,
-"2024-02-24",
-699.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "dine789@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
-"Unfufilled");
+"2024-10-02",
+379.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "tifi494@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -6072,11 +6552,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (75,
-"2024-05-23",
-899.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "tipe534@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1),
+"2022-12-28",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "safi534@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -6088,12 +6568,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (76,
-"2023-02-10",
-649.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "alta877@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
-"Unfufilled");
+"2023-07-13",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "ethi230@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -6104,11 +6584,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (77,
-"2022-12-09",
+"2023-03-28",
 799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gecl938@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "tifi494@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -6120,11 +6600,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (78,
-"2023-02-05",
-2399.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "boki102@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"2023-02-20",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "alqu850@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -6136,12 +6616,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (79,
-"2023-03-05",
-849.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chev357@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1),
-"Unfufilled");
+"2023-08-19",
+699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "mifi772@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -6152,11 +6632,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (80,
-"2024-06-15",
-849.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miir225@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1),
+"2024-04-03",
+379.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "ethi230@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -6168,11 +6648,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (81,
-"2024-08-29",
-799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "hair603@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1),
+"2023-06-29",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chcl500@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -6184,10 +6664,10 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (82,
-"2024-05-20",
-349.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miir225@email.com" LIMIT 1),
+"2023-07-09",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "naan844@email.com" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
@@ -6200,12 +6680,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (83,
-"2023-02-26",
-349.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "rafi180@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
-"Unfufilled");
+"2024-01-25",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chev825@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -6216,11 +6696,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (84,
-"2023-01-02",
-649.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "naan625@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1),
+"2024-05-28",
+849.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "lahi919@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -6232,11 +6712,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (85,
-"2023-09-15",
-1799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "safi161@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"2023-04-15",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "paja922@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -6248,11 +6728,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (86,
-"2023-04-06",
-349.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gefi179@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1),
+"2024-04-26",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "lahi919@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -6264,12 +6744,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (87,
-"2024-11-22",
-649.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "quja554@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
-"Unfufilled");
+"2023-06-22",
+329.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juir809@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -6280,12 +6760,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (88,
-"2024-01-05",
-899.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osqu480@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1),
-"Unfufilled");
+"2022-12-16",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iaga913@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -6296,11 +6776,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (89,
-"2023-05-19",
-1099.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "allo722@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1),
+"2023-06-19",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gero380@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -6312,11 +6792,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (90,
-"2023-01-16",
-899.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "hape661@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1),
+"2023-07-27",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "fiow782@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -6328,12 +6808,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (91,
-"2023-12-28",
-329.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juqu815@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1),
-"Unfufilled");
+"2023-03-29",
+949.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gero380@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -6344,11 +6824,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (92,
-"2024-11-10",
-2399.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "hape661@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"2024-04-21",
+949.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "quow851@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -6360,11 +6840,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (93,
-"2023-05-13",
-799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "quja554@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1),
+"2023-12-08",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chfi689@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -6376,12 +6856,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (94,
-"2022-12-29",
-349.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chsm925@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1),
-"Unfufilled");
+"2023-01-12",
+2399.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "ficl529@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -6392,11 +6872,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (95,
-"2023-08-19",
-1099.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "sane182@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"2023-06-29",
+329.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chfi689@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -6408,11 +6888,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (96,
-"2023-03-31",
-999.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "alta877@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"2024-06-01",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "alqu850@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -6424,11 +6904,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (97,
-"2023-07-07",
-1199.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "naan625@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"2024-01-21",
+329.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gebr785@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -6440,11 +6920,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (98,
-"2023-12-25",
-699.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osow699@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"2023-12-19",
+849.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miro664@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -6456,12 +6936,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (99,
-"2023-08-17",
+"2023-07-10",
 899.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iami400@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
-"Unfufilled");
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gebr785@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -6472,12 +6952,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (100,
-"2024-06-06",
-699.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "oshi808@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
-"Unfufilled");
+"2023-07-07",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "nacl936@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -6488,12 +6968,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (101,
-"2023-08-04",
-329.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "bobr707@email.com" LIMIT 1),
+"2024-06-15",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "nacl891@email.com" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
-"Unfufilled");
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -6504,12 +6984,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (102,
-"2023-07-15",
-329.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "hape661@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1),
-"Unfufilled");
+"2024-04-21",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gero380@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -6520,12 +7000,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (103,
-"2023-12-10",
-1099.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chev357@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
-"Unfufilled");
+"2024-01-18",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "kefi936@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -6536,11 +7016,11 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (104,
-"2023-10-10",
-2399.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "oshi731@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"2023-05-05",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "qulo525@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -6552,12 +7032,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (105,
-"2023-10-01",
-349.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "alta877@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
-"Unfufilled");
+"2024-08-05",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miqu626@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -6568,12 +7048,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (106,
-"2024-08-26",
-329.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miir225@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1),
-"Unfufilled");
+"2024-07-23",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osne893@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -6584,12 +7064,12 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (107,
-"2024-04-04",
-849.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gega975@email.com" LIMIT 1),
+"2023-07-25",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "keta762@email.com" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
-"Unfufilled");
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -6600,9 +7080,2665 @@ INSERT INTO `database`.`ORDER`
 `Status`)
 VALUES
 (108,
-"2023-11-09",
+"2024-01-27",
+849.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "hane250@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(109,
+"2024-09-21",
+1799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "pabr831@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(110,
+"2024-10-10",
+849.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "lahi919@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(111,
+"2023-02-18",
 349.99,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "hahi690@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(112,
+"2023-06-01",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "bosm166@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(113,
+"2024-04-26",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miqu626@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(114,
+"2024-02-11",
+699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gero380@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(115,
+"2024-05-22",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "diro197@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(116,
+"2023-05-29",
+949.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "mifi772@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(117,
+"2022-12-08",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "mism575@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(118,
+"2024-05-26",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juja110@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(119,
+"2023-03-21",
+379.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "nacl891@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(120,
+"2024-01-21",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "rata216@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(121,
+"2024-07-02",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "naan844@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(122,
+"2024-05-02",
+949.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "pafi803@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(123,
+"2024-08-09",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "mimi632@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(124,
+"2023-05-15",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "qusm353@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(125,
+"2024-02-01",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "firo162@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(126,
+"2024-01-03",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juda947@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(127,
+"2024-02-18",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "dita817@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(128,
+"2023-07-11",
+649.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "lane907@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(129,
+"2023-06-11",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "pafi803@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(130,
+"2024-08-12",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "labr201@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(131,
+"2023-03-07",
+699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "labr201@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(132,
+"2023-02-22",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chow426@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(133,
+"2024-10-21",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juqu555@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(134,
+"2024-04-26",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "quow851@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(135,
+"2024-10-23",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "keta762@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(136,
+"2024-09-03",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "fiqu506@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(137,
+"2023-02-27",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iaan271@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(138,
+"2024-10-16",
+379.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "keev936@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(139,
+"2023-07-21",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "TU@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(140,
+"2023-08-16",
+949.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "rata216@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(141,
+"2023-04-19",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "naqu744@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(142,
+"2024-07-18",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juow238@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(143,
+"2024-03-28",
+849.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "TU2@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(144,
+"2024-03-05",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "dita817@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(145,
+"2024-10-11",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miro750@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(146,
+"2023-01-14",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "hahi690@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(147,
+"2023-11-05",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iaki555@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(148,
+"2023-10-04",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "quow851@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(149,
+"2023-12-05",
+1199.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "qulo525@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(150,
+"2023-09-20",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "hada883@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(151,
+"2024-01-30",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iape182@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(152,
+"2023-09-08",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "diqu170@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(153,
+"2023-03-07",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "fiqu506@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(154,
+"2023-03-23",
+329.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miro350@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(155,
+"2024-06-20",
+699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "dism776@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(156,
+"2023-06-06",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "dija912@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(157,
+"2024-07-29",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "nacl891@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(158,
+"2024-02-24",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "naan844@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(159,
+"2023-11-12",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "diev933@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(160,
+"2023-07-08",
+1799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chev825@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(161,
+"2024-06-24",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "firo162@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(162,
+"2024-03-31",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miga493@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(163,
+"2023-09-06",
+329.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "julo221@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(164,
+"2023-10-05",
+849.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "julo221@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(165,
+"2023-01-18",
+2399.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "tifi494@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(166,
+"2022-12-08",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "qusm353@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(167,
+"2023-08-21",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "kepe567@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(168,
+"2024-09-08",
+849.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "kefi936@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(169,
+"2023-08-16",
+1799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osne893@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(170,
+"2023-04-19",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "tiev478@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(171,
+"2023-01-04",
+1199.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juqu555@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(172,
+"2024-02-26",
+1799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osne893@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(173,
+"2023-06-03",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "fibr445@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(174,
+"2023-12-22",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "tiev478@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(175,
+"2024-08-01",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "firo162@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(176,
+"2024-06-02",
+1199.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "tifi494@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(177,
+"2023-12-24",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "TU@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(178,
+"2024-09-10",
+2399.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "safi534@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(179,
+"2023-02-27",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "raan813@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(180,
+"2024-10-09",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iape182@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(181,
+"2022-12-20",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gero380@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(182,
+"2022-12-20",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "firo162@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(183,
+"2024-05-15",
+1799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "alqu850@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(184,
+"2023-07-16",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "qulo525@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(185,
+"2024-08-04",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "safi534@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(186,
+"2024-06-25",
+949.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "bosm166@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(187,
+"2024-04-28",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "pabr831@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(188,
+"2024-02-04",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gero674@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(189,
+"2023-01-25",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "haqu981@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(190,
+"2023-05-02",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "keja339@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(191,
+"2023-04-13",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osqu541@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(192,
+"2024-10-17",
+1199.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miqu626@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(193,
+"2024-02-09",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "nair967@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(194,
+"2024-02-03",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osne269@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(195,
+"2023-04-28",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "lacl194@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(196,
+"2024-05-19",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "keev936@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(197,
+"2024-03-17",
+2399.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "rata216@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(198,
+"2024-05-29",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "hane250@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(199,
+"2023-08-17",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "quan379@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(200,
+"2024-08-05",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "laow283@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(201,
+"2023-01-26",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "fism599@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(202,
+"2023-10-12",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "haqu981@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(203,
+"2024-01-05",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juja110@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(204,
+"2024-04-28",
+379.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "firo162@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(205,
+"2023-02-25",
+1799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "fian644@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(206,
+"2023-01-11",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osow916@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(207,
+"2024-01-20",
+849.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "diqu170@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(208,
+"2022-12-08",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miro750@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(209,
+"2023-06-07",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "jubr241@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(210,
+"2023-08-25",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "dita817@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(211,
+"2023-04-17",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "fism599@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(212,
+"2023-02-13",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gesm731@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(213,
+"2023-04-22",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "TU@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(214,
+"2024-10-31",
+849.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "naqu744@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Unfulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(215,
+"2024-04-01",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iaga913@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(216,
+"2023-09-28",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "quan379@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(217,
+"2023-02-05",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "quan379@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(218,
+"2023-11-29",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miqu626@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(219,
+"2023-04-05",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chev825@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(220,
+"2023-01-22",
+1199.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "nair967@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(221,
+"2022-12-18",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "lacl194@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(222,
+"2023-03-24",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "fiow782@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(223,
+"2024-11-24",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "dism776@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Unfulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(224,
+"2024-04-03",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osev213@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(225,
+"2024-05-24",
+329.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "hada883@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(226,
+"2024-07-26",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gero674@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(227,
+"2024-10-31",
+1799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "lane907@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Unfulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(228,
+"2023-12-24",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miro350@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(229,
+"2023-08-04",
+699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "labr201@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(230,
+"2023-10-05",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "jubr241@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(231,
+"2022-12-21",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "TU@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(232,
+"2023-05-12",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "alqu850@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(233,
+"2023-06-17",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "haqu981@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(234,
+"2023-06-15",
+649.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juqu555@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(235,
+"2023-11-10",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "fian644@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(236,
+"2023-08-05",
+329.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "hahi690@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(237,
+"2024-06-09",
+1199.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "labr201@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(238,
+"2024-11-12",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "lape996@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Unfulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(239,
+"2023-03-28",
+379.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miro350@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(240,
+"2023-04-18",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "diga895@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(241,
+"2023-05-21",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juta757@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(242,
+"2024-11-16",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "mimi632@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Unfulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(243,
+"2024-06-29",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "fian644@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(244,
+"2023-04-01",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chir933@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(245,
+"2024-10-05",
+949.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "raqu602@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(246,
+"2023-07-14",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "hane250@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(247,
+"2023-06-24",
+1799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chir933@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(248,
+"2024-01-27",
+649.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "pair334@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(249,
+"2024-09-21",
+379.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "naan844@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(250,
+"2024-06-23",
+849.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "qulo525@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(251,
+"2024-07-13",
+1799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "ethi230@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(252,
+"2023-05-16",
+2399.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "hane250@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(253,
+"2022-12-06",
+949.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "nacl936@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(254,
+"2024-08-10",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iaan271@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(255,
+"2024-05-17",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chir933@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(256,
+"2022-12-05",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "pair334@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(257,
+"2023-01-02",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "etcl163@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(258,
+"2023-07-04",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "pabr831@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(259,
+"2023-01-05",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "mifi772@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(260,
+"2024-02-28",
+649.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iape182@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(261,
+"2023-03-07",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osqu541@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(262,
+"2023-02-10",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "TU@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(263,
+"2023-02-18",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "diqu170@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(264,
+"2023-07-24",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "fibr445@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(265,
+"2023-03-17",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "pair334@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(266,
+"2023-08-27",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "fibr445@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(267,
+"2023-08-16",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "hada883@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(268,
+"2022-12-27",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "bosm166@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(269,
+"2024-02-12",
+379.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "ficl529@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(270,
+"2023-07-27",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miro350@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(271,
+"2024-11-01",
+949.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "quan379@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Unfulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(272,
+"2023-01-14",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osev213@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(273,
+"2024-04-06",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miro664@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(274,
+"2024-09-07",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
 (SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "TU@email.com" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
 "Fulfilled");
@@ -6615,139 +9751,11 @@ INSERT INTO `database`.`ORDER`
 `BranchID`,
 `Status`)
 VALUES
-(109,
-"2024-08-13",
-799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juro307@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1),
-"Unfufilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(110,
-"2024-05-08",
-2399.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gefi179@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
-"Fulfilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(111,
-"2024-02-10",
-1799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chsm925@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1),
-"Fulfilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(112,
-"2024-07-14",
-1299.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "boki102@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1),
-"Unfufilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(113,
-"2023-09-27",
-379.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "haev529@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
-"Unfufilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(114,
-"2023-09-04",
-349.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "allo722@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
-"Fulfilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(115,
-"2024-10-04",
-1799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "bota955@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1),
-"Unfufilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(116,
-"2024-02-19",
-1299.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "dine789@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
-"Unfufilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(117,
-"2024-08-08",
+(275,
+"2023-04-08",
 1099.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "boki102@email.com" LIMIT 1),
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "rata216@email.com" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
@@ -6759,204 +9767,12 @@ INSERT INTO `database`.`ORDER`
 `BranchID`,
 `Status`)
 VALUES
-(118,
-"2024-06-28",
-999.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chsm191@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
-"Unfufilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(119,
-"2024-01-22",
-799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chev357@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1),
-"Fulfilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(120,
-"2024-01-01",
-899.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "dimi664@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Cambridge" LIMIT 1),
-"Fulfilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(121,
-"2023-09-04",
-1299.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miir225@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1),
-"Fulfilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(122,
-"2023-04-19",
-2399.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "naan625@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1),
-"Fulfilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(123,
-"2024-04-20",
-1299.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "hair603@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
-"Fulfilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(124,
-"2023-06-21",
-899.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juow461@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
-"Unfufilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(125,
-"2024-01-02",
-1299.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "oshi731@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
-"Fulfilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(126,
-"2023-11-21",
-1499.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chcl696@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1),
-"Unfufilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(127,
-"2023-09-04",
-379.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gega975@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1),
-"Unfufilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(128,
-"2024-05-11",
-1499.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "qupe217@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1),
-"Unfufilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(129,
-"2023-04-30",
-379.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osqu480@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
-"Fulfilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(130,
-"2023-09-07",
+(276,
+"2023-04-25",
 899.99,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miir105@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "mifi772@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -6967,13 +9783,13 @@ INSERT INTO `database`.`ORDER`
 `BranchID`,
 `Status`)
 VALUES
-(131,
-"2022-12-19",
-349.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "lafi941@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1),
-"Unfufilled");
+(277,
+"2024-05-05",
+329.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miro350@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
+"Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
 `Date`,
@@ -6983,107 +9799,11 @@ INSERT INTO `database`.`ORDER`
 `BranchID`,
 `Status`)
 VALUES
-(132,
-"2024-02-12",
+(278,
+"2023-09-08",
 699.99,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "mimi129@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
-"Unfufilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(133,
-"2023-08-15",
-1199.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "naan625@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
-"Fulfilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(134,
-"2024-08-06",
-1799.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "oshi731@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
-"Unfufilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(135,
-"2024-10-24",
-899.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "jucl784@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
-"Unfufilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(136,
-"2023-01-25",
-349.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "allo722@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
-"Unfufilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(137,
-"2024-05-23",
-1099.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "boki102@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1),
-"Unfufilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(138,
-"2023-02-03",
-899.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "mifi121@email.com" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "lane907@email.com" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
@@ -7095,12 +9815,12 @@ INSERT INTO `database`.`ORDER`
 `BranchID`,
 `Status`)
 VALUES
-(139,
-"2024-11-05",
-2399.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "dimi664@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "York" LIMIT 1),
+(279,
+"2024-01-26",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chcl500@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -7111,28 +9831,60 @@ INSERT INTO `database`.`ORDER`
 `BranchID`,
 `Status`)
 VALUES
-(140,
-"2024-05-05",
+(280,
+"2023-08-10",
+649.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miro350@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(281,
+"2023-06-10",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "nacl891@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(282,
+"2024-02-23",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iaki555@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(283,
+"2022-12-08",
 999.99,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "palo893@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
-"Unfufilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(141,
-"2024-05-08",
-1099.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juqu815@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Liverpool" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "lane907@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -7143,92 +9895,12 @@ INSERT INTO `database`.`ORDER`
 `BranchID`,
 `Status`)
 VALUES
-(142,
-"2024-09-25",
-349.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "tibr985@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1),
-"Fulfilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(143,
-"2024-01-19",
-1099.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "hair603@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
-"Unfufilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(144,
-"2023-01-20",
-849.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "diev452@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
-"Fulfilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(145,
-"2023-12-06",
-1299.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gecl938@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Belfast" LIMIT 1),
-"Unfufilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(146,
-"2023-12-29",
-1499.99,
-(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "laro346@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
-"Fulfilled");
-INSERT INTO `database`.`ORDER`
-(`OrderID`,
-`Date`,
-`Price`,
-`ProductID`,
-`CustomerID`,
-`BranchID`,
-`Status`)
-VALUES
-(147,
-"2024-08-01",
+(284,
+"2023-12-14",
 999.99,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "lafi941@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "alqu850@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -7239,12 +9911,156 @@ INSERT INTO `database`.`ORDER`
 `BranchID`,
 `Status`)
 VALUES
-(148,
-"2023-04-02",
+(285,
+"2024-03-02",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "rata216@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(286,
+"2023-03-30",
+2399.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "mism575@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(287,
+"2024-10-24",
+849.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juja110@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(288,
+"2024-07-13",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juja110@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(289,
+"2023-03-10",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iaqu281@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(290,
+"2024-07-28",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "fiow782@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(291,
+"2024-04-02",
+1199.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "laev750@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(292,
+"2023-01-25",
+949.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "bosm166@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(293,
+"2024-11-03",
+699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "rafi911@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Unfulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(294,
+"2024-02-04",
 1099.99,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chsm925@email.com" LIMIT 1),
-(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Birmingham" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osne269@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
 "Fulfilled");
 INSERT INTO `database`.`ORDER`
 (`OrderID`,
@@ -7255,10 +10071,1674 @@ INSERT INTO `database`.`ORDER`
 `BranchID`,
 `Status`)
 VALUES
-(149,
-"2024-04-15",
+(295,
+"2024-02-03",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "nasm953@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(296,
+"2024-02-01",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juja110@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(297,
+"2024-08-10",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chev849@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(298,
+"2023-12-03",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "raan813@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(299,
+"2024-09-25",
+1799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "dism776@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(300,
+"2023-01-29",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "kepe567@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(301,
+"2023-04-25",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gero674@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(302,
+"2024-10-12",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juir809@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(303,
+"2024-09-11",
+329.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chev825@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(304,
+"2023-05-31",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osev213@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(305,
+"2023-10-17",
+1799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miqu626@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(306,
+"2024-02-15",
 799.99,
 (SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
-(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "mimi129@email.com" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "diga895@email.com" LIMIT 1),
 (SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
-"Unfufilled");
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(307,
+"2024-02-07",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "bocl131@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(308,
+"2024-09-26",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osfi563@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(309,
+"2024-01-31",
+849.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "TU2@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(310,
+"2024-05-05",
+699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miqu626@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(311,
+"2024-01-13",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juir809@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(312,
+"2024-08-31",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miqu626@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(313,
+"2023-12-01",
+329.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juta757@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(314,
+"2022-11-29",
+699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miro702@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(315,
+"2024-04-13",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "lahi919@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(316,
+"2023-11-05",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iape182@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(317,
+"2023-01-11",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gebr785@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(318,
+"2023-05-15",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "pair334@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(319,
+"2023-06-11",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "jubr241@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(320,
+"2024-06-12",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juir809@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(321,
+"2024-07-15",
+2399.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "safi534@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(322,
+"2024-06-01",
+379.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "rafi911@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(323,
+"2023-09-20",
+1799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "haqu981@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(324,
+"2024-07-01",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "julo221@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(325,
+"2023-08-31",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "pair334@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(326,
+"2023-02-02",
+379.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miga493@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(327,
+"2023-12-08",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miro750@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(328,
+"2023-11-09",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "diga895@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(329,
+"2024-02-25",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "diga895@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(330,
+"2023-10-16",
+699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "nacl936@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(331,
+"2024-07-21",
+1199.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osne269@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(332,
+"2024-03-12",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "rafi911@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(333,
+"2023-06-01",
+2399.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chev825@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(334,
+"2024-03-10",
+329.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "firo162@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(335,
+"2023-10-20",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iaqu281@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(336,
+"2023-09-18",
+649.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "lahi919@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(337,
+"2023-05-27",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osne269@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(338,
+"2022-12-28",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iape182@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(339,
+"2024-01-28",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "quow851@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(340,
+"2023-05-18",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "diga895@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(341,
+"2023-01-07",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "kefi936@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(342,
+"2023-04-24",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG OLED 65 4K TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "nair967@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(343,
+"2023-10-31",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "keev936@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(344,
+"2024-05-21",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chfi689@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(345,
+"2022-12-27",
+379.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "dism776@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(346,
+"2024-05-28",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "hahi690@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(347,
+"2023-06-13",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung QLED 55 4K Smart TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "gero674@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(348,
+"2024-11-23",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "nair967@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Unfulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(349,
+"2023-07-24",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "fiow782@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(350,
+"2024-02-04",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "pafi803@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(351,
+"2024-10-15",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iape182@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(352,
+"2024-07-19",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "diga895@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(353,
+"2023-12-20",
+699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Garmin Fenix 7 Sapphire Solar" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "paja922@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(354,
+"2023-05-15",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "mifi772@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(355,
+"2024-05-10",
+329.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Bose QuietComfort 45" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "haro165@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(356,
+"2023-04-17",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "keja339@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(357,
+"2024-08-12",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "jubr241@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(358,
+"2024-04-12",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miga493@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(359,
+"2023-03-12",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "miro750@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(360,
+"2023-10-30",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chcl500@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(361,
+"2023-12-31",
+379.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "fiqu506@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(362,
+"2023-05-14",
+849.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "pair334@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(363,
+"2024-09-01",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "diro197@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(364,
+"2023-10-30",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juja110@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(365,
+"2023-01-02",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "HP Spectre x360 14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "alan804@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(366,
+"2024-07-19",
+1499.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Dell XPS 13 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chev849@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(367,
+"2023-06-22",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy S23 Ultra 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osne269@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(368,
+"2023-10-11",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "OnePlus 11 5G" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "hane250@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(369,
+"2024-08-24",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "juta757@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(370,
+"2023-09-21",
+649.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Vizio 65 4K UHD Smart TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "haqu981@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(371,
+"2023-03-13",
+1799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iaqu281@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(372,
+"2024-02-17",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "pair334@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Dundee" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(373,
+"2023-02-04",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony WH-1000XM5 Noise Cancelling" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "bocl131@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(374,
+"2022-12-19",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Motorola Edge 40 Pro" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osev213@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(375,
+"2024-09-07",
+899.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Acer Swift 3" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iaan271@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Nottingham" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(376,
+"2023-01-12",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "etcl163@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(377,
+"2023-05-14",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony Bravia 55 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chfi689@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(378,
+"2023-11-17",
+1799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Lenovo ThinkPad X1 Carbon Gen 10" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "nacl936@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(379,
+"2023-01-10",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chfi689@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(380,
+"2024-05-20",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "LG C4 65 inch OLED evo 4K HDR Smart TV 2024 - OLED65C44LA" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "laev750@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Bath" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(381,
+"2024-08-16",
+849.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Tab S9 512GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "labr201@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(382,
+"2023-06-03",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "nair967@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(383,
+"2024-04-11",
+349.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Samsung Galaxy Watch 6" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "osev213@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(384,
+"2024-03-15",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "tifi494@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Sheffield" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(385,
+"2023-05-24",
+379.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sennheiser Momentum 4 Wireless" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "dita817@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(386,
+"2024-07-01",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "rafi911@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Glasgow" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(387,
+"2024-04-30",
+1199.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Sony X90K 65 4K LED TV" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "pabr831@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(388,
+"2024-08-09",
+1699.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Asus ROG Zephyrus G14" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "labr201@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(389,
+"2023-08-11",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "julo221@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(390,
+"2023-10-15",
+999.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Google Pixel 8 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "TU@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Manchester" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(391,
+"2024-02-01",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iaan271@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(392,
+"2023-02-21",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "iaqu281@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(393,
+"2023-04-21",
+1299.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Microsoft Surface Pro 9 i7" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "keta762@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "London" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(394,
+"2023-02-09",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "pafi803@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Brighton" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(395,
+"2023-05-08",
+799.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple Watch Ultra 49mm" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chev825@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(396,
+"2024-03-26",
+949.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Xiaomi 13 Pro 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "tipe514@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Edinburgh" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(397,
+"2023-12-11",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "iPhone 15 Pro 128GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "lape996@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Oxford" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(398,
+"2023-11-04",
+1099.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "Apple iPad Pro 12.9 256GB" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "chcl500@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");
+INSERT INTO `database`.`ORDER`
+(`OrderID`,
+`Date`,
+`Price`,
+`ProductID`,
+`CustomerID`,
+`BranchID`,
+`Status`)
+VALUES
+(399,
+"2023-01-20",
+2399.99,
+(SELECT ProductID FROM PRODUCT WHERE PRODUCT.Name = "MacBook Pro 16 M2" LIMIT 1),
+(SELECT CustomerID FROM CUSTOMER WHERE CUSTOMER.Email = "diev933@email.com" LIMIT 1),
+(SELECT BranchID FROM BRANCH WHERE BRANCH.Location = "Newcastle" LIMIT 1),
+"Fulfilled");

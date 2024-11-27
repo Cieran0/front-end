@@ -1,5 +1,5 @@
 <?php 
-include '/query.php';
+include '../query.php';
 session_start();
 
 if (!isset($_SESSION['EmployeeID'])) {

@@ -1,28 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<?php 
+require "query.php";
+session_start();
+
+if (!isset($_SESSION['CustomerID']) && !isset($_SESSION['EmployeeID'])) {
+    header('Location: /login.php');
+    exit();
+}
+
+if (isset($_SESSION['CustomerID'])) {
+    header('Location: /customer_dashboard.php');
+    exit();
+}
+?>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Performance</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script> 
+    
 </head>
 <body>
-<canvas id="myChart" style="width:100%;max-width:700px"></canvas> 
+<?php include "header.php" ?>
 
+<section class="section">
+<div class="columns is-multiline">
+
+<div class="column is-one-quarter is-one-quarter-mobile is-one-quarter-tablet is-one-quarter-desktop">
+</div>
+<div class="column is-half is-one-mobile is-half-tablet is-half-desktop ">
+  <div class="has-background-grey-lighter card">
+    <canvas id="myChart" style="width:50%;max-width:50vw"></canvas> 
+  </div>
+
+</div>
+
+<div class="column is-one-quarter is-one-quarter-mobile is-one-quarter-tablet is-one-quarter-desktop">
+</div>
+</div>
+</section>
 <script>
 
 <?php 
 
-require "query.php";
+if( $_SESSION['Role'] == 'CEO') {
+  $result = query("SELECT * FROM BranchOrderSummary;");
+} else {
+  $branchID = $_SESSION["BranchID"];
+  $result = query("SELECT * FROM BranchOrderSummary WHERE BranchID = $branchID;");
+}
 
-$result = query("SELECT 
-    `Branch`.`Location`,
-    COUNT(CASE WHEN `ORDER`.`Status` = 'Fulfilled' THEN 1 END) AS FulfilledOrders,
-    COUNT(CASE WHEN `ORDER`.`Status` = 'Unfufilled' THEN 1 END) AS UnfulfilledOrders
-FROM `database`.`ORDER` AS `ORDER`
-JOIN `database`.`BRANCH` AS `Branch`
-    ON `ORDER`.`BranchID` = `Branch`.`BranchID`
-GROUP BY `ORDER`.`BranchID`, `Branch`.`Location`;");
 
 $branches = [];
 $fulfilledOrders = [];
@@ -99,5 +130,4 @@ new Chart("myChart", {
 });
 
 </script>
-</body>
 </html>

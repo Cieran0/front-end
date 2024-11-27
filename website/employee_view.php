@@ -280,7 +280,8 @@ if($_SESSION['Role'] != 'Employee') {
             <h1 class="title">Fulfill Orders</h1>
             <div class="grid">
                 <?php
-                $query = "SELECT OrderID, ProductID, Price, `Status` FROM `ORDER` WHERE `Status` = 'Unfufilled'";
+                $branch_id = $_SESSION["BranchID"];
+                $query = "SELECT OrderID, ProductID, Price, `Status` FROM `ORDER` WHERE `Status` = 'Unfulfilled' AND BranchID = $branch_id";
                 $result = query($query);
 
                 if (!$result) {
@@ -336,15 +337,12 @@ if($_SESSION['Role'] != 'Employee') {
             <div class="columns is-multiline is-variable">
                 <?php
                 if (!empty($searchValue)) {
-                    $stmt = mysqli_prepare($dbc, "SELECT FirstName AS Name, Role, Email FROM EMPLOYEE WHERE FirstName LIKE CONCAT('%', ?, '%')");
-                    mysqli_stmt_bind_param($stmt, 's', $searchValue);
-                    mysqli_stmt_execute($stmt);
-                    $result = mysqli_stmt_get_result($stmt);
+                    $query = "SELECT FirstName, LastName, `Role`, Email, EMPLOYEE.BranchID, BRANCH.Location FROM EMPLOYEE JOIN BRANCH ON EMPLOYEE.BranchID = BRANCH.BranchID WHERE FirstName LIKE '%$searchValue%' OR LastName LIKE '%$searchValue%'";
                 } else {
-                    $query = "SELECT FirstName AS Name, Role, Email FROM EMPLOYEE";
-                    $result = query($query);
+                    $query = "SELECT FirstName, LastName, `Role`, Email, EMPLOYEE.BranchID, BRANCH.Location FROM EMPLOYEE JOIN BRANCH ON EMPLOYEE.BranchID = BRANCH.BranchID;";
                 }
-
+                $result = query($query);
+                
                 if (!$result) {
                     echo "<p>Error fetching employees: " . mysqli_error($dbc) . "</p>";
                 } else {
@@ -357,8 +355,9 @@ if($_SESSION['Role'] != 'Employee') {
                             ?>
                             <div class="column is-one-third">
                                 <div class="box">
-                                <h2><?php echo htmlspecialchars($employee['Name']); ?></h2>
+                                <h2><?php echo htmlspecialchars($employee['FirstName']) . " " . htmlspecialchars($employee['LastName']); ?></h2>
                                 <p>Role: <?php echo htmlspecialchars($employee['Role']); ?></p>
+                                <p>Branch: <?php echo htmlspecialchars($employee['Location']); ?></p>
                                 <a href="mailto:<?php echo htmlspecialchars($employee['Email']); ?>">
                                     <button class="contact-button button mt-2">Contact</button>
                                 </a>

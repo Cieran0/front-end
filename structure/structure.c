@@ -78,7 +78,7 @@ TABLE {
     int ProductID DEFAULT_NULL;
     int CustomerID DEFAULT_NULL;
     int BranchID DEFAULT_NULL;
-    ENUM('Unfufilled','Fulfilled') Status DEFAULT_NULL;
+    ENUM('Unfulfilled','Fulfilled') Status DEFAULT_NULL;
     PRIMARY_KEY ('OrderID')
     FOREIGN_KEY ('ProductID', 'PRODUCT')
     FOREIGN_KEY ('CustomerID', 'CUSTOMER')
