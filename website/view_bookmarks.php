@@ -26,6 +26,18 @@
   @include_once 'header.php';
   require "query.php";
 
+  // Add notification message if present in URL
+  if (isset($_GET['message'])) {
+    echo '<div class="columns is-centered">
+            <div class="column is-half">
+              <div class="notification is-success is-light">
+                <button class="delete"></button>
+                ' . htmlspecialchars($_GET['message']) . '
+              </div>
+            </div>
+          </div>';
+  }
+
   $sqlView = query("SELECT * FROM Bookmarks WHERE CustomerID = ". $_SESSION['CustomerID'] .";");
 ?>
   <section class="section">
@@ -146,6 +158,18 @@
     </p>
     </div>
     </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+    const $notification = $delete.parentNode;
+
+    $delete.addEventListener('click', () => {
+      $notification.parentNode.removeChild($notification);
+    });
+  });
+});
+</script>
 
 </body>
 </html>
