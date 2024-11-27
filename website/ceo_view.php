@@ -250,13 +250,17 @@ if($_SESSION['Role'] != 'CEO') {
         <div class="level">
            <div class="level-left">
                 <form method="GET" action="ceo_view.php">
-                    <input class="input" type="text" name="search" placeholder="Search for employees..." 
-                    value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
+                    <div class="columns">
+                        <div class="column is-11">
+                            <input class="input" type="text" name="search" placeholder="Search for employees..." 
+                            value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
+                        </div>
+                        <div class="column">
+                          <button class="button" type="submit">Search</button>
+                        </div>
+                    </div>
                 </form>
            </div> 
-           <div class="level-right">
-                <button class="button" type="submit">Search</button>
-           </div>
         </div>
         
         </div>
