@@ -1,20 +1,23 @@
-
 html, body { height: 100vh; margin: 0;   display: flex;
   flex-direction: column;}
 /* Carousel container */
 .carousel-container {
   display: flex;
   overflow-x: auto;
-  gap: 1rem; /* space between items */
-  padding: 1rem;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+  gap: 20px;
 }
 .carousel-container::-webkit-scrollbar {
   display: none; /* hides scrollbar for WebKit browsers */
 }
 .carousel-item {
-  height: 20%;
-  width: 20%;
-  flex: 0 0 auto; /* Prevent items from shrinking */
+  flex: 0 0 300px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-item:hover {
+  transform: translateY(-10px);
 }
 
 .footer {
@@ -33,5 +36,35 @@ html, body { height: 100vh; margin: 0;   display: flex;
 }
 
 .image-rounded {
-  border-radius: 10px; /* Adjust the radius to control the rounding */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+#support, #info {
+  transition: color 0.3s ease;
+}
+
+#support:hover, #info:hover {
+  color: #485fc7;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }

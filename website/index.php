@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Add fade-in class to sections
+        const sections = document.querySelectorAll('section');
+        sections.forEach((section, index) => {
+            section.classList.add('fade-in');
+            section.style.animationDelay = `${index * 0.3}s`;
+        });
+    });
+    </script>
   
   </head>
 <body>
@@ -20,7 +30,7 @@
       </div>
     </section>
   -->
-    <section class="section">
+    <section class="section fade-in">
       <p class="title">Categories:</p>
       <div class="carousel-container">
         <?php 
@@ -63,7 +73,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section fade-in">
       <p class="title">All Products:</p>
       <div class="container">
         <div class="columns is-multiline">

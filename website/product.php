@@ -20,14 +20,36 @@
 
         .product-img {
             max-width: 30vw;
+            max-height: 300px;
+            object-fit: contain;
+        }
+
+        .media {
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .media-left {
+            margin-right: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .bottom-col {
-            margin-top: 40%;
+            margin-top: 2rem;
         }
 
         .split-col .button {
             width: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+            .product-img {
+                max-width: 100%;
+            }
+            
+            .media-left {
+                margin-right: 0;
+            }
         }
 
     </style>
