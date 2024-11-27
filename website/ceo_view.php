@@ -124,6 +124,91 @@ if (isset($_SESSION['CustomerID'])) {
         </div>
     </div>
 
+    <div id="staffModal" class="modal is-active">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Edit Employee</p>
+                <button class="delete" aria-label="close" id="cross"></button>
+            </header>
+            <section class="modal-card-body">
+                <form id="EmployeeForm">
+
+                <div class="field">
+                    <label class="label">Select Role</label>
+                    <div class="select">
+                        <select id="RoleSelect">
+                            <option disabled selected> Select Role...</option>
+                            <option>Employee</option>
+                            <option>Manager</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Select Branch</label>
+                    <div class="select">
+                        <select id="location">
+                            <option disabled selected> Select Role...</option>
+                            <?php 
+                            $result = query("
+                            SELECT 
+                              Location
+                            FROM BRANCH;
+                        ");
+
+                                while($row = mysqli_fetch_assoc($result)) {
+                                    echo "<option>".$row['Location']."</option>";
+                                }
+                            
+                            ?>
+                           
+                        </select>
+                    </div>
+                </div>
+                <div class="field">
+                        <label class="label">E-mail</label>
+                        <div class="control">
+                            <input class="input" type="text" name="eMail" id="eMail"
+                                placeholder="Enter e-mail" min="1" max="100" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">First Name</label>
+                        <div class="control">
+                            <input class="input" type="text" name="firstName" id="firstName"
+                                placeholder="Enter first name" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Last Name</label>
+                        <div class="control">
+                            <input class="input" type="text" name="lastName" id="lastName"
+                                placeholder="Enter last name" min="1" max="100" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Weekly Hours</label>
+                        <div class="control">
+                            <input class="input" type="number" name="hours" id="hours"
+                                placeholder="Enter new salary" min="1" max="1000000" step="0.01" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Salary</label>
+                        <div class="control">
+                            <input class="input" type="number" name="Salary" id="SalarySelect"
+                                placeholder="Enter new salary" min="1" max="1000000" step="0.01" required>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <section class="modal-card-foot">
+                <button class="button is-success" id="saveChangesButton">Save</button>
+                <button class="button cancel-button" id="cancel">Cancel</button>
+            </section>
+        </div>
+    </div>
+
 
     <!-- branch order detials modal -->
         <div id="branchModal" class="modal">
@@ -196,6 +281,8 @@ if (isset($_SESSION['CustomerID'])) {
             }
             ?>
         </div>
+        
+
     </section>
 
     <section class="section">

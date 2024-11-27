@@ -13,7 +13,7 @@ go:
 	cd go_sql_gen/ && go build -o ../$(EXECUTABLE)
 
 gen_reset: go
-	python random_py/data.py > structure/data.cpp
+	python3 random_py/data.py > structure/data.cpp
 	./$(EXECUTABLE)
 	cat database/bookmarks_view.sql >> database/gen_reset.sql
 
