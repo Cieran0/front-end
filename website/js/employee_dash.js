@@ -95,6 +95,8 @@ const saveProduct = () => {
   // Proceed if all required fields are valid
   const formData = new FormData(form);
 
+  console.log(formData);
+
   fetch('actions/create_product.php', {
     method: 'POST',
     body: formData

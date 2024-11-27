@@ -78,7 +78,7 @@ try {
 
 
     // Insert into PRODUCT table
-    $insert_product_query = query("CALL InsertProduct('$productName', '$description', $basePrice, $supp_id, $stockQuantity, $branchID)");
+    $insert_product_query = query("CALL InsertProduct('$productName', '$description', $basePrice, $supp_id, $stockQuantity, '$category',  $branchID)");
 
     if (!$insert_product_query) {
         throw new Exception("Failed to insert product: " . $dbc->error);

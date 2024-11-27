@@ -61,6 +61,7 @@ CREATE PROCEDURE InsertProduct(
     IN p_BasePrice DECIMAL(10, 2),
     IN p_SupplierID INT,
     IN p_Stock INT,
+    IN p_Category TEXT,
     IN p_BranchID INT
 )
 BEGIN
@@ -72,8 +73,8 @@ BEGIN
     FROM PRODUCT;
 
     -- Insert into PRODUCT
-    INSERT INTO PRODUCT (ProductID, Name, Description, BasePrice, SupplierID)
-    VALUES (p_ProductID, p_Name, p_Description, p_BasePrice, p_SupplierID);
+    INSERT INTO PRODUCT (ProductID, Name, Description, Category, BasePrice, SupplierID, ImageSrc)
+    VALUES (p_ProductID, p_Name, p_Description, p_Category, p_BasePrice, p_SupplierID, "product.png");
 
     -- Insert into STOCK
     INSERT INTO STOCK (StockID, Stock, ProductID, BranchID)
