@@ -24,6 +24,7 @@
       
           <!-- Right side buttons -->
           <?php 
+        error_reporting(E_ALL ^ E_WARNING ^ E_DEPRECATED ^ E_NOTICE);
         session_start();
         if (!$_SESSION['loggedin']) {
             echo "<div class=\"navbar-end\">
