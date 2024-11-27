@@ -56,6 +56,7 @@ TABLE {
     char Description[255] DEFAULT_NULL;
     decimal BasePrice DEFAULT_NULL;
     int SupplierID DEFAULT_NULL;
+    char ImageSrc[255] DEFAULT_NULL;
     PRIMARY_KEY ('ProductID')
     FOREIGN_KEY('SupplierID', 'SUPPLIER')
 } typedef PRODUCT;
