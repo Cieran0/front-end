@@ -10,6 +10,8 @@
 <body>
 
 <?php 
+    @include_once 'header.php';
+
     session_start();
     $product = $_POST['ProductID'];
     $customer = $_SESSION['CustomerID'];
@@ -21,7 +23,6 @@
         header("Location: /index.php");
         exit();
     }
-
 ?>
 
 <section class="section">
