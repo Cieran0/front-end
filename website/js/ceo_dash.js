@@ -95,6 +95,66 @@ const get_employee_id = () => {
     return EmployeeID;
   }
 
+function fill_modal_details(branchId) {
+  let modalBody = document.getElementById('modal-body');
+
+  modalBody.innerHTML = '';
+  
+  fetch_branch_info(branchId).then(data => {
+    arr = data['data'];
+    for (let i = 0;i<arr.length;i++) {
+      let newsection = document.createElement("section");
+      
+      let price = document.createElement("p");
+      let priceText = document.createTextNode("Price: " + arr[i].Price);
+
+      let date = document.createElement("p");
+      let dateText = document.createTextNode("Date Ordered: " + arr[i].Date);
+
+      let orderId = document.createElement("p");
+      let orderIdText = document.createTextNode("Order ID: " + arr[i].OrderID);
+
+      
+      newsection.classList.add("section");
+      newsection.classList.add("box");
+
+      price.append(priceText);
+      date.append(dateText);
+      orderId.append(orderIdText);
+
+      newsection.append(orderId);
+      newsection.append(price);
+      newsection.append(date);
+
+      modalBody.append(newsection);
+    }
+  })
+}
+
+const fetch_branch_info = (branchId) => {
+  const data = new URLSearchParams();
+  data.append('BranchID', branchId);
+
+  return fetch('../actions/fetch_branch_data.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: data.toString(),
+  })
+    .then(response => response.json())
+    .then(data => {
+      if(data.success) {
+        return data;
+      } else {
+        alert('Failed to fetch data.');
+        throw new Error('Data fetch unsuccessful');
+      }
+    })
+  .catch(error => {
+    console.error('Error: ', error);
+    throw error;
+  })
+}
+
 function fill_de() {
     console.log("test");
 
@@ -157,3 +217,18 @@ const fetchStuff = () => {
         throw error; // Re-throw the error for further handling
       });
   };
+
+document.addEventListener('DOMContentLoaded', () => {
+    const dropdownButton = document.getElementById('sortDropdownButton');
+    const dropdown = dropdownButton.closest('.dropdown');
+
+    dropdownButton.addEventListener('click', () => {
+        dropdown.classList.toggle('is-active');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!dropdown.contains(event.target)) {
+            dropdown.classList.remove('is-active');
+        }
+    });
+});

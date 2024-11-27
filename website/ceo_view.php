@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php 
-require 'query.php';
+include '/query.php';
 session_start();
 
 if (!isset($_SESSION['CustomerID']) && !isset($_SESSION['EmployeeID'])) {
@@ -19,9 +19,52 @@ if (isset($_SESSION['CustomerID'])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="./js/ceo_dash.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  function openModal($el) {
+    $el.classList.add('is-active');
+  }
+
+  function closeModal($el) {
+    $el.classList.remove('is-active');
+  }
+
+  function closeAllModals() {
+    (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+      closeModal($modal);
+    });
+  }
+
+  (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+    const modal = $trigger.dataset.target;
+    const $target = document.getElementById(modal);
+
+    $trigger.addEventListener('click', () => {
+      openModal($target);
+    });
+  });
+
+  // Add a click event on various child elements to close the parent modal
+  (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+    const $target = $close.closest('.modal');
+
+    $close.addEventListener('click', () => {
+      closeModal($target);
+    });
+  });
+
+  // Add a keyboard event to close all modals
+  document.addEventListener('keydown', (event) => {
+    if(event.key === "Escape") {
+      closeAllModals();
+    }
+  });
+});
+    </script>
 </head>
 <body>
     <?php @include_once 'header.php' ?>
+    <?php @include_once 'query.php' ?>
 
     <div id="staffModal" class="modal">
         <div class="modal-background"></div>
@@ -38,7 +81,7 @@ if (isset($_SESSION['CustomerID'])) {
                         <select id="EmployeeSelect">
                             <option disabled selected> Select Employee...</option>
                             <?php 
-                                $employeeQuery = "CALL GetEmployeesForCEO()";
+                                $employeeQuery = "SELECT * FROM CEOView WHERE NOT `ROLE` = 'CEO'";
                                 $employeeResult = query($employeeQuery);
                                 while($row = mysqli_fetch_assoc($employeeResult)) {
                                     echo '<option>' . $row['EmployeeID'] . ": " . $row['FirstName'] . " " . $row['LastName'] . "</option>";
@@ -82,6 +125,24 @@ if (isset($_SESSION['CustomerID'])) {
     </div>
 
 
+    <!-- branch order detials modal -->
+        <div id="branchModal" class="modal">
+        <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Branch Order History</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body" id="modal-body">
+    </section>
+    <footer class="modal-card-foot">
+      <div class="buttons">
+      </div>
+    </footer>
+  </div>    
+</div>
+
+
     <section class="section">
         <div class="manage-staff">
             <h1 class="title">
@@ -120,7 +181,7 @@ if (isset($_SESSION['CustomerID'])) {
 
                                     <form method="post" action="./actions/delete_employee.php">
                                         <input type="hidden" name="EmployeeID" value="<?php echo $row['EmployeeID'] ?>"/>
-                                        <button title="Delete employee record....">
+                                        <button title="Delete employee record...." class="js-modal-trigger" data-target="modal-js-example">
                                             <figure class="image is-24x24">
                                                 <img src="./images//cross.webp" />
                                             </figure>                                                                        
@@ -133,6 +194,84 @@ if (isset($_SESSION['CustomerID'])) {
                     <?php
                 }
             }
+            ?>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="branch-stats">
+            <div class="level">
+                <div class="level-left">
+                    <h1 class="title">
+                        Branch Performance
+                    </h1>
+                </div>
+                <div class="level-right">
+                <div class="dropdown is-right">
+            <div class="dropdown-trigger">
+                <button class="button" id="sortDropdownButton" aria-haspopup="false" aria-controls="dropdown-menu">
+                <span>Sort</span>
+                <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+                </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                <div class="dropdown-content">
+                <a href="ceo_view.php?order=asc" class="dropdown-item"> Sort Total Order Value: Ascending </a>
+                <a href="ceo_view.php?order=desc" class="dropdown-item"> Sort Total Order Value: Descending </a>
+                </div>
+            </div>
+            </div>
+        </div>
+                </div>
+               
+        <div class="columns is-multiline is-variable is-5 mt-4">
+            <?php 
+
+                (isset($_GET['order']) && $_GET['order'] == 'asc') ? $order = 'ASC' : $order = 'DESC';
+                $branchQuery = "SELECT 
+                    BRANCH.BranchID,
+                    BRANCH.Location,
+                    COUNT(`ORDER`.OrderID) AS TotalOrders,
+                    SUM(`ORDER`.Price) AS TotalOrderPrice
+                FROM 
+                    BRANCH
+                LEFT JOIN 
+                    `ORDER` ON BRANCH.BranchID = `ORDER`.BranchID
+                GROUP BY 
+                    BRANCH.BranchID, BRANCH.Location, BRANCH.ContactNo
+                ORDER BY 
+                    TotalOrderPrice " . $order;
+
+                $branchResult = query($branchQuery);
+                while ($row = mysqli_fetch_assoc($branchResult)) {
+                    ?>
+                    <div class="column is-one-third">
+                        <div class="box">
+                            <p><?php echo "Branch ID: " . $row['BranchID']?></p>
+                            <p><?php echo "Branch Location: " . $row['Location']?></p>
+                            <p><?php echo "Total Orders: " . $row['TotalOrders'] ?></p>
+                            <p><?php echo "Total Order Value: £" . number_format($row['TotalOrderPrice']) ?></p>
+                            <div class="level">
+                                <div class="level-left">
+                                </div>
+                                <div class="level-right">
+                                <button 
+                                    onclick="fill_modal_details(<?php echo $row['BranchID'] ?>)"
+                                    class="js-modal-trigger" 
+                                    data-target="branchModal" 
+                                    title="See full details...">
+                                    <figure class="image is-48x48">
+                                        <img style="filter: brightness(0) invert(1);" src="./images/eye.webp" />
+                                    </figure>
+                                </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php
+                }
             ?>
         </div>
     </section>
