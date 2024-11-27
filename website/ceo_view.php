@@ -24,6 +24,7 @@ if($_SESSION['Role'] != 'CEO') {
     <title>Tech Supply - CEO Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="./js/ceo_dash.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -235,9 +236,16 @@ if($_SESSION['Role'] != 'CEO') {
 
     <section class="section">
         <div class="manage-staff">
-            <h1 class="title">
-                Manage Staff
-            </h1>
+            <div class="level">
+                <div class="level-left">
+                    <h1 class="title">
+                        Manage Staff
+                    </h1>
+                </div>
+                <div class="level-right">
+                    <button class="button" onclick = "open_add()">Add Employee</button>
+                </div>
+            </div>
         </div>
         <div class="columns is-variable is-multiline is-5 mt-4">
             <?php
@@ -287,7 +295,6 @@ if($_SESSION['Role'] != 'CEO') {
             ?>
         </div>
         
-        <button class="button" onclick = "open_add()">add employee</button>
 
     </section>
 
@@ -322,28 +329,57 @@ if($_SESSION['Role'] != 'CEO') {
         <div class="columns is-multiline is-variable is-5 mt-4">
             <?php 
 
-                (isset($_GET['order']) && $_GET['order'] == 'asc') ? $order = 'ASC' : $order = 'DESC';
-                $branchQuery = "SELECT 
-                    BRANCH.BranchID,
-                    BRANCH.Location,
-                    COUNT(`ORDER`.OrderID) AS TotalOrders,
-                    SUM(`ORDER`.Price) AS TotalOrderPrice
-                FROM 
-                    BRANCH
-                LEFT JOIN 
-                    `ORDER` ON BRANCH.BranchID = `ORDER`.BranchID
-                GROUP BY 
-                    BRANCH.BranchID, BRANCH.Location, BRANCH.ContactNo
-                ORDER BY 
-                    TotalOrderPrice " . $order;
+            (isset($_GET['order']) && $_GET['order'] == 'asc') ? $order = 'ASC' : $order = 'DESC';
+            $branchQuery = "SELECT 
+                BRANCH.BranchID,
+                BRANCH.Location,
+                SUM(CASE WHEN `ORDER`.`Status` = 'Unfulfilled' THEN 1 ELSE 0 END) AS TotalUnfulfilled,
+                SUM(CASE WHEN `ORDER`.`Status` = 'Fulfilled' THEN 1 ELSE 0 END) AS TotalFulfilled,
+                COUNT(`ORDER`.OrderID) AS TotalOrders,
+                SUM(`ORDER`.Price) AS TotalOrderPrice
+            FROM 
+                BRANCH
+            LEFT JOIN 
+                `ORDER` ON BRANCH.BranchID = `ORDER`.BranchID
+            GROUP BY 
+                BRANCH.BranchID, BRANCH.Location
+            ORDER BY 
+                TotalOrderPrice $order";
 
                 $branchResult = query($branchQuery);
                 while ($row = mysqli_fetch_assoc($branchResult)) {
                     ?>
                     <div class="column is-one-third">
                         <div class="box">
+                            <div class="title">
+                                <h1>Branch: <?php echo $row['Location']?></h1>
+                            </div>
+                            <canvas id="myChart_<?php echo $row['BranchID']; ?>" style="width: 100%;max-width:600px"></canvas>
+
+                            <script>
+                                var xValues_<?php echo $row['BranchID']; ?> = ["Fulfilled Orders", "Unfulfilled Orders"];
+                                var yValues_<?php echo $row['BranchID']; ?> = [<?php echo $row['TotalFulfilled']; ?>, <?php echo $row['TotalUnfulfilled'] ?>];
+                                var barColors_<?php echo $row['BranchID']; ?> = ["#1ff231", "#f21f1f"];
+
+                                new Chart(document.getElementById("myChart_<?php echo $row['BranchID']; ?>"), {
+                                    type: "pie",
+                                    data: {
+                                        labels: xValues_<?php echo $row['BranchID']; ?>,
+                                        datasets: [{
+                                            backgroundColor: barColors_<?php echo $row['BranchID']; ?>,
+                                            data: yValues_<?php echo $row['BranchID']; ?>
+                                        }]
+                                    },
+                                    options: {
+                                        title: {
+                                            display: true,
+                                            text: "Branch Performance"
+                                        }
+                                    }
+                                });
+                            </script>
+
                             <p><?php echo "Branch ID: " . $row['BranchID']?></p>
-                            <p><?php echo "Branch Location: " . $row['Location']?></p>
                             <p><?php echo "Total Orders: " . $row['TotalOrders'] ?></p>
                             <p><?php echo "Total Order Value: £" . number_format($row['TotalOrderPrice']) ?></p>
                             <div class="level">
