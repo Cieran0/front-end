@@ -31,3 +31,7 @@ html, body { height: 100vh; margin: 0;   display: flex;
   background: url('./header.jpg') center;
   background-size: cover;
 }
+
+.image-rounded {
+  border-radius: 10px; /* Adjust the radius to control the rounding */
+}

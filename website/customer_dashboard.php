@@ -19,7 +19,6 @@
               exit();
             }
         
-            $selectCategoryQuery = query("SELECT DISTINCT Category FROM PRODUCT");
 
             //DONT TOUCH THIS PLEASE - ITS MAGIC
         $selectRecentOrder = query("
@@ -53,7 +52,7 @@ AND p1.ProductID NOT IN (
                 $pid = $row["ProductID"];
                 $name = $row["Name"];
                 $price = $row["BasePrice"];
-                $img = "/images/product.png";
+                $img = "produt_images/" . $row["ImageSrc"];
 
                 echo"<div class=\"column is-one-fifth is-third-mobile is-one-third-tablet is-one-fifth-desktop\">
         <div class=\"card\">
@@ -95,11 +94,20 @@ AND p1.ProductID NOT IN (
           <!-- Repeat for more cards -->
           <?php
 
+            $selectCategoryQuery = query( "SELECT 
+                                                      Category,
+                                                      MIN(ImageSrc) AS ImageSrc
+                                                  FROM 
+                                                      PRODUCT
+                                                  GROUP BY 
+                                                      Category;");
+
+
             if (mysqli_num_rows($selectCategoryQuery) > 0) {
               while ($row = mysqli_fetch_array($selectCategoryQuery)) {
               
                   $category = $row['Category'];
-                  $img = "images/product.png";
+                  $img = "product_images/" . $row['ImageSrc'];
               
                   echo"<div class=\"column is-one-fifth is-third-mobile is-one-third-tablet is-one-fifth-desktop\">
         <div class=\"card\">

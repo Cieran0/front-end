@@ -13,7 +13,7 @@
             <form action="results.php" method="GET" style="width: 100%;">
                 <div class="field">
                   <p class="control has-icons-right">
-                    <input class="input" type="text" name="search" placeholder="Search..." required>
+                    <input class="input" type="text" name="search" placeholder="Search...">
                     <span class="icon is-right">
                       <i class="fas fa-search"></i>
                     </span>

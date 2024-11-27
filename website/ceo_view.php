@@ -12,6 +12,12 @@ if (isset($_SESSION['CustomerID'])) {
     header('Location: /customer_dashboard.php');
     exit();
 }
+
+if($_SESSION['Role'] != 'CEO') {
+    $redirect = 'Location: /' . strtolower($_SESSION['Role']) . '_view.php';
+    header($redirect);
+    exit();
+}
 ?>
 <html lang="en">
 <head>

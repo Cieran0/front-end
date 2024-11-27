@@ -26,19 +26,25 @@
         <?php 
             @include_once("/query.php");
         
-            $sqlSelect = query("SELECT DISTINCT Category FROM PRODUCT;");
+            $sqlSelect = query(" SELECT 
+                                            Category,
+                                            MIN(ImageSrc) AS ImageSrc
+                                        FROM 
+                                            PRODUCT
+                                        GROUP BY 
+                                            Category;");
 
             if (mysqli_num_rows($sqlSelect) > 0) {
                 while ($row = mysqli_fetch_array($sqlSelect)) {
    
                     $category = $row['Category'];
-                    $img = "images/product.png";
+                    $img = "product_images/" . $row['ImageSrc'];
 
                     echo "<div class=\"carousel-item\">
                     <div class=\"box\">
                       <figure class=\"image is-500x500\">
                         <a href=\"results.php?category=$category\">
-                            <img src=\"$img\" alt=\"Placeholder image\">
+                            <img src=\"$img\" alt=\"Placeholder image\" class=\"image-rounded\">
                         </a>
                       </figure>
                       <div class=\"content has-text-centered\">
@@ -71,7 +77,7 @@
                     $pid = $row["ProductID"];
                     $name = $row["Name"];
                     $price = $row["BasePrice"];
-                    $img = "images/product.png";
+                    $img = "product_images/" . $row["ImageSrc"];;
 
 
                     echo "<div class=\"column is-one-fifth is-third-mobile is-one-third-tablet is-one-fifth-desktop\">

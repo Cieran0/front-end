@@ -13,6 +13,13 @@ function set_buttons(in_stock) {
 
     const buy_button = document.getElementById('buy_button');
 
+
+    if (force_disable) {
+        buy_button.disabled = true;
+        buy_button.textContent = "Disabled (Employee)";
+        return;
+    }
+
     if (in_stock) {
         buy_form.action = buy_form.action.replace(path, "confirm_order.php");
         buy_button.textContent = "Buy";
@@ -22,6 +29,8 @@ function set_buttons(in_stock) {
         buy_button.textContent = "Out of Stock";
         buy_button.disabled = true;
     }
+
+
 }
 
 function on_select() {

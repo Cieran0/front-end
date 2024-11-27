@@ -32,7 +32,7 @@ if(mysqli_num_rows($selectOrders)>0) {
     <div class=\"columns is-multiline\">";
 
     while($row = mysqli_fetch_array($selectOrderedProducts)){
-        $img = "images/product.png";
+        $img = "product_images/" . $row['ImageSrc'];
         $name = $row['Name'];
         $date = $row['Date'];
         $price = $row['Price'];
