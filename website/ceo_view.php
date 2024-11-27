@@ -333,7 +333,7 @@ if($_SESSION['Role'] != 'CEO') {
             $branchQuery = "SELECT 
                 BRANCH.BranchID,
                 BRANCH.Location,
-                SUM(CASE WHEN `ORDER`.`Status` = 'Unfulfilled' THEN 1 ELSE 0 END) AS TotalUnfulfilled,
+                ORDER.Date,
                 SUM(CASE WHEN `ORDER`.`Status` = 'Fulfilled' THEN 1 ELSE 0 END) AS TotalFulfilled,
                 COUNT(`ORDER`.OrderID) AS TotalOrders,
                 SUM(`ORDER`.Price) AS TotalOrderPrice
@@ -358,7 +358,8 @@ if($_SESSION['Role'] != 'CEO') {
 
                             <script>
                                 var xValues_<?php echo $row['BranchID']; ?> = ["Fulfilled Orders", "Unfulfilled Orders"];
-                                var yValues_<?php echo $row['BranchID']; ?> = [<?php echo $row['TotalFulfilled']; ?>, <?php echo $row['TotalUnfulfilled'] ?>];
+                                var yValues_<?php echo $row['BranchID']; ?> = [<?php echo $row['TotalFulfilled']; ?>, 
+                                    <?php echo (intval($row['TotalOrders']) - intval($row['TotalFulfilled'])) ?>];
                                 var barColors_<?php echo $row['BranchID']; ?> = ["#1ff231", "#f21f1f"];
 
                                 new Chart(document.getElementById("myChart_<?php echo $row['BranchID']; ?>"), {
