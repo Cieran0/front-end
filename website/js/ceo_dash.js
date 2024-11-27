@@ -32,6 +32,12 @@ function open_modal(id) {
   document.getElementById('staffModal').classList.add('is-active');
 }
 
+function open_add() {
+
+  document.getElementById('addStaffModal').classList.add('is-active');
+}
+
+
 function cancel() {
     document.getElementById('staffModal').classList.remove('is-active');
     document.getElementById('addStaffModal').classList.remove('is-active');

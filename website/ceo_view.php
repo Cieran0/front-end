@@ -288,6 +288,7 @@ if($_SESSION['Role'] != 'CEO') {
             ?>
         </div>
         
+        <button class="button" onclick = "open_add()">add employee</button>
 
     </section>
 
