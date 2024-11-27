@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,6 +11,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script>
+    const force_disable = <?php echo isset($_SESSION['EmployeeID']) ? 'true' : 'false'; ?>;
+
+    </script>
     <script src="./js/product.js"></script>
     <style>
 
@@ -50,6 +58,7 @@
             $price = $row["BasePrice"];
             $desc = $row["Description"];
             $category = $row["Category"];
+            $img = $row["ImageSrc"];
         }
     } else {
         header("Location: /index.php");
@@ -93,7 +102,7 @@
                     <article class=\"media\">
                         <div class=\"media-left\">
                             <figure class=\"image\">
-                                <img src=\"images/product.png\" class=\"product-img\" alt=\"Image\" />
+                                <img src=\"product_images/$img\" class=\"product-img  image-rounded\" alt=\"Image\" />
                             </figure>
                         </div>
                         <div class=\"media-content\">
@@ -150,7 +159,8 @@
 
                                 ?>
                                 
-                                <button class="button" type="submit">
+                                <?php $employed = isset($_SESSION['EmployeeID']); ?>
+                                <button class="button" type="submit" <?php if($employed) {echo 'disabled'; }?>>
                                     <?php
                                     if($action == "actions/un_bookmark.php"){
                                         echo "Remove bookmark";
@@ -174,7 +184,7 @@
                                 echo "<input type=\"text\" name=\"ProductID\" value=\"$pid\" style=\"display: none;\">";
                                 echo "<input type=\"text\" name=\"BranchID\" style=\"display: none;\" id=\"hidden_branch_id\">";
                                 ?>
-                                <button class="button" type="submit" id="buy_button">Buy</button>
+                                <button class="button" type="submit" id="buy_button" <?php if($employed) {echo 'disabled'; }?> >Buy</button>
                                 </form>
                                 </div>
                                 </div>

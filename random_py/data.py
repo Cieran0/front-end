@@ -298,7 +298,7 @@ def generate_product_data():
     .Description = \"{product['Description']}\",
     .BasePrice = {product['BasePrice']:.2f},
     .SupplierID = ID_OF(supplier->Name == "{product['Supplier']}"),
-    .ImageSrc = \"product.png\",
+    .ImageSrc = \"{product['Name']}.png\",
 }},"""
         print(formatted_product)
 

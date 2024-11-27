@@ -50,6 +50,7 @@
                     $name = $row['ProductName'];
                     $price = $row['BasePrice'];
                     $pid = $row['ProductID'];
+                    $img = $row['ImageSrc'];
 
                     if($all_ids == "") {
                       $all_ids = "$pid";
@@ -62,7 +63,7 @@
                     <article class=\"media\">
                         <div class=\"media-left\">
                             <figure class=\"image\">
-                                <img src=\"images/product.png\" class=\"bookmark-img\" alt=\"Image\" />
+                                <img src=\"product_images/$img\" class=\"bookmark-img\" alt=\"Image\" />
                             </figure>
                         </div>
                         <div class=\"media-content\">

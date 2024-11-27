@@ -199,13 +199,14 @@
                     $price = $row['BasePrice'];
                     $pid = $row['ProductID'];
                     $desc = $row['Description'];
+                    $img = $row['ImageSrc'];
                     
                     echo "<a href=\"product.php?ProductID=$pid\">
                 <div class=\"box\">
                     <article class=\"media\">
                         <div class=\"media-left\">
                             <figure class=\"image\">
-                                <img src=\"images/product.png\" class=\"search-img\" alt=\"Image\" />
+                                <img src=\"product_images/$img\" class=\"search-img image-rounded\"  alt=\"Image\" />
                             </figure>
                         </div>
                         <div class=\"media-content\">
