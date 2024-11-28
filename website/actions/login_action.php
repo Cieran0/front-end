@@ -39,5 +39,5 @@
 	$_SESSION['loggedin'] = false;
 	$_SESSION['email'] = "";
 	$_SESSION['password'] = "";
-	header("Location: /login_failed.html");
+	header("Location: /login_failed.php");
 	exit();
