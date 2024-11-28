@@ -65,7 +65,7 @@ func view_to_string(v view) string {
 		}
 	}
 
-	builder.WriteString(fmt.Sprintf("FROM\n\t%s;\n\n", v.from))
+	builder.WriteString(fmt.Sprintf("FROM\n\t`%s`;\n\n", v.from))
 
 	return builder.String()
 }

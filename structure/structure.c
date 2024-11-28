@@ -135,3 +135,9 @@ VIEW CUSTOMER EmployeeView = {
     .LastName INCLUDED
     .Email INCLUDED
 };
+
+VIEW ORDER ReccomendationView = {
+    .OrderID INCLUDED
+    .ProductID INCLUDED
+    .CustomerID INCLUDED
+};

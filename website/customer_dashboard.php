@@ -24,20 +24,20 @@
         $recommended = query("
 SELECT DISTINCT p1.* 
 FROM PRODUCT p1
-JOIN `ORDER` o1 ON o1.ProductID = p1.ProductID
-WHERE o1.CustomerID IN (
-    SELECT o2.CustomerID
-    FROM `ORDER` o2
-    WHERE o2.ProductID IN (
-        SELECT ProductID 
-        FROM `ORDER`
-        WHERE CustomerID = '".$_SESSION['CustomerID']."'
+JOIN ReccomendationView rv1 ON rv1.ProductID = p1.ProductID
+WHERE rv1.CustomerID IN (
+    SELECT rv2.CustomerID
+    FROM ReccomendationView rv2
+    WHERE rv2.ProductID IN (
+        SELECT rv3.ProductID 
+        FROM ReccomendationView rv3
+        WHERE rv3.CustomerID = '".$_SESSION['CustomerID']."'
     )
 )
 AND p1.ProductID NOT IN (
-    SELECT ProductID 
-    FROM `ORDER`
-    WHERE CustomerID = '".$_SESSION['CustomerID']."'
+    SELECT rv4.ProductID 
+    FROM ReccomendationView rv4
+    WHERE rv4.CustomerID = '".$_SESSION['CustomerID']."'
 );"
         
         );

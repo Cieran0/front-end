@@ -101,7 +101,7 @@ AS SELECT
 	WeeklyHours,
 	BranchID
 FROM
-	EMPLOYEE;
+	`EMPLOYEE`;
 
 CREATE VIEW ManagerView 
 AS SELECT
@@ -113,7 +113,7 @@ AS SELECT
 	WeeklyHours,
 	BranchID
 FROM
-	EMPLOYEE;
+	`EMPLOYEE`;
 
 CREATE VIEW CustomerProductView 
 AS SELECT
@@ -122,14 +122,14 @@ AS SELECT
 	Description,
 	BasePrice
 FROM
-	PRODUCT;
+	`PRODUCT`;
 
 CREATE VIEW CustomerSupplierView 
 AS SELECT
 	Name,
 	ContactNo
 FROM
-	SUPPLIER;
+	`SUPPLIER`;
 
 CREATE VIEW EmployeeView 
 AS SELECT
@@ -138,7 +138,15 @@ AS SELECT
 	LastName,
 	Email
 FROM
-	CUSTOMER;
+	`CUSTOMER`;
+
+CREATE VIEW ReccomendationView 
+AS SELECT
+	OrderID,
+	ProductID,
+	CustomerID
+FROM
+	`ORDER`;
 
 CREATE VIEW Bookmarks AS
 SELECT
@@ -174,17 +182,6 @@ CREATE INDEX idx_product_baseprice ON PRODUCT (BasePrice);
 CREATE UNIQUE INDEX idx_customer_email ON CUSTOMER (Email);
 CREATE INDEX idx_order_date ON `ORDER` (Date);
 CREATE INDEX idx_order_status ON `ORDER` (Status);
-
--- Composite Indexes
-CREATE INDEX idx_product_category_baseprice ON PRODUCT (Category, BasePrice);
-CREATE INDEX idx_order_customerid_date ON `ORDER` (CustomerID, Date);
-
--- Full-Text Index (optional for search functionality)
-CREATE FULLTEXT INDEX idx_product_name_description ON PRODUCT (Name, Description);
-
--- Other Important Indexes
-CREATE UNIQUE INDEX idx_supplier_contactno ON SUPPLIER (ContactNo);
-CREATE INDEX idx_bookmark_timesaved ON BOOKMARK (TimeSaved);
 
 
 CREATE VIEW EmployeeDataView AS
