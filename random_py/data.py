@@ -179,7 +179,7 @@ def generate_employee_data(num_employees, branches):
     .FirstName = "{employee["FirstName"]}",
     .LastName = "{employee["LastName"]}",
     .Role = "{employee["Role"]}",
-    .Password = "{employee["Password"]}",
+    .Password = "password123",
     .Email = "{employee["Email"]}",
     .Salary = {employee["Salary"]},
     .WeeklyHours = {employee["WeeklyHours"]},
