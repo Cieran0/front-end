@@ -21,7 +21,7 @@ function open_modal(id) {
   const options = employeeSelect.options;
 
   for (let i = 0; i < options.length; i++) {
-      if (options[i].value.split(':')[0] === id.toString()) { // Match ID
+      if (options[i].value.split(':')[0] === id.toString()) {
           employeeSelect.selectedIndex = i;
           break;
       }

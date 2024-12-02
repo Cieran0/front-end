@@ -106,7 +106,7 @@ if($_SESSION['Role'] != 'Employee') {
                                                     $categoryQuery = "SELECT DISTINCT Category FROM `PRODUCT`";
                                                     $categoryResult = query($categoryQuery);
                                                     if (!$categoryResult) {
-                                                        echo "<p>sake man</p>";
+                                                        echo "<p>Couldn't fetch categories</p>";
                                                     } else {
                                                         while($row = mysqli_fetch_assoc($categoryResult)) {
                                                             ?>
@@ -128,7 +128,7 @@ if($_SESSION['Role'] != 'Employee') {
                                                     $categoryQuery = "SELECT * FROM `SUPPLIER`";
                                                     $categoryResult = query($categoryQuery);
                                                     if (!$categoryResult) {
-                                                        echo "<p>sake man</p>";
+                                                        echo "<p>Couldn't fetch cateogires  </p>";
                                                     } else {
                                                         while($row = mysqli_fetch_assoc($categoryResult)) {
                                                             ?>
